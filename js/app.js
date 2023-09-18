@@ -27,3 +27,15 @@ $map.addEventListener("load", () => {
 	}
 })
 
+let planName = "01"
+
+function change() {
+	if (planName === '01'){
+		$map.data = "plan-02.svg"
+		planName = "02"
+	}
+	else {
+		$map.data = "plan-01.svg"
+		planName = "01"
+	}
+}

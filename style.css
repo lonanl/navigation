@@ -17,4 +17,19 @@ body {
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+	gap: 40px;
+}
+
+.map {
+	min-height: 514px;
+	min-width: 514px;
+}
+
+.change-map {
+	border-radius:13px;
+	background-color: #232323;
+	text-decoration: none;
+	color: #D9D9D9;
+	padding: 4px;
+	border:2px solid #424242;
 }
