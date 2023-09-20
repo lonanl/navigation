@@ -5,7 +5,11 @@
 	<title>Title</title>
 	
 	<link rel="stylesheet" href="style.css">
-	<script src="js/app.js" defer type="module"></script>
+	<script src="./js/app.js" defer type="module"></script>
+	<script type="module" defer>
+	  import { change } from "./js/app.js";
+	  window.change = change;
+	</script>
 </head>
 <body>
 <section class="section-map">

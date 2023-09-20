@@ -1,4 +1,4 @@
-import {Graph, Vertex, Edge} from '/js/graph.js'
+import {Graph, Vertex, Edge} from './graph.js'
 
 let $map = document.querySelector(".map")
 let mapContent, auditoriums, points
@@ -31,7 +31,7 @@ $map.addEventListener("load", () => {
 
 let planName = "plan-01"
 
-function change() {
+export function change() {
 	if (planName === 'plan-01'){
 		$map.data = "plan-01-all.svg"
 		planName = "plan-01-all"

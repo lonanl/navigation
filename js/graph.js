@@ -36,17 +36,23 @@ export class Graph {
 				y2Value = coordinates.substring(secondLetterPosition+1)
 			}
 
-			function addTdToTR(value, tr) {
+			function addTdToTR(value, cellClass, tr) {
 				let td =  document.createElement('td')
 				td.innerHTML = value
+				// td.setAttribute('class', String(cellClass))
 				tr.appendChild(td)
 			}
 
-			addTdToTR($el.getAttribute('id'), row)
-			addTdToTR(x1Value, row)
-			addTdToTR(x2Value, row)
-			addTdToTR(y1Value, row)
-			addTdToTR(y2Value, row)
+			let weightValue = Number((((x2Value-x1Value)**2+(y2Value-y1Value)**2)**0.5).toFixed(2))
+
+			addTdToTR($el.getAttribute('id'), 'id', row)
+			addTdToTR(x1Value, 'x1', row)
+			addTdToTR(y1Value, 'y1', row)
+			addTdToTR(x2Value, 'x2', row)
+			addTdToTR(y2Value, 'y2', row)
+			addTdToTR(weightValue, 'weight', row)
+			addTdToTR('same-floor', 'type', row)
+
 
 
 
@@ -60,7 +66,7 @@ export class Graph {
 				if ($graphEl.getAttribute('stroke') === '#FF5F5F') {
 					console.log($graphEl)
 					setTimeout(erase, timeout, $graphEl)
-					timeout += 50
+					timeout += 300
 				}
 			}
 		})

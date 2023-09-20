@@ -57,6 +57,10 @@ body {
 	pointer-events: none;
 }
 
+table {
+	/*min-height: 431px;*/
+}
+
 th, tr, td {
 	border: 1px solid #575764;
 	text-align: center;
