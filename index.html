@@ -5,13 +5,28 @@
 	<title>Title</title>
 	
 	<link rel="stylesheet" href="style.css">
-	<script src="js/app.js" defer></script>
+	<script src="js/app.js" defer type="module"></script>
 </head>
 <body>
 <section class="section-map">
 	<object data="plan-01-graph.svg" type="image/svg+xml" class="graph" title="graph"></object>
 	<object data="plan-01.svg" type="image/svg+xml" class="map" title="map"></object>
 	<button class='change-map' type="reset" onclick="change()">Поменять</button>
+	<table>
+		<thead>
+		<tr>
+			<th>ID</th>
+			<th>X1</th>
+			<th>Y1</th>
+			<th>X2</th>
+			<th>Y2</th>
+			<th>WEIGHT</th>
+			<th>TYPE</th>
+		</tr>
+		</thead>
+		<tbody class="list-smezh">
+		</tbody>
+	</table>
 </section>
 </body>
 </html>

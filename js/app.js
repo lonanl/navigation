@@ -1,3 +1,5 @@
+import {Graph, Vertex, Edge} from '/js/graph.js'
+
 let $map = document.querySelector(".map")
 let mapContent, auditoriums, points
 
@@ -19,11 +21,11 @@ $map.addEventListener("load", () => {
 					elPointCrassing = elPoint
 				}
 			}
-			console.log(elPointCrassing)
+			// console.log(elPointCrassing)
 			if (elAuditorium.classList.contains('selected'))
 				elPointCrassing.classList.add('selected-point')
 		})
-		console.log(elAuditorium)
+		// console.log(elAuditorium)
 	}
 })
 
@@ -39,3 +41,6 @@ function change() {
 		planName = "plan-01"
 	}
 }
+
+
+Graph.tracing()

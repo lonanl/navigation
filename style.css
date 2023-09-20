@@ -2,6 +2,9 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	border-collapse: collapse;
+	font-family: "Segoe UI", sans-serif;
+	font-size: 20px;
 }
 
 body {
@@ -13,13 +16,14 @@ body {
 	align-items: center;
 	justify-content: center;
 	position: relative;
+	color: #D9D9D9;
 }
 
 .section-map {
 	/*width: 100vw;*/
 	/*height: 100vh;*/
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
 	align-items: center;
 	justify-content: center;
 	gap: 40px;
@@ -32,16 +36,29 @@ body {
 }
 
 .change-map {
-	border-radius:13px;
+	border-radius:14px;
 	background-color: #232323;
 	text-decoration: none;
 	color: #D9D9D9;
-	padding: 4px;
-	border:2px solid #424242;
+	padding: 4px 12px 4px 12px;
+	border:2px solid #575764;
+	transition: all .2s ease;
+}
+
+.change-map:hover {
+	border:2px solid #D9D9D9;
+	background-color: #3B3C41;
 }
 
 .graph {
 	position: absolute;
 	top: 0;
+	left: 0;
 	pointer-events: none;
+}
+
+th, tr, td {
+	border: 1px solid #575764;
+	text-align: center;
+	padding: 6px 12px 6px 12px;
 }
