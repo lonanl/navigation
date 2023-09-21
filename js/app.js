@@ -42,5 +42,9 @@ export function change() {
 	}
 }
 
-
-Graph.tracing()
+export function eraseTable() {
+	console.log(Graph.$tableContent.childElementCount)
+	while(Graph.$tableContent.firstChild)
+		Graph.$tableContent.firstChild.remove()
+		Graph.$objectGraph.data = "plan-01-graph.svg"
+}

@@ -6,16 +6,25 @@
 	
 	<link rel="stylesheet" href="style.css">
 	<script src="./js/app.js" defer type="module"></script>
+	<script src="./js/graph.js" defer type="module"></script>
 	<script type="module" defer>
-	  import { change } from "./js/app.js";
-	  window.change = change;
+	  import {change, eraseTable} from "./js/app.js";
+	  import {Graph, Vertex} from "./js/graph.js";
+		window.eraseTable = eraseTable
+	  window.Graph = Graph
+		window.Vertex = Vertex
+	  window.change = change
 	</script>
 </head>
 <body>
 <section class="section-map">
 	<object data="plan-01-graph.svg" type="image/svg+xml" class="graph" title="graph"></object>
 	<object data="plan-01.svg" type="image/svg+xml" class="map" title="map"></object>
-	<button class='change-map' type="reset" onclick="change()">Поменять</button>
+	<div class="menu">
+		<button class='change-map button' onclick="change()">Поменять</button>
+		<button class='tracing button' onclick="Graph.tracing()">Трассировка</button>
+		<button class='erase button' onclick="eraseTable()">Очистить</button>
+	</div>
 	<table>
 		<thead>
 		<tr>
