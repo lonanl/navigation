@@ -96,3 +96,9 @@ table tr:not(thead>tr) {
 		font-size: 20px;
 	}
 }
+
+.non-active-button {
+	pointer-events: none;
+	color: #575764;
+	border-color: #37373f;
+}
