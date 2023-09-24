@@ -2,6 +2,7 @@ import {Graph} from './graph.js'
 
 let $map = document.querySelector(".map") //объект отображения карты
 let mapContent, auditoriums, points //головной элемент документа карты, аудитории на карте, точки на карте
+export const graph = new Graph()
 
 $map.addEventListener("load", () => { //при загрузке карты
 
@@ -54,6 +55,8 @@ export function eraseTable() { //стирание таблицы и восста
 	activateButton('tracing')
 	deactivateButton('erase')
 	deactivateButton('get-list-of-edges')
+	deactivateButton('get-list-of-adjacency')
+
 }
 
 export function activateButton(buttonClass) {

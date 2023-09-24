@@ -21,7 +21,7 @@ body {
 	font-size: 20px;
 }
 
-.section-map {
+.section-main {
 	/*width: 100vw;*/
 	/*height: 100vh;*/
 	display: flex;
@@ -29,12 +29,24 @@ body {
 	align-items: center;
 	justify-content: center;
 	gap: 40px;
+}
+
+.map-objects {
 	position: relative;
 }
 
 .map {
 	min-height: 514px;
 	min-width: 514px;
+}
+
+.menu {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 20px;
+	width: 125px;
 }
 
 .button {
@@ -46,14 +58,6 @@ body {
 	padding: 4px 12px 4px 12px;
 	border:2px solid #575764;
 	transition: all .2s ease;
-}
-
-.menu {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	gap: 20px;
 }
 
 .button:hover {
