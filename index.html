@@ -6,15 +6,14 @@
 	
 	<link rel="stylesheet" href="style.css">
 	<script src="./js/app.js" defer type="module"></script>
-	<script src="./js/graph.js" defer type="module"></script>
+	<script src="./js/Graph.js" defer type="module"></script>
 	<script type="module" defer>
-	  import {change, eraseTable, graph} from "./js/app.js";
-	  import {Graph, Vertex} from "./js/graph.js";
+	  import {graph} from "./js/app.js";
 	  window.graph = graph
-	  window.eraseTable = eraseTable
-	  window.Graph = Graph
-	  window.Vertex = Vertex
-	  window.change = change
+	  // window.eraseTable = eraseTable
+	  // window.Graph = Graph
+	  // window.Vertex = Vertex
+	  // window.change = change
 	</script>
 </head>
 <body>
@@ -25,14 +24,14 @@
 	</div>
 	<div class="menu">
 		<button class='change-map button non-active-button' onclick="change()">Поменять</button>
-		<button class='tracing button' onclick="graph.tracing()">Трассировка</button>
-		<button class='erase button non-active-button' onclick="eraseTable()">Очистить</button>
-		<button class='get-list-of-edges button non-active-button' onclick="Graph.getRawListOfEdges()">Список ребер</button>
-		<button class='get-list-of-adjacency button non-active-button'
-						onclick="Graph.getListOfVertexes(Graph.getRawListOfEdges())">Список вершин с ребрами
+		<button class='tracing button'>Трассировка</button>
+		<button class='erase button non-active-button'>Очистить</button>
+		<button class='create-list-of-vertexes button non-active-button'>Список вершин
 		</button>
+		<button class='get-list-of-edges button non-active-button'>Список ребер</button>
 	</div>
 	<table>
+		<caption>Список рёбер</caption>
 		<thead>
 		<tr>
 			<th>ID</th>
@@ -44,7 +43,7 @@
 			<th>TYPE</th>
 		</tr>
 		</thead>
-		<tbody class="list-smezh">
+		<tbody class="list-of-edges">
 		</tbody>
 	</table>
 </section>

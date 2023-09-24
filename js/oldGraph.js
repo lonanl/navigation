@@ -79,7 +79,7 @@ export class Graph {
 				y1 = t
 			}
 
-			function addTdToTR(value, cellClass, tr) {
+			function addTdToTr(value, cellClass, tr) {
 				let td = document.createElement('td')
 				td.innerHTML = value
 				td.setAttribute('class', String(cellClass))
@@ -88,13 +88,13 @@ export class Graph {
 
 			let weight = Number((((x2 - x1) ** 2 + (y2 - y1) ** 2) ** 0.5).toFixed(2))
 
-			addTdToTR($el.getAttribute('id'), 'id', row)
-			addTdToTR(x1, 'x1', row)
-			addTdToTR(y1, 'y1', row)
-			addTdToTR(x2, 'x2', row)
-			addTdToTR(y2, 'y2', row)
-			addTdToTR(weight, 'weight', row)
-			addTdToTR('same-floor', 'type', row)
+			addTdToTr($el.getAttribute('id'), 'id', row)
+			addTdToTr(x1, 'x1', row)
+			addTdToTr(y1, 'y1', row)
+			addTdToTr(x2, 'x2', row)
+			addTdToTr(y2, 'y2', row)
+			addTdToTr(weight, 'weight', row)
+			addTdToTr('same-floor', 'type', row)
 
 			Graph.$tableContent.appendChild(row)
 		}
