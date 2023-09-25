@@ -8,6 +8,10 @@
 	vertical-align: baseline;
 }
 
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
 body {
 	width: 100vw;
 	height: 100vh;
@@ -18,7 +22,7 @@ body {
 	justify-content: center;
 	position: relative;
 	color: #D9D9D9;
-	font-size: 20px;
+	/*font-size: 14px;*/
 }
 
 .section-main {
@@ -46,10 +50,11 @@ body {
 	align-items: center;
 	justify-content: center;
 	gap: 20px;
-	width: 125px;
+	width: 150px;
 }
 
 .button {
+	font-size: inherit;
 	border-radius:14px;
 	background-color: #232323;
 	text-decoration: none;
@@ -103,4 +108,48 @@ table tr:not(thead>tr) {
 	pointer-events: none;
 	color: #575764;
 	border-color: #37373f;
+}
+
+.vertex-id {
+	position: absolute;
+	color: #ce787f;
+	font-family: "GothamSSm XNarrow Medium", "Segoe UI", sans-serif;
+	border: 1px solid rgba(206, 120, 127, 0.5);
+	padding: 2px 4px;
+}
+
+.edge-id {
+	position: absolute;
+	color: #78a88c;
+	font-family: "GothamSSm XNarrow Medium", "Segoe UI", sans-serif;
+	/*transform: rotate(45deg);*/
+	font-size: 14px;
+}
+
+.select-points {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.point-input {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+input {
+	color: inherit;
+	font-size: inherit;
+	background-color: inherit;
+	border-radius: 7px;
+	border:2px solid #575764;
+	padding: 4px 6px 4px 6px;
+	/*width: 50%;*/
+	width: 50%;
+}
+
+.output-found-way {
+	font-weight: 500;
 }

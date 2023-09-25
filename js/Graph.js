@@ -13,7 +13,12 @@ class Vertex {
 }
 
 class Edge {
-	id; idVertex1; idVertex2; weight; type
+	id;
+	idVertex1;
+	idVertex2;
+	weight;
+	type
+	
 	constructor(id = '', idVertex1 = '', idVertex2 = '', weight = 0, type = '') {
 		this.id = id
 		this.idVertex1 = idVertex1
@@ -51,6 +56,23 @@ export class Graph {
 		}
 		return undefined
 	} //возвращает вершину по координатам
+	
+	getVertexByID(id = '') {
+		for (let vertex of this.vertexes)
+			if (vertex.id === id) {
+				return vertex
+			}
+		return undefined
+	}
+	
+	getDistanceBetween2VertexesByID(idVertex1, idVertex2) {
+		for (let edge of this.edges) {
+			if (edge.idVertex1 === idVertex1 && edge.idVertex2 === idVertex2)
+				return (edge.weight)
+			else if (edge.idVertex1 === idVertex2 && edge.idVertex2 === idVertex1)
+				return (edge.weight)
+		}
+	}
 	
 	tracing($tableOfEdges, $svgGraphContent) { //трассировка - парсинг путей и добавление их в таблицу
 		let allPaths = $svgGraphContent.getElementsByTagName('path') //все path на картинке
@@ -220,6 +242,97 @@ export class Graph {
 		console.table(this.vertexes)
 		console.log('Осталось добавить параметры экспорта')
 		console.groupEnd()
+	}
+	
+	showGraph($mapObjects) {
+		for (let vertex of this.vertexes) {
+			let $idEl = document.createElement('div')
+			$idEl.classList.add('vertex-id')
+			$idEl.style.left = `${vertex.x}px`
+			$idEl.style.top = `${vertex.y}px`
+			$idEl.innerText = vertex.id
+			$mapObjects.appendChild($idEl)
+		}
+		
+		for (let edge of this.edges) {
+			let $idEl = document.createElement('div')
+			let vertex1 = this.getVertexByID(edge.idVertex1)
+			let vertex2 = this.getVertexByID(edge.idVertex2)
+			let left = ((vertex1.x + vertex2.x) / 2).toFixed(0)
+			let top = ((vertex1.y + vertex2.y) / 2 - 7).toFixed(0)
+			$idEl.classList.add('edge-id')
+			$idEl.style.left = `${left}px`
+			$idEl.style.top = `${top}px`
+			// $idEl.innerHTML = edge.id.replace('Vector ', '')+'<br>'+edge.weight
+			$idEl.innerHTML = edge.weight
+			$mapObjects.appendChild($idEl)
+		}
+	}
+	
+	getShortestWayFromTo(idVertex1, idVertex2) {
+		
+		let distances = new Map() //расстояния до вершин от начальной точки (старта)
+		let ways = new Map() //маршруты из точек
+		for (let vertex of this.vertexes) { // для всех вершин устанавливаем бесконечную длину пути
+			distances.set(vertex.id, Infinity)
+			ways.set(vertex.id, [])
+		}
+		distances.set(idVertex1, 0) //для начальной вершины длина пути = 0
+		
+		let finals = new Set() //вершины с окончательной длиной (обработанные вершины)
+		
+		let currentVertexID = idVertex1 //ид обрабатываемой вершины
+		// for (let i = 0; i < 2; i ++) {
+			while(finals.size !== this.vertexes.length){ //пока не посетили все вершины (или пока не обнаружено, что
+			// граф не связный)
+			
+			//релаксации для соседних вершин
+			let currentVertexDistance = distances.get(currentVertexID) //длина до обрабатываемой вершины
+			for (let neighborId of this.getVertexByID(currentVertexID).neighboringIDs) { //для всех айдишников соседей вершины по айди
+				let distanceBetweenCurrentAndNeighbor = this.getDistanceBetween2VertexesByID(currentVertexID, neighborId)
+				//расстояние между обрабатываемой и соседней вершиной
+				
+				let neighborDistance = distances.get(neighborId) //расстояние до соседней вершины от старта
+				
+				//если расстояние до обр верш + между соседней < расст до соседней вершины от старта
+				if (currentVertexDistance + distanceBetweenCurrentAndNeighbor < neighborDistance) {
+					//обновляем расстояние до соседней вершины
+					distances.set(neighborId, currentVertexDistance + distanceBetweenCurrentAndNeighbor)
+					//и путь для нёё, как путь до текущей вершины + текущая вершина
+					let wayToRelaxingVertex = Array.from(ways.get(currentVertexID))
+					wayToRelaxingVertex.push(currentVertexID)
+					ways.set(neighborId, wayToRelaxingVertex)
+				}
+				
+			}
+			
+			finals.add(currentVertexID) //помечаем текущую вершину как обработканную
+			
+			//поиск следующей обрабатываемой вершины (необработанная вершина с наименьшим расстоянием от начала)
+			let minDistance = Infinity
+			let nextVertexID = ''
+			for (let [id, distance] of distances) {
+				if (distance < minDistance && (!finals.has(id))) {
+					minDistance = distance
+					nextVertexID = id
+					// console.log(minDistance, nextVertexID)
+				}
+			}
+			if (minDistance === Infinity) //если граф несвязный то закончить поиск путей
+				break
+			currentVertexID = nextVertexID
+		}
+		
+		for(let [id, way] of ways){
+			way.push(id)
+		}
+		
+		// console.log(distances)
+		// console.log(ways)
+		return {
+			way: ways.get(idVertex2),
+			distance: distances.get(idVertex2)
+		}
 	}
 }
 

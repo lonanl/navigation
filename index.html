@@ -9,6 +9,7 @@
 	<script src="./js/Graph.js" defer type="module"></script>
 	<script type="module" defer>
 	  import {graph} from "./js/app.js";
+	  
 	  window.graph = graph
 	</script>
 </head>
@@ -19,24 +20,37 @@
 		<object data="plan-01.svg" type="image/svg+xml" class="map" title="map"></object>
 	</div>
 	<div class="menu">
-<!--		<button class='change-map button non-active-button' onclick="change()">Поменять</button>-->
+		<!--		<button class='change-map button non-active-button' onclick="change()">Поменять</button>-->
 		<button class='erase button non-active-button'>Очистить</button>
 		<button class='tracing button'>Трассировка</button>
 		<button class='create-list-of-vertexes button non-active-button'>Список вершин
 		</button>
 		<button class='fill-graph button non-active-button'>Заполнить граф</button>
+		<button class='show-graph button non-active-button'>Показать граф</button>
+		<div class="select-points">
+			<div class="point-input">
+				<label for="input-idPoint1">Точка 1:</label>
+				<input class="" type="text" name="idPoint1" id="input-idPoint1">
+			</div>
+			<div class="point-input">
+				<label for="input-idPoint2">Точка 2:</label>
+				<input class="" type="text" name="idPoint2" id="input-idPoint2">
+			</div>
+			<button class="get-way button non-active-button">Найти маршрут</button>
+			<p class="output-found-way"></p>
+		</div>
 	</div>
 	<table>
 		<caption>Список рёбер</caption>
 		<thead>
 		<tr>
-			<th>ID</th>
-			<th>X1</th>
-			<th>Y1</th>
-			<th>X2</th>
-			<th>Y2</th>
-			<th>WEIGHT</th>
-			<th>TYPE</th>
+			<th>id</th>
+			<th>x1</th>
+			<th>y1</th>
+			<th>x2</th>
+			<th>y2</th>
+			<th>weight</th>
+			<th>type</th>
 		</tr>
 		</thead>
 		<tbody class="list-of-edges">
