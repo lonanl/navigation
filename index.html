@@ -10,10 +10,6 @@
 	<script type="module" defer>
 	  import {graph} from "./js/app.js";
 	  window.graph = graph
-	  // window.eraseTable = eraseTable
-	  // window.Graph = Graph
-	  // window.Vertex = Vertex
-	  // window.change = change
 	</script>
 </head>
 <body>
@@ -23,12 +19,12 @@
 		<object data="plan-01.svg" type="image/svg+xml" class="map" title="map"></object>
 	</div>
 	<div class="menu">
-		<button class='change-map button non-active-button' onclick="change()">Поменять</button>
-		<button class='tracing button'>Трассировка</button>
+<!--		<button class='change-map button non-active-button' onclick="change()">Поменять</button>-->
 		<button class='erase button non-active-button'>Очистить</button>
+		<button class='tracing button'>Трассировка</button>
 		<button class='create-list-of-vertexes button non-active-button'>Список вершин
 		</button>
-		<button class='get-list-of-edges button non-active-button'>Список ребер</button>
+		<button class='fill-graph button non-active-button'>Заполнить граф</button>
 	</div>
 	<table>
 		<caption>Список рёбер</caption>

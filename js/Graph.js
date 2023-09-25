@@ -2,12 +2,24 @@ class Vertex {
 	constructor(x, y, id = '', type = '') {
 		this.x = x
 		this.y = y
-		if (id !== '' && id !== undefined) {
-			this.id = id
-		}
-		if (id !== '' && id !== undefined) {
-			this.type = type
-		}
+		this.id = id
+		this.type = type
+		this.neighboringIDs = new Set()
+	}
+	
+	// isSame(vertexOther) {
+	// 	return this.x === vertexOther.x && this.y === vertexOther.y
+	// }
+}
+
+class Edge {
+	id; idVertex1; idVertex2; weight; type
+	constructor(id = '', idVertex1 = '', idVertex2 = '', weight = 0, type = '') {
+		this.id = id
+		this.idVertex1 = idVertex1
+		this.idVertex2 = idVertex2
+		this.weight = weight
+		this.type = type
 	}
 }
 
@@ -16,75 +28,75 @@ export class Graph {
 		this.vertexes = [] //список вершин
 		this.vertexIdIterator = 0 //итератор для вершин в списке
 		this.rawEdges = [] //сырой список рёбер со свойствами
-		// this.edges = []
+		this.edges = []
 	}
-
+	
 	hasVertexByXY(x, y) {
-		for (let vertex of this.vertexes)
-			if ((vertex.x === x) && (vertex.y === y)) {
-				return true
-			}
+		for (let vertex of this.vertexes) if ((vertex.x === x) && (vertex.y === y)) {
+			return true
+		}
 		return false
 	} //есть ли вершина в списке по координатам
-
+	
 	addVertexByXY(x, y) {
-		if (!this.hasVertexByXY(x, y))
-			this.vertexes.push(new Vertex(x, y, this.vertexIdIterator))
-		this.vertexIdIterator++
+		if (!this.hasVertexByXY(x, y)) {
+			this.vertexes.push(new Vertex(x, y, String(this.vertexIdIterator)))
+			this.vertexIdIterator ++
+		}
 	}
-
+	
 	getVertexByXY(x, y) {
-		for (let vertex of this.vertexes)
-			if ((vertex.x === x) && (vertex.y === y)) {
-				return vertex
-			}
+		for (let vertex of this.vertexes) if ((vertex.x === x) && (vertex.y === y)) {
+			return vertex
+		}
 		return undefined
 	} //возвращает вершину по координатам
-
+	
 	tracing($tableOfEdges, $svgGraphContent) { //трассировка - парсинг путей и добавление их в таблицу
 		let allPaths = $svgGraphContent.getElementsByTagName('path') //все path на картинке
-
+		
 		function getGraphPaths() {
 			let paths = []
 			for (let path of allPaths) {
-				if (path.getAttribute('stroke') === '#FF5F5F')
-					paths.push(path)
+				if (path.getAttribute('stroke') === '#FF5F5F') paths.push(path)
 			}
 			return paths
 		}
-
+		
 		let graphPaths = getGraphPaths() //path рёбер графа с картинки по цвету
-
+		
 		function parseEdgesFromPaths(path) {
 			let id = path.getAttribute('id')
-
-
+			
+			
 			let coordinates = path.getAttribute('d').substring(1).replaceAll('.5', '')
-
+			
 			let firstSpace = coordinates.indexOf(' ')
 			let x1, y1, x2, y2
-
+			
 			x1 = coordinates.substring(0, firstSpace)
-
+			
 			coordinates = coordinates.substring(firstSpace + 1)
-
+			
 			// let lineType = ''
 			let secondLetterPosition;
-
-
-			if (coordinates.indexOf('H') !== -1) {
+			
+			
+			if (coordinates.indexOf('H') !== - 1) {
 				// lineType = 'horizontal'
 				secondLetterPosition = coordinates.indexOf('H')
 				y1 = coordinates.substring(0, secondLetterPosition)
 				y2 = y1
 				x2 = coordinates.substring(secondLetterPosition + 1)
-			} else if (coordinates.indexOf('V') !== -1) {
+			}
+			else if (coordinates.indexOf('V') !== - 1) {
 				// lineType = 'vertical'
 				secondLetterPosition = coordinates.indexOf('V')
 				y1 = coordinates.substring(0, secondLetterPosition)
 				x2 = x1
 				y2 = coordinates.substring(secondLetterPosition + 1)
-			} else if (coordinates.indexOf('L') !== -1) {
+			}
+			else if (coordinates.indexOf('L') !== - 1) {
 				secondLetterPosition = coordinates.indexOf('L')
 				y1 = coordinates.substring(0, secondLetterPosition)
 				coordinates = coordinates.substring(secondLetterPosition + 1)
@@ -92,7 +104,7 @@ export class Graph {
 				x2 = coordinates.substring(0, secondSpace)
 				y2 = coordinates.substring(secondSpace + 1)
 			}
-
+			
 			if (x1 >= x2 && y1 >= y2) {
 				let t = x2
 				x2 = x1
@@ -101,7 +113,7 @@ export class Graph {
 				y2 = y1
 				y1 = t
 			}
-
+			
 			let weight = Number((((x2 - x1) ** 2 + (y2 - y1) ** 2) ** 0.5).toFixed(2))
 			return {
 				id: id,
@@ -118,7 +130,7 @@ export class Graph {
 			edgesProperties.push(parseEdgesFromPaths(path))
 			path.setAttribute('stroke-width', '3')
 		})  //создаем список рёбер со свойствами
-
+		
 		function addTdToTr(value, cellClass, tr) {
 			let td = document.createElement('td')
 			td.innerHTML = value
@@ -142,37 +154,72 @@ export class Graph {
 			timeout += 50
 		}) //формирование таблицы из списка рёбер
 		this.rawEdges = edgesProperties
-
+		
 		console.log('Сырой список рёбер: ')
 		console.table(this.rawEdges)
-	} // трассировка: по элементам свг-картинки графа делает сырой список рёбер и заносит их в таблицу, записывает в rawEdges ребра со свойствами
-
+	} // трассировка: по элементам свг-картинки графа делает сырой список рёбер и заносит их в таблицу, записывает в
+      // rawEdges ребра со свойствами
+	
 	createVertexesList($mapContent) {
 		for (let rawEdge of this.rawEdges) {
 			this.addVertexByXY(rawEdge.x1, rawEdge.y1)
 			this.addVertexByXY(rawEdge.x2, rawEdge.y2)
 		}
-
-
+		
+		
 		let circlesOnMap = $mapContent.getElementsByTagName('circle');
 		console.group('Входы в аудитории: ')
 		for (let $el of circlesOnMap) {
 			if ($el.getAttribute('fill')) {
 				let x = Number($el.getAttribute('cx'))
 				let y = Number($el.getAttribute('cy'))
-
+				
 				let vertexEntrance = this.getVertexByXY(x, y)
 				vertexEntrance.type = 'entranceToAu'
-
+				
 				/*
 				Сюда добавить обработку ассоциации с аудиторией
 				 */
-
+				
 				console.log(x, y, vertexEntrance)
 			}
 		}
 		console.groupEnd()
 		console.table(this.vertexes)
+	}
+	
+	fillGraph() {
+		for (let rawEdge of this.rawEdges) {
+			let vertex1 = this.getVertexByXY(rawEdge.x1, rawEdge.y1)
+			let vertex2 = this.getVertexByXY(rawEdge.x2, rawEdge.y2)
+			
+			let type
+			if (vertex1.type === 'entranceToAu' || vertex2.type === 'entranceToAu') type = 'entranceToAu'
+			else type = rawEdge.type
+			
+			/*
+			Здесь можно добавить чтобы была длина у лестниц / входов в лестницы побольше
+			 */
+			
+			let edge = new Edge(
+				rawEdge.id,
+				vertex1.id,
+				vertex2.id,
+				rawEdge.weight,
+				type)
+			this.edges.push(edge)
+			
+			vertex1.neighboringIDs.add(vertex2.id)
+			vertex2.neighboringIDs.add(vertex1.id)
+		}
+		
+		console.groupCollapsed('Готовый граф')
+		console.log('Готовый список рёбер')
+		console.table(this.edges)
+		console.log('Готовый список вершин')
+		console.table(this.vertexes)
+		console.log('Осталось добавить параметры экспорта')
+		console.groupEnd()
 	}
 }
 
