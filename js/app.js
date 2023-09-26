@@ -1,41 +1,23 @@
 import {Graph} from './Graph.js';
+import {PlanHandler} from './PlanHandler.js'
+import {Settings} from './Settings.js'
 
-let $map = document.querySelector('.map') //объект отображения карты
-let $mapContent, auditoriums, points //головной элемент документа карты, аудитории на карте, точки на карте
+//обработчик карты, передаем объект содержащий карту
+export let planHandler = new PlanHandler(document.querySelector('.plan'))
+planHandler.$planObject.data = Settings.planName
+planHandler.$planWrapper = document.getElementsByClassName('map-objects')[0]
 
-$map.addEventListener('load', () => { //при загрузке карты
-	
-	$mapContent = $map.contentDocument //ищем контент
-	auditoriums = $mapContent.getElementsByClassName('au') //ищем аудитории по классу (ПОМЕНЯТЬ НА ЦВЕТ)
-	points = $mapContent.getElementsByClassName('point') //ищем точки на карте (ПОМЕНЯТЬ НА ЦВЕТ)
-	
-	for (const elAuditorium of auditoriums) { //проходимся по аудиториям
-		elAuditorium.addEventListener('click', function () { //при нажатии на аудиторию
-			
-			for (const elErasingAuditorium of auditoriums) { //стираем все аудитории
-				if (elErasingAuditorium !== this) elErasingAuditorium.classList.remove('selected')
-			}
-			//сюда добавить занесение аудитории в выбранную
-			
-			this.classList.toggle('selected') //стираем или закрашиваем аудиторию
-			let $elPointPainting //здесь будет закрашиваемая точка аудитории
-			for (const $elPoint of points) {
-				$elPoint.classList.remove('selected-point') //стираем все точки
-				if ($elPoint.id.indexOf(elAuditorium.id) !== - 1) {
-					$elPointPainting = $elPoint
-				}
-			}
-			
-			if (elAuditorium.classList.contains('selected')) // закрашиваем или нет точку
-				$elPointPainting.classList.add('selected-point')
-		})
-		
-	}
+planHandler.$planObject.addEventListener('load', () => { //при загрузке плана
+	console.log('план загружен')
+	planHandler.onPlanLoad()
 })
 
-export function eraseTable($tableOfEdge, $svgGraph) { //стирание таблицы и восстановление плана
+// let $mapContent, auditoriums, points //головной элемент документа карты, аудитории на карте, точки на карте
+
+
+function eraseTable($tableOfEdge, $svgGraph) { //стирание таблицы и восстановление плана
 	while ($tableOfEdge.hasChildNodes()) $tableOfEdge.firstChild.remove()
-	$svgGraph.data = 'plan-01-graph.svg'
+	$svgGraph.data = Settings.graphName
 }
 
 export function activateButton(buttonClassName) {
@@ -48,10 +30,13 @@ export function deactivateButton(buttonClassName) {
 
 
 export let graph = new Graph()
+let $graphObject = document.getElementsByClassName('graph')[0]
+$graphObject.data = Settings.graphName
+
 
 document.getElementsByClassName('tracing')[0].addEventListener('click', () => {
 	let $tableOfEdge = document.getElementsByClassName('list-of-edges')[0];
-	let $svgGraphContent = document.getElementsByClassName('graph')[0].contentDocument;
+	let $svgGraphContent = $graphObject.contentDocument;
 	
 	graph.tracing($tableOfEdge, $svgGraphContent)
 	
@@ -82,7 +67,7 @@ document.getElementsByClassName('erase')[0].addEventListener('click', () => {
 })
 
 document.getElementsByClassName('create-list-of-vertexes')[0].addEventListener('click', () => {
-	graph.createVertexesList($mapContent)
+	graph.createVertexesList(planHandler.$planDocument)
 	deactivateButton('create-list-of-vertexes')
 	deactivateButton('create-list-of-vertexes')
 	activateButton('fill-graph')
@@ -95,8 +80,7 @@ document.getElementsByClassName('fill-graph')[0].addEventListener('click', () =>
 })
 
 document.getElementsByClassName('show-graph')[0].addEventListener('click', () => {
-	let $mapObjects = document.getElementsByClassName('map-objects')[0]
-	graph.showGraph($mapObjects)
+	graph.showGraph(planHandler.$planWrapper)
 	
 	deactivateButton('show-graph')
 	activateButton('get-way')

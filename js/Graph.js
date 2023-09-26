@@ -80,7 +80,11 @@ export class Graph {
 		function getGraphPaths() {
 			let paths = []
 			for (let path of allPaths) {
-				if (path.getAttribute('stroke') === '#FF5F5F') paths.push(path)
+				/*
+				ЗДЕСЬ НАСТРАИВАЕТСЯ ЦВЕТ РЕБРА
+				 */
+				let edgeColor = '#FF5F5F'
+				if (path.getAttribute('stroke') === edgeColor) paths.push(path)
 			}
 			return paths
 		}
