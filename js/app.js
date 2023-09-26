@@ -1,23 +1,23 @@
-import {Graph} from "./Graph.js";
+import {Graph} from './Graph.js';
 
-let $map = document.querySelector(".map") //объект отображения карты
+let $map = document.querySelector('.map') //объект отображения карты
 let $mapContent, auditoriums, points //головной элемент документа карты, аудитории на карте, точки на карте
 
-$map.addEventListener("load", () => { //при загрузке карты
+$map.addEventListener('load', () => { //при загрузке карты
 	
 	$mapContent = $map.contentDocument //ищем контент
 	auditoriums = $mapContent.getElementsByClassName('au') //ищем аудитории по классу (ПОМЕНЯТЬ НА ЦВЕТ)
 	points = $mapContent.getElementsByClassName('point') //ищем точки на карте (ПОМЕНЯТЬ НА ЦВЕТ)
 	
 	for (const elAuditorium of auditoriums) { //проходимся по аудиториям
-		elAuditorium.addEventListener("click", function () { //при нажатии на аудиторию
+		elAuditorium.addEventListener('click', function () { //при нажатии на аудиторию
 			
 			for (const elErasingAuditorium of auditoriums) { //стираем все аудитории
-				if (elErasingAuditorium !== this) elErasingAuditorium.classList.remove("selected")
+				if (elErasingAuditorium !== this) elErasingAuditorium.classList.remove('selected')
 			}
 			//сюда добавить занесение аудитории в выбранную
 			
-			this.classList.toggle("selected") //стираем или закрашиваем аудиторию
+			this.classList.toggle('selected') //стираем или закрашиваем аудиторию
 			let $elPointPainting //здесь будет закрашиваемая точка аудитории
 			for (const $elPoint of points) {
 				$elPoint.classList.remove('selected-point') //стираем все точки
@@ -35,7 +35,7 @@ $map.addEventListener("load", () => { //при загрузке карты
 
 export function eraseTable($tableOfEdge, $svgGraph) { //стирание таблицы и восстановление плана
 	while ($tableOfEdge.hasChildNodes()) $tableOfEdge.firstChild.remove()
-	$svgGraph.data = "plan-01-graph.svg"
+	$svgGraph.data = 'plan-01-graph.svg'
 }
 
 export function activateButton(buttonClassName) {
@@ -49,7 +49,7 @@ export function deactivateButton(buttonClassName) {
 
 export let graph = new Graph()
 
-document.getElementsByClassName('tracing')[0].addEventListener("click", () => {
+document.getElementsByClassName('tracing')[0].addEventListener('click', () => {
 	let $tableOfEdge = document.getElementsByClassName('list-of-edges')[0];
 	let $svgGraphContent = document.getElementsByClassName('graph')[0].contentDocument;
 	
@@ -60,7 +60,7 @@ document.getElementsByClassName('tracing')[0].addEventListener("click", () => {
 	activateButton('create-list-of-vertexes')
 })
 
-document.getElementsByClassName('erase')[0].addEventListener("click", () => {
+document.getElementsByClassName('erase')[0].addEventListener('click', () => {
 	let $tableOfEdge = document.getElementsByClassName('list-of-edges')[0];
 	let $svgGraph = document.getElementsByClassName('graph')[0];
 	
@@ -81,20 +81,20 @@ document.getElementsByClassName('erase')[0].addEventListener("click", () => {
 	deactivateButton('create-list-of-vertexes')
 })
 
-document.getElementsByClassName('create-list-of-vertexes')[0].addEventListener("click", () => {
+document.getElementsByClassName('create-list-of-vertexes')[0].addEventListener('click', () => {
 	graph.createVertexesList($mapContent)
 	deactivateButton('create-list-of-vertexes')
 	deactivateButton('create-list-of-vertexes')
 	activateButton('fill-graph')
 })
 
-document.getElementsByClassName('fill-graph')[0].addEventListener("click", () => {
+document.getElementsByClassName('fill-graph')[0].addEventListener('click', () => {
 	graph.fillGraph()
 	deactivateButton('fill-graph')
 	activateButton('show-graph')
 })
 
-document.getElementsByClassName('show-graph')[0].addEventListener("click", () => {
+document.getElementsByClassName('show-graph')[0].addEventListener('click', () => {
 	let $mapObjects = document.getElementsByClassName('map-objects')[0]
 	graph.showGraph($mapObjects)
 	
@@ -102,7 +102,7 @@ document.getElementsByClassName('show-graph')[0].addEventListener("click", () =>
 	activateButton('get-way')
 })
 
-document.getElementsByClassName('get-way')[0].addEventListener("click", () => {
+document.getElementsByClassName('get-way')[0].addEventListener('click', () => {
 	let idVertex1 = document.getElementById('input-idPoint1').value
 	let idVertex2 = document.getElementById('input-idPoint2').value
 	
