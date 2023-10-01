@@ -1,12 +1,12 @@
 <svg width="10" height="13" viewBox="0 0 10 13" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_77_27)">
-<circle cx="5" cy="1" r="1" transform="rotate(-180 5 1)" fill="#9CBBFF"/>
-<path d="M5 4L5 12" stroke="url(#paint0_linear_77_27)" stroke-width="2" stroke-linecap="round"/>
-<path d="M5 12L8 8" stroke="#9CBBFF" stroke-width="2" stroke-linecap="round"/>
-<path d="M5 12L2 8" stroke="#9CBBFF" stroke-width="2" stroke-linecap="round"/>
+<ellipse cx="5" cy="12" rx="1.5" ry="1" transform="rotate(-180 5 12)" fill="#9CBBFF"/>
+<path d="M5 1L5 9" stroke="url(#paint0_linear_77_27)" stroke-width="2" stroke-linecap="round"/>
+<path d="M5 9L8 5" stroke="#9CBBFF" stroke-width="2" stroke-linecap="round"/>
+<path d="M5 9L2 5" stroke="#9CBBFF" stroke-width="2" stroke-linecap="round"/>
 </g>
 <defs>
-<linearGradient id="paint0_linear_77_27" x1="4.5" y1="9.09091" x2="4.5" y2="4" gradientUnits="userSpaceOnUse">
+<linearGradient id="paint0_linear_77_27" x1="4.5" y1="6.09091" x2="4.5" y2="1" gradientUnits="userSpaceOnUse">
 <stop stop-color="#9CBBFF"/>
 <stop offset="1" stop-color="#9CBBFF" stop-opacity="0.54"/>
 </linearGradient>
