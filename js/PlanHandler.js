@@ -13,6 +13,7 @@ export class PlanHandler {
 	
 	setSelectorElements($selector) {
 		this.$selector = $selector
+		this.$selector.setAttribute('auID', '')
 	}
 	
 	onPlanLoad() { //при загрузки плана
@@ -64,25 +65,15 @@ export class PlanHandler {
 	
 	showSelector(event, isSelected, clickedAuId) {
 		
-		function show(planHandler) {
-			planHandler.$selector.classList.remove('hidden-selector')
-			planHandler.$selector.classList.add('showing-selector')
-			planHandler.$selector.style.left = `${String(event.clientX)}px`
-			planHandler.$selector.style.top = `${String(event.clientY)}px`
-		}
 		
 		if (isSelected) {
-			if (clickedAuId === this.$selector.getAttribute('auID') || this.$selector.getAttribute('auID' === '')) {
-				this.$selector.style.left = `${String(event.clientX)}px`
-				this.$selector.style.top = `${String(event.clientY)}px`
-				this.$selector.classList.remove('hidden-selector')
-				this.$selector.classList.add('showing-selector')
-			}
-			else{
-				this.$selector.classList.remove('showing-selector')
-				this.$selector.classList.add('hidden-selector')
-				setTimeout(show, 20, this)
-			}
+			this.$selector.classList.remove('showing-selector')
+			setTimeout((planHandler) => {
+				planHandler.$selector.style.left = `${String(event.clientX)}px`
+				planHandler.$selector.style.top = `${String(event.clientY)}px`
+				planHandler.$selector.classList.remove('hidden-selector')
+				planHandler.$selector.classList.add('showing-selector')
+			}, 20, this)
 		}
 		else {
 			this.$selector.classList.remove('showing-selector')
