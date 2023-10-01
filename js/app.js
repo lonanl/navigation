@@ -5,7 +5,9 @@ import {Settings} from './Settings.js'
 //обработчик карты, передаем объект содержащий карту
 export let planHandler = new PlanHandler(document.querySelector('.plan'))
 planHandler.$planObject.data = Settings.planName
-planHandler.setSelectorElements(document.querySelector('.selector'))
+planHandler.setSelectorElements(document.querySelector('.selector'),
+document.querySelector('.button-from'),
+document.querySelector('.button-to'))
 
 
 planHandler.$planObject.addEventListener('load', () => { //при загрузке плана

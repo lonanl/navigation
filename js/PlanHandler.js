@@ -9,12 +9,50 @@ export class PlanHandler {
 	$planDocument //содержимое документа плана
 	auditoriums = new Map() //map ид-аудитории: dom-элемент аудитории
 	entrances = new Map() //map ид-входа: dom-элемент входа
-	$selector, $fromInput, $toInput
+	$selector;
+	$fromInput;
+	$toInput;
+	$bFrom;
+	$bTo;
+	currentAuId;
 	
-	setSelectorElements($selector) {
+	setSelectorElements($selector, $bFrom, $bTo) {
 		this.$selector = $selector
 		this.$selector.setAttribute('auID', '')
-		this.$fromInput = this.$selector.querySelector('.')
+		this.$bFrom = $bFrom
+		this.$bTo = $bTo
+		this.$bFrom.addEventListener('mousedown', () => this.onBFromClicked())
+		this.$bTo.addEventListener('mousedown', () => this.onBToClicked())
+		
+		this.$fromInput = document.querySelector('#input-from')
+		this.$toInput = document.querySelector('#input-to')
+		console.log(this.$bFrom, this.$bTo)
+	}
+	
+	flipFromTo() {
+		let tInputValue = this.$fromInput.value
+		this.$fromInput.value = this.$toInput.value
+		this.$toInput.value = tInputValue
+	}
+	
+	onBFromClicked() {
+		if (this.$toInput.value === Settings.auditoriumsRusNames.get(this.currentAuId)) {
+			this.flipFromTo()
+		}
+		else {
+			this.$fromInput.value = Settings.auditoriumsRusNames.get(this.currentAuId)
+		}
+		this.onAuditoriumClicked(this.currentAuId, null)
+	}
+	
+	onBToClicked() {
+		if (this.$fromInput.value === Settings.auditoriumsRusNames.get(this.currentAuId)) {
+			this.flipFromTo()
+		}
+		else {
+			this.$toInput.value = Settings.auditoriumsRusNames.get(this.currentAuId)
+		}
+		this.onAuditoriumClicked(this.currentAuId, null)
 	}
 	
 	onPlanLoad() { //при загрузки плана
@@ -74,6 +112,7 @@ export class PlanHandler {
 				planHandler.$selector.style.top = `${String(event.clientY)}px`
 				planHandler.$selector.classList.remove('hidden-selector')
 				planHandler.$selector.classList.add('showing-selector')
+				this.currentAuId = clickedAuId
 			}, 20, this)
 		}
 		else {

@@ -35,11 +35,11 @@ let auditoriumsRusNames = [
 	],
 	[
 		"pr1309",
-		"Пр1315"
+		"Пр1309"
 	],
 	[
 		"pr1334",
-		"Пр1315"
+		"Пр1334"
 	]
 ]
 Settings.auditoriumsRusNames = new Map(auditoriumsRusNames)
