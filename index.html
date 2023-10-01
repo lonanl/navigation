@@ -26,7 +26,8 @@
 			</div>
 			<div class="to button">
 				<img src="resources/img/to.svg" alt=""/>
-				Сюда</div>
+				Сюда
+			</div>
 		</div>
 	</div>
 	<div class="menu">
@@ -38,18 +39,29 @@
 		<button class="fill-graph button non-active-button">Заполнить граф</button>
 		<button class="show-graph button non-active-button">Показать граф</button>
 		<div class="select-points">
-			<div class="point-input">
-				<label for="input-idPoint1">Точка 1:</label>
+			<div class="input-row">
+				<label for="input-idPoint1">1:</label>
 				<input class="" type="text" name="idPoint1" id="input-idPoint1">
 			</div>
-			<div class="point-input">
-				<label for="input-idPoint2">Точка 2:</label>
+			<div class="input-row">
+				<label for="input-idPoint2">2:</label>
 				<input class="" type="text" name="idPoint2" id="input-idPoint2">
 			</div>
 			<button class="get-way button">Проложить</button>
 			<p class="output-found-way"></p>
 		</div>
 		<button class="fill-auditoriums-vertexes button">Список вершин аудиторий</button>
+		<div class="selector-auditoriums">
+			<div class="input-row">
+				<label for="input-from"><img src="resources/img/from.svg" alt=""/></label>
+				<input type="text" name="input-from" id="input-from" placeholder="Откуда">
+			</div>
+			<div class="input-row">
+				<label for="input-to"><img src="resources/img/to.svg" alt=""/></label>
+				<input type="text" name="input-to" id="input-to" placeholder="Куда">
+			</div>
+			<button class="build-way button">Построить</button>
+		</div>
 	</div>
 	<table>
 		<caption>Список рёбер</caption>

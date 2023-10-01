@@ -9,11 +9,12 @@ export class PlanHandler {
 	$planDocument //содержимое документа плана
 	auditoriums = new Map() //map ид-аудитории: dom-элемент аудитории
 	entrances = new Map() //map ид-входа: dom-элемент входа
-	$selector
+	$selector, $fromInput, $toInput
 	
 	setSelectorElements($selector) {
 		this.$selector = $selector
 		this.$selector.setAttribute('auID', '')
+		this.$fromInput = this.$selector.querySelector('.')
 	}
 	
 	onPlanLoad() { //при загрузки плана
