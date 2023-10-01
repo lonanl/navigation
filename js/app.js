@@ -36,7 +36,7 @@ export function deactivateButton(buttonClassName) {
 
 
 
-document.getElementsByClassName('tracing')[0].addEventListener('click', () => {
+document.querySelector('.tracing').addEventListener('click', () => {
 	graph.tracing($tableOfEdge)
 	
 	deactivateButton('tracing')
@@ -44,7 +44,7 @@ document.getElementsByClassName('tracing')[0].addEventListener('click', () => {
 	activateButton('create-list-of-vertexes')
 })
 
-document.getElementsByClassName('erase')[0].addEventListener('click', () => {
+document.querySelector('.erase').addEventListener('click', () => {
 	let $tableOfEdge = document.getElementsByClassName('list-of-edges')[0];
 	let $svgGraph = document.getElementsByClassName('graph')[0];
 	
@@ -65,28 +65,28 @@ document.getElementsByClassName('erase')[0].addEventListener('click', () => {
 	deactivateButton('create-list-of-vertexes')
 })
 
-document.getElementsByClassName('create-list-of-vertexes')[0].addEventListener('click', () => {
+document.querySelector('.create-list-of-vertexes').addEventListener('click', () => {
 	graph.createVertexesList()
 	deactivateButton('create-list-of-vertexes')
 	deactivateButton('create-list-of-vertexes')
 	activateButton('fill-graph')
 })
 
-document.getElementsByClassName('fill-graph')[0].addEventListener('click', () => {
+document.querySelector('.fill-graph').addEventListener('click', () => {
 	graph.fillGraph()
 	deactivateButton('fill-graph')
 	activateButton('show-graph')
 	activateButton('fill-auditoriums-vertexes')
 })
 
-document.getElementsByClassName('show-graph')[0].addEventListener('click', () => {
+document.querySelector('.show-graph').addEventListener('click', () => {
 	graph.showGraph()
 	
 	deactivateButton('show-graph')
 	activateButton('get-way')
 })
 
-document.getElementsByClassName('get-way')[0].addEventListener('click', () => {
+document.querySelector('.get-way').addEventListener('click', () => {
 	let idVertex1 = document.getElementById('input-idPoint1').value
 	let idVertex2 = document.getElementById('input-idPoint2').value
 	
@@ -127,6 +127,8 @@ document.querySelector('.build-way').addEventListener('click', () => {
 
 document.getElementsByClassName('fill-auditoriums-vertexes')[0].addEventListener('click', () => {
 	graph.fillAuditoriumsVertexes(Settings.auditoriumsEntrances, planHandler.$planDocument)
+	deactivateButton('fill-auditoriums-vertexes')
+	activateButton('build-way')
 })
 
 //////временно
@@ -148,4 +150,3 @@ setTimeout(() => {
 	
 	
 }, 200)
-

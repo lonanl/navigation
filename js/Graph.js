@@ -338,4 +338,3 @@ export class Graph {
 		console.log(this.auditoriumsVertexesMap)
 	}
 }
-

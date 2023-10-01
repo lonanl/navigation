@@ -1,4 +1,5 @@
 import {Settings} from "./Settings.js";
+import {activateButton, deactivateButton} from "./app.js";
 
 export class PlanHandler {
 	constructor($mapObject) {
@@ -121,6 +122,10 @@ export class PlanHandler {
 				planHandler.$selector.classList.remove('hidden-selector')
 				planHandler.$selector.classList.add('showing-selector')
 				this.currentAuId = clickedAuId
+				if(this.currentAuId === this.fromId) deactivateButton('button-from')
+				else activateButton('button-from')
+				if(this.currentAuId === this.toId) deactivateButton('button-to')
+				else activateButton('button-to')
 			}, 20, this)
 		}
 		else {
