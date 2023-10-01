@@ -9,12 +9,14 @@ export class PlanHandler {
 	$planDocument //содержимое документа плана
 	auditoriums = new Map() //map ид-аудитории: dom-элемент аудитории
 	entrances = new Map() //map ид-входа: dom-элемент входа
-	$selector;
-	$fromInput;
-	$toInput;
-	$bFrom;
-	$bTo;
-	currentAuId;
+	$selector
+	$fromInput
+	$toInput
+	$bFrom
+	$bTo
+	currentAuId
+	fromId
+	toId
 	
 	setSelectorElements($selector, $bFrom, $bTo) {
 		this.$selector = $selector
@@ -33,6 +35,10 @@ export class PlanHandler {
 		let tInputValue = this.$fromInput.value
 		this.$fromInput.value = this.$toInput.value
 		this.$toInput.value = tInputValue
+		
+		let tId = this.fromId
+		this.fromId = this.toId
+		this.toId = tId
 	}
 	
 	onBFromClicked() {
@@ -41,6 +47,7 @@ export class PlanHandler {
 		}
 		else {
 			this.$fromInput.value = Settings.auditoriumsRusNames.get(this.currentAuId)
+			this.fromId = this.currentAuId
 		}
 		this.onAuditoriumClicked(this.currentAuId, null)
 	}
@@ -51,6 +58,7 @@ export class PlanHandler {
 		}
 		else {
 			this.$toInput.value = Settings.auditoriumsRusNames.get(this.currentAuId)
+			this.toId = this.currentAuId
 		}
 		this.onAuditoriumClicked(this.currentAuId, null)
 	}

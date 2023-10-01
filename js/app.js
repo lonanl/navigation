@@ -76,6 +76,7 @@ document.getElementsByClassName('fill-graph')[0].addEventListener('click', () =>
 	graph.fillGraph()
 	deactivateButton('fill-graph')
 	activateButton('show-graph')
+	activateButton('fill-auditoriums-vertexes')
 })
 
 document.getElementsByClassName('show-graph')[0].addEventListener('click', () => {
@@ -99,6 +100,26 @@ document.getElementsByClassName('get-way')[0].addEventListener('click', () => {
 	outputContent += `<br>Длина: ${wayAndDistance.distance}`
 	
 	let $output = document.getElementsByClassName('output-found-way')[0]
+	$output.innerHTML = outputContent
+	
+	
+})
+
+document.querySelector('.build-way').addEventListener('click', () => {
+	let idVertex1 = graph.auditoriumsVertexesMap.get(planHandler.fromId)
+	let idVertex2 = graph.auditoriumsVertexesMap.get(planHandler.toId)
+	console.log(idVertex1, graph.auditoriumsVertexesMap)
+	
+	let wayAndDistance = graph.getShortestWayFromTo(idVertex1, idVertex2)
+	
+	let outputContent = ''
+	wayAndDistance.way.forEach(vertexId => {
+		outputContent += `→ ${vertexId} `
+	})
+	outputContent = outputContent.substring(2)
+	outputContent += `<br>Длина: ${wayAndDistance.distance}`
+	
+	let $output = document.getElementsByClassName('output-way-between-au')[0]
 	$output.innerHTML = outputContent
 	
 	
