@@ -29,12 +29,16 @@ class Edge {
 }
 
 export class Graph {
-	constructor() {
-		this.vertexes = [] //список вершин
-		this.vertexIdIterator = 0 //итератор для вершин в списке
-		this.rawEdges = [] //сырой список рёбер со свойствами
-		this.edges = []
+	constructor($graphObject) {
+		this.$graphObject = $graphObject
 	}
+	
+	vertexes = [] //список вершин
+	vertexIdIterator = 0 //итератор для вершин в списке
+	rawEdges = [] //сырой список рёбер со свойствами
+	edges = []
+	$graphObject
+	auditoriumsVertexesMap = new Map()
 	
 	hasVertexByXY(x, y) {
 		for (let vertex of this.vertexes) if ((vertex.x === x) && (vertex.y === y)) {
@@ -43,9 +47,9 @@ export class Graph {
 		return false
 	} //есть ли вершина в списке по координатам
 	
-	addVertexByXY(x, y) {
+	addVertexByXY(x, y, type = '') {
 		if (!this.hasVertexByXY(x, y)) {
-			this.vertexes.push(new Vertex(x, y, String(this.vertexIdIterator)))
+			this.vertexes.push(new Vertex(x, y, String(this.vertexIdIterator), type))
 			this.vertexIdIterator ++
 		}
 	}
@@ -74,8 +78,8 @@ export class Graph {
 		}
 	}
 	
-	tracing($tableOfEdges, $svgGraphContent) { //трассировка - парсинг путей и добавление их в таблицу
-		let allPaths = $svgGraphContent.getElementsByTagName('path') //все path на картинке
+	tracing($tableOfEdges) { //трассировка - парсинг путей и добавление их в таблицу
+		let allPaths = this.$graphObject.contentDocument.getElementsByTagName('path') //все path на картинке
 		
 		function getGraphPaths() {
 			let paths = []
@@ -186,31 +190,11 @@ export class Graph {
 	} // трассировка: по элементам свг-картинки графа делает сырой список рёбер и заносит их в таблицу, записывает в
       // rawEdges ребра со свойствами
 	
-	createVertexesList($mapContent) {
+	createVertexesList() {
 		for (let rawEdge of this.rawEdges) {
-			this.addVertexByXY(rawEdge.x1, rawEdge.y1)
-			this.addVertexByXY(rawEdge.x2, rawEdge.y2)
+			this.addVertexByXY(rawEdge.x1, rawEdge.y1, 'hallway')
+			this.addVertexByXY(rawEdge.x2, rawEdge.y2, 'hallway')
 		}
-		
-		
-		let circlesOnMap = $mapContent.getElementsByTagName('circle');
-		console.group('Входы в аудитории: ')
-		for (let $el of circlesOnMap) {
-			if ($el.getAttribute('fill')) {
-				let x = Number($el.getAttribute('cx'))
-				let y = Number($el.getAttribute('cy'))
-				
-				let vertexEntrance = this.getVertexByXY(x, y)
-				vertexEntrance.type = 'entranceToAu'
-				
-				/*
-				Сюда добавить обработку ассоциации с аудиторией
-				 */
-				
-				console.log(x, y, vertexEntrance)
-			}
-		}
-		console.groupEnd()
 		console.table(this.vertexes)
 	}
 	
@@ -248,14 +232,16 @@ export class Graph {
 		console.groupEnd()
 	}
 	
-	showGraph($mapObjects) {
+	showGraph() {
+		let $wrapper = this.$graphObject.parentElement
+		
 		for (let vertex of this.vertexes) {
 			let $idEl = document.createElement('div')
 			$idEl.classList.add('vertex-id')
 			$idEl.style.left = `${vertex.x}px`
 			$idEl.style.top = `${vertex.y}px`
 			$idEl.innerText = vertex.id
-			$mapObjects.appendChild($idEl)
+			$wrapper.appendChild($idEl)
 		}
 		
 		for (let edge of this.edges) {
@@ -269,7 +255,7 @@ export class Graph {
 			$idEl.style.top = `${top}px`
 			// $idEl.innerHTML = edge.id.replace('Vector ', '')+'<br>'+edge.weight
 			$idEl.innerHTML = edge.weight
-			$mapObjects.appendChild($idEl)
+			$wrapper.appendChild($idEl)
 		}
 	}
 	
@@ -337,6 +323,19 @@ export class Graph {
 			way: ways.get(idVertex2),
 			distance: distances.get(idVertex2)
 		}
+	}
+	
+	fillAuditoriumsVertexes(auditoriumsEntrances, $planDocument) {
+		for(const [auditoriumID, entranceID] of auditoriumsEntrances){
+			let $entrance = $planDocument.getElementById(entranceID)
+			let cx = Number($entrance.getAttribute('cx'))
+			let cy = Number($entrance.getAttribute('cy'))
+			let vertex = this.getVertexByXY(cx, cy)
+			vertex.type = 'entrancesToAu'
+			this.auditoriumsVertexesMap.set(auditoriumID, vertex.id)
+		}
+		console.log('Вершины аудиторий')
+		console.log(this.auditoriumsVertexesMap)
 	}
 }
 

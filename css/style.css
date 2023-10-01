@@ -6,6 +6,11 @@
 	font-family: "Segoe UI", sans-serif;
 	border: 0;
 	vertical-align: baseline;
+
+}
+
+:root {
+	--backround-color: #232323;
 }
 
 *, *::before, *::after {
@@ -15,7 +20,7 @@
 body {
 	width: 100vw;
 	height: 100vh;
-	background-color: #232323;
+	background-color: var(--backround-color);
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -49,24 +54,25 @@ body {
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	gap: 20px;
+	gap: 10px;
 	width: 150px;
 }
 
 .button {
+	cursor: pointer;
 	font-size: inherit;
-	border-radius:14px;
+	border-radius: 14px;
 	background-color: #232323;
 	text-decoration: none;
 	width: 100%;
 	color: #D9D9D9;
 	padding: 4px 12px 4px 12px;
-	border:2px solid #575764;
+	border: 2px solid #575764;
 	transition: all .2s ease;
 }
 
 .button:hover {
-	border:2px solid #D9D9D9;
+	border: 2px solid #D9D9D9;
 	background-color: #3B3C41;
 }
 
@@ -129,7 +135,8 @@ table tr:not(thead>tr) {
 .select-points {
 	display: flex;
 	flex-direction: column;
-	gap: 10px;
+	gap: 5px;
+	width: 90%;
 }
 
 .point-input {
@@ -144,7 +151,7 @@ input {
 	font-size: inherit;
 	background-color: inherit;
 	border-radius: 7px;
-	border:2px solid #575764;
+	border: 2px solid #575764;
 	padding: 4px 6px 4px 6px;
 	/*width: 50%;*/
 	width: 50%;
@@ -152,4 +159,70 @@ input {
 
 .output-found-way {
 	font-weight: 500;
+}
+
+.selector {
+	position: absolute;
+	z-index: 10;
+	display: none;
+	/*display: flex;*/
+	flex-direction: column;
+	gap: 10px;
+	padding: 10px;
+	background: #20222DAA;
+	border-radius: 10px;
+	border: 2px solid var(--backround-color);
+	width: 125px;
+}
+
+
+.hidden-selector {
+	animation: hide-selector .25s ease forwards;
+	display: flex;
+}
+
+.showing-selector {
+	animation: show-selector .25s ease forwards;
+	display: flex;
+}
+
+@keyframes show-selector {
+	0% {
+		transform: translateY(6px);
+		opacity: 0;
+	}
+	99% {
+		transform: translateY(0);
+		opacity: 1;
+		visibility: hidden;
+	}
+	100% {
+		visibility: visible;
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+@keyframes hide-selector {
+	0% {
+		transform: translateY(0);
+		opacity: 1;
+	}
+	99% {
+		transform: translateY(6px);
+		opacity: 0;
+		visibility: visible;
+	}
+	100% {
+		visibility: hidden;
+		transform: translateY(6px);
+		opacity: 0;
+	}
+}
+
+.from-img {
+	background: url(../resources/img/from.svg);
+	width: 22px;
+	height: 21px;
+	display: inline-block;
 }

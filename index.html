@@ -9,6 +9,7 @@
 	<script src="./js/app.js" defer type="module"></script>
 	<script type="module" defer>
 	  import {graph, planHandler} from "./js/app.js";
+	  
 	  window.planHandler = planHandler
 	  window.graph = graph
 	</script>
@@ -18,6 +19,15 @@
 	<div class="map-objects">
 		<object type="image/svg+xml" class="graph" title="graph"></object>
 		<object type="image/svg+xml" class="plan" title="plan"></object>
+		<div class="selector">
+			<div class="from button">
+				<img src="resources/img/from.svg" alt=""/>
+				Отсюда
+			</div>
+			<div class="to button">
+				<img src="resources/img/to.svg" alt=""/>
+				Сюда</div>
+		</div>
 	</div>
 	<div class="menu">
 		<!--		<button class="change-map button non-active-button" onclick="change()">Поменять</button>-->
@@ -36,9 +46,10 @@
 				<label for="input-idPoint2">Точка 2:</label>
 				<input class="" type="text" name="idPoint2" id="input-idPoint2">
 			</div>
-			<button class="get-way button non-active-button">Найти маршрут</button>
+			<button class="get-way button">Проложить</button>
 			<p class="output-found-way"></p>
 		</div>
+		<button class="fill-auditoriums-vertexes button">Список вершин аудиторий</button>
 	</div>
 	<table>
 		<caption>Список рёбер</caption>

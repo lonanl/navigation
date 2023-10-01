@@ -5,15 +5,18 @@ import {Settings} from './Settings.js'
 //обработчик карты, передаем объект содержащий карту
 export let planHandler = new PlanHandler(document.querySelector('.plan'))
 planHandler.$planObject.data = Settings.planName
-planHandler.$planWrapper = document.getElementsByClassName('map-objects')[0]
+planHandler.setSelectorElements(document.querySelector('.selector'))
+
 
 planHandler.$planObject.addEventListener('load', () => { //при загрузке плана
 	console.log('план загружен')
 	planHandler.onPlanLoad()
 })
 
-// let $mapContent, auditoriums, points //головной элемент документа карты, аудитории на карте, точки на карте
+export let graph = new Graph(document.querySelector('.graph'))
+graph.$graphObject.data = Settings.graphName
 
+let $tableOfEdge = document.getElementsByClassName('list-of-edges')[0]
 
 function eraseTable($tableOfEdge, $svgGraph) { //стирание таблицы и восстановление плана
 	while ($tableOfEdge.hasChildNodes()) $tableOfEdge.firstChild.remove()
@@ -29,16 +32,10 @@ export function deactivateButton(buttonClassName) {
 }
 
 
-export let graph = new Graph()
-let $graphObject = document.getElementsByClassName('graph')[0]
-$graphObject.data = Settings.graphName
 
 
 document.getElementsByClassName('tracing')[0].addEventListener('click', () => {
-	let $tableOfEdge = document.getElementsByClassName('list-of-edges')[0];
-	let $svgGraphContent = $graphObject.contentDocument;
-	
-	graph.tracing($tableOfEdge, $svgGraphContent)
+	graph.tracing($tableOfEdge)
 	
 	deactivateButton('tracing')
 	activateButton('erase')
@@ -50,7 +47,7 @@ document.getElementsByClassName('erase')[0].addEventListener('click', () => {
 	let $svgGraph = document.getElementsByClassName('graph')[0];
 	
 	eraseTable($tableOfEdge, $svgGraph)
-	graph = new Graph()
+	graph = new Graph(document.querySelector('.graph'))
 	graph.rawEdges = []
 	
 	let $mapObjects = document.getElementsByClassName('map-objects')[0]
@@ -67,7 +64,7 @@ document.getElementsByClassName('erase')[0].addEventListener('click', () => {
 })
 
 document.getElementsByClassName('create-list-of-vertexes')[0].addEventListener('click', () => {
-	graph.createVertexesList(planHandler.$planDocument)
+	graph.createVertexesList()
 	deactivateButton('create-list-of-vertexes')
 	deactivateButton('create-list-of-vertexes')
 	activateButton('fill-graph')
@@ -80,7 +77,7 @@ document.getElementsByClassName('fill-graph')[0].addEventListener('click', () =>
 })
 
 document.getElementsByClassName('show-graph')[0].addEventListener('click', () => {
-	graph.showGraph(planHandler.$planWrapper)
+	graph.showGraph()
 	
 	deactivateButton('show-graph')
 	activateButton('get-way')
@@ -105,22 +102,27 @@ document.getElementsByClassName('get-way')[0].addEventListener('click', () => {
 	
 })
 
+document.getElementsByClassName('fill-auditoriums-vertexes')[0].addEventListener('click', () => {
+	graph.fillAuditoriumsVertexes(Settings.auditoriumsEntrances, planHandler.$planDocument)
+})
+
 //////временно
 setTimeout(() => {
-	// let $tableOfEdge = document.getElementsByClassName('list-of-edges')[0];
-	// let $svgGraphContent = document.getElementsByClassName('graph')[0].contentDocument;
-	// graph.tracing($tableOfEdge, $svgGraphContent)
+	// graph.tracing($tableOfEdge)
 	//
 	// deactivateButton('tracing')
 	// activateButton('erase')
 	// activateButton('create-list-of-vertexes')
 	// activateButton('show-graph')
 	//
-	// graph.createVertexesList($mapContent)
+	// graph.createVertexesList()
 	//
 	// graph.fillGraph()
 	//
-	// graph.getShortestWayFromTo('7','8')
+	// console.log(graph.getShortestWayFromTo('7','8'))
+	// graph.showGraph()
+	// graph.fillAuditoriumsVertexes(Settings.auditoriumsEntrances, planHandler.$planDocument)
+	
 	
 }, 200)
 
