@@ -34,16 +34,6 @@ export function deactivateButton(buttonClassName) {
 }
 
 
-
-
-document.querySelector('.tracing').addEventListener('click', () => {
-	graph.tracing($tableOfEdge)
-	
-	deactivateButton('tracing')
-	activateButton('erase')
-	activateButton('create-list-of-vertexes')
-})
-
 document.querySelector('.erase').addEventListener('click', () => {
 	let $tableOfEdge = document.getElementsByClassName('list-of-edges')[0];
 	let $svgGraph = document.getElementsByClassName('graph')[0];
@@ -65,6 +55,14 @@ document.querySelector('.erase').addEventListener('click', () => {
 	deactivateButton('create-list-of-vertexes')
 })
 
+document.querySelector('.tracing').addEventListener('click', () => {
+	graph.tracing($tableOfEdge)
+	
+	deactivateButton('tracing')
+	activateButton('erase')
+	activateButton('create-list-of-vertexes')
+})
+
 document.querySelector('.create-list-of-vertexes').addEventListener('click', () => {
 	graph.createVertexesList()
 	deactivateButton('create-list-of-vertexes')
@@ -77,6 +75,12 @@ document.querySelector('.fill-graph').addEventListener('click', () => {
 	deactivateButton('fill-graph')
 	activateButton('show-graph')
 	activateButton('fill-auditoriums-vertexes')
+})
+
+document.querySelector('.fill-auditoriums-vertexes').addEventListener('click', () => {
+	graph.fillAuditoriumsVertexes(Settings.auditoriumsEntrances, planHandler.$planDocument)
+	deactivateButton('fill-auditoriums-vertexes')
+	activateButton('build-way')
 })
 
 document.querySelector('.show-graph').addEventListener('click', () => {
@@ -125,28 +129,11 @@ document.querySelector('.build-way').addEventListener('click', () => {
 	
 })
 
-document.getElementsByClassName('fill-auditoriums-vertexes')[0].addEventListener('click', () => {
-	graph.fillAuditoriumsVertexes(Settings.auditoriumsEntrances, planHandler.$planDocument)
-	deactivateButton('fill-auditoriums-vertexes')
-	activateButton('build-way')
-})
-
 //////временно
 setTimeout(() => {
-	// graph.tracing($tableOfEdge)
-	//
-	// deactivateButton('tracing')
-	// activateButton('erase')
-	// activateButton('create-list-of-vertexes')
-	// activateButton('show-graph')
-	//
-	// graph.createVertexesList()
-	//
-	// graph.fillGraph()
-	//
-	// console.log(graph.getShortestWayFromTo('7','8'))
-	// graph.showGraph()
-	// graph.fillAuditoriumsVertexes(Settings.auditoriumsEntrances, planHandler.$planDocument)
-	
-	
+	document.querySelector('.tracing').click()
+	document.querySelector('.create-list-of-vertexes').click()
+	document.querySelector('.fill-graph').click()
+	document.querySelector('.fill-auditoriums-vertexes').click()
+	document.querySelector('.show-graph').click()
 }, 200)
