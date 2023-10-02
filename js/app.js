@@ -129,7 +129,9 @@ document.querySelector('.build-way').addEventListener('click', () => {
 	
 })
 
-//////временно
+/*
+Это потом убрать
+ */
 setTimeout(() => {
 	document.querySelector('.tracing').click()
 	document.querySelector('.create-list-of-vertexes').click()
