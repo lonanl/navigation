@@ -133,9 +133,9 @@ document.querySelector('.build-way').addEventListener('click', () => {
 Это потом убрать
  */
 setTimeout(() => {
-	document.querySelector('.tracing').click()
-	document.querySelector('.create-list-of-vertexes').click()
-	document.querySelector('.fill-graph').click()
-	document.querySelector('.fill-auditoriums-vertexes').click()
-	document.querySelector('.show-graph').click()
+	// document.querySelector('.tracing').click()
+	// document.querySelector('.create-list-of-vertexes').click()
+	// document.querySelector('.fill-graph').click()
+	// document.querySelector('.fill-auditoriums-vertexes').click()
+	// document.querySelector('.show-graph').click()
 }, 200)
