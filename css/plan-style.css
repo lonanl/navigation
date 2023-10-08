@@ -3,6 +3,13 @@
 	transition: fill .25s ease, fill-opacity .25s ease;
 }
 
+@font-face {
+	font-family: GothamSSm;
+	src: url(../resources/fonts/GothamXNarrow-Bold.woff2);
+	font-weight: bold;
+	font-style: normal;
+}
+
 /*noinspection ALL,CssUnusedSymbol*/
 .auditorium:hover:not(.selected) {
 	fill: #3D4356;

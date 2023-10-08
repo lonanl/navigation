@@ -10,12 +10,12 @@ export class PlanHandler {
 	$planDocument //содержимое документа плана
 	auditoriums = new Map() //map ид-аудитории: dom-элемент аудитории
 	entrances = new Map() //map ид-входа: dom-элемент входа
-	$selector
-	$fromInput
-	$toInput
-	$bFrom
-	$bTo
-	currentAuId
+	$selector //элемент выбора аудиторий старта и финиша
+	$fromInput //текстовое поле "откуда"
+	$toInput  //текстовое поле "куда"
+	$bFrom //кнопка "отсюда"
+	$bTo //кнопка "сюда"
+	currentAuId //
 	fromId
 	toId
 	
