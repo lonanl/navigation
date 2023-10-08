@@ -1,13 +1,14 @@
 import {Graph} from './Graph.js';
 import {PlanHandler} from './PlanHandler.js'
 import {Settings} from './Settings.js'
+import {Way} from './Way.js'
 
 //обработчик карты, передаем объект содержащий карту
 export let planHandler = new PlanHandler(document.querySelector('.plan'))
 planHandler.$planObject.data = Settings.planName
 planHandler.setSelectorElements(document.querySelector('.selector'),
-document.querySelector('.button-from'),
-document.querySelector('.button-to'))
+	document.querySelector('.button-from'),
+	document.querySelector('.button-to'))
 
 
 planHandler.$planObject.addEventListener('load', () => { //при загрузке плана
@@ -17,6 +18,8 @@ planHandler.$planObject.addEventListener('load', () => { //при загрузк
 
 export let graph = new Graph(document.querySelector('.graph'))
 graph.$graphObject.data = Settings.graphName
+
+export let way = new Way(document.querySelector('.svg-way'))
 
 let $tableOfEdge = document.getElementsByClassName('list-of-edges')[0]
 
@@ -112,7 +115,6 @@ document.querySelector('.get-way').addEventListener('click', () => {
 document.querySelector('.build-way').addEventListener('click', () => {
 	let idVertex1 = graph.auditoriumsVertexesMap.get(planHandler.fromId)
 	let idVertex2 = graph.auditoriumsVertexesMap.get(planHandler.toId)
-	console.log(idVertex1, graph.auditoriumsVertexesMap)
 	
 	let wayAndDistance = graph.getShortestWayFromTo(idVertex1, idVertex2)
 	
@@ -125,17 +127,22 @@ document.querySelector('.build-way').addEventListener('click', () => {
 	
 	let $output = document.getElementsByClassName('output-way-between-au')[0]
 	$output.innerHTML = outputContent
-	
+	way.build(graph, wayAndDistance)
 	
 })
+
+document.querySelector('.hide-graph').addEventListener('click', () => {
+	graph.$graphObject.setAttribute('style', 'visibility: hidden')
+})
+
 
 /*
 Это потом убрать
  */
 setTimeout(() => {
-	// document.querySelector('.tracing').click()
-	// document.querySelector('.create-list-of-vertexes').click()
-	// document.querySelector('.fill-graph').click()
-	// document.querySelector('.fill-auditoriums-vertexes').click()
+	document.querySelector('.tracing').click()
+	document.querySelector('.create-list-of-vertexes').click()
+	document.querySelector('.fill-graph').click()
+	document.querySelector('.fill-auditoriums-vertexes').click()
 	// document.querySelector('.show-graph').click()
 }, 200)

@@ -243,3 +243,24 @@ input {
 #input-to, #input-from {
 	pointer-events: none;
 }
+
+.svg-way {
+	position: absolute;
+	top: 0;
+	left: 0;
+	pointer-events: none;
+	z-index: 1;
+}
+
+.svg-way path {
+	/*stroke-dashoffset: 468;*/
+	/*stroke-dasharray: 468;*/
+	animation: draw-way 1s ease-in-out forwards;
+}
+
+
+@keyframes draw-way {
+	100% {
+		stroke-dashoffset: 0;
+	}
+}

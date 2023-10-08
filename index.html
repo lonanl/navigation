@@ -17,6 +17,21 @@
 <body>
 <section class="section-main">
 	<div class="map-objects">
+		/*
+		Добавить динамическое изменение размера этой свгшки
+		*/
+		<svg class="svg-way" fill="none" height="514" width="514" xmlns="http://www.w3.org/2000/svg">
+			<defs>
+				<marker fill="none" id="end-arrow" orient="auto-start-reverse" refX="6" refY="6" viewBox="0 0 10 12">
+					<path d="M0 0L10 6L0 12L3 6L0 0Z" fill="#3CD288"/>
+				</marker>
+				
+				<!-- Dot marker definition -->
+				<marker id="start-dot" refX="5" refY="5" viewBox="0 0 10 10">
+					<circle cx="5" cy="5" fill="#3CD288" r="5"/>
+				</marker>
+			</defs>
+		</svg>
 		<object type="image/svg+xml" class="graph" title="graph"></object>
 		<object class="plan" style="visibility: hidden" title="plan" type="image/svg+xml"></object>
 		<div class="selector">
@@ -37,6 +52,7 @@
 		</button>
 		<button class="fill-graph button non-active-button">Заполнить граф</button>
 		<button class="fill-auditoriums-vertexes button non-active-button">Список вершин аудиторий</button>
+		<button class="hide-graph button">Скрыть граф</button>
 		<button class="show-graph button non-active-button">Показать граф</button>
 		<div class="select-points">
 			<div class="input-row">

@@ -7,8 +7,11 @@ export class Settings {
 	
 	static planStyleLink = '../css/plan-style.css' //путь к таблице стилей для плана
 	
-	static planName = 'resources/new-plan.svg'
-	static graphName = 'resources/new-graph.svg'
+	static planName = 'resources/new-plan.svg' //путь к плану
+	static graphName = 'resources/new-graph.svg' //путь к графу
+	
+	static wayColor = '#3CD288'
+	static wayWidth = '4px'
 }
 
 //ассоциации для сэмпла
