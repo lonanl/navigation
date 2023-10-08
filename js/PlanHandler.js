@@ -2,11 +2,6 @@ import {Settings} from "./Settings.js";
 import {activateButton, deactivateButton} from "./app.js";
 
 export class PlanHandler {
-	constructor($mapObject) {
-		this.$planObject = $mapObject //объект отображения плана
-		// this.$planWrapper = $mapObject.parentElement //внешний контейнер с картами
-	}
-	
 	$planDocument //содержимое документа плана
 	auditoriums = new Map() //map ид-аудитории: dom-элемент аудитории
 	entrances = new Map() //map ид-входа: dom-элемент входа
@@ -18,6 +13,11 @@ export class PlanHandler {
 	currentAuId //
 	fromId
 	toId
+	
+	constructor($mapObject) {
+		this.$planObject = $mapObject //объект отображения плана
+		// this.$planWrapper = $mapObject.parentElement //внешний контейнер с картами
+	}
 	
 	setSelectorElements($selector, $bFrom, $bTo) {
 		this.$selector = $selector
@@ -72,7 +72,11 @@ export class PlanHandler {
 		
 		let $svgPlan = this.$planDocument.getElementsByTagName('svg')[0]
 		$svgPlan.prepend(linkXmlToStylesheet)
-		console.log($svgPlan)
+		console.log()
+		
+		setTimeout(function () {
+			this.$planObject.style = 'visibility: visible'
+		}.bind(this), 20)
 		
 		let planElements = this.$planDocument.getElementsByTagName('*') //все элементы документа плана
 		for (const $el of planElements) { //если элемент это аудитория - добавляем в аудитории

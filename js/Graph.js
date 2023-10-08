@@ -29,16 +29,16 @@ class Edge {
 }
 
 export class Graph {
-	constructor($graphObject) {
-		this.$graphObject = $graphObject
-	}
-	
 	vertexes = [] //список вершин
 	vertexIdIterator = 0 //итератор для вершин в списке
 	rawEdges = [] //сырой список рёбер со свойствами
 	edges = []
 	$graphObject
 	auditoriumsVertexesMap = new Map()
+	
+	constructor($graphObject) {
+		this.$graphObject = $graphObject
+	}
 	
 	hasVertexByXY(x, y) {
 		for (let vertex of this.vertexes) if ((vertex.x === x) && (vertex.y === y)) {
