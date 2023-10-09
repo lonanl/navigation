@@ -15,20 +15,7 @@ export class Settings {
 }
 
 //ассоциации для сэмпла
-let auditoriumsEntrances = [
-	[
-		"pr1315",
-		"pr1315-v1"
-	],
-	[
-		"pr1309",
-		"pr1309-v1"
-	],
-	[
-		"pr1334",
-		"pr1334-v1"
-	]
-]
+let auditoriumsEntrances = []
 Settings.auditoriumsEntrances = new Map(auditoriumsEntrances)
 
 let auditoriumsRusNames = [

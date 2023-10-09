@@ -81,7 +81,7 @@ document.querySelector('.fill-graph').addEventListener('click', () => {
 })
 
 document.querySelector('.fill-auditoriums-vertexes').addEventListener('click', () => {
-	graph.fillAuditoriumsVertexes(Settings.auditoriumsEntrances, planHandler.$planDocument)
+	graph.fillAuditoriumsVertexes(planHandler.AuditoriumsIdEntrancesId, planHandler.$planDocument)
 	deactivateButton('fill-auditoriums-vertexes')
 	activateButton('build-way')
 })

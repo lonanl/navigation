@@ -5,6 +5,7 @@ export class PlanHandler {
 	$planDocument //содержимое документа плана
 	auditoriums = new Map() //map ид-аудитории: dom-элемент аудитории
 	entrances = new Map() //map ид-входа: dom-элемент входа
+	AuditoriumsIdEntrancesId = new Map() //ассоциация айдишников аудиторий и входов
 	$selector //элемент выбора аудиторий старта и финиша
 	$fromInput //текстовое поле "откуда"
 	$toInput  //текстовое поле "куда"
@@ -92,6 +93,31 @@ export class PlanHandler {
 			}
 		}
 		
+		
+		function isEntranceOfAuditorium($entrance, $auditorium) {
+			let cx = Number($entrance.getAttribute('cx'))
+			let cy = Number($entrance.getAttribute('cy'))
+			let x = Number($auditorium.getAttribute('x'))
+			let y = Number($auditorium.getAttribute('y'))
+			let width = Number($auditorium.getAttribute('width'))
+			let height = Number($auditorium.getAttribute('height'))
+			return (cx >= x && cx <= x + width && cy >= y && cy <= y + height)
+		}
+		
+		for (const [auditoriumId, $auditorium] of this.auditoriums) {
+			if ($auditorium.tagName !== 'rect') {
+				this.AuditoriumsIdEntrancesId.set(auditoriumId, Settings.auditoriumsEntrances.get(auditoriumId))
+			}
+			else {
+				for (const [entranceId, $entrance] of this.entrances) {
+					if (isEntranceOfAuditorium($entrance, $auditorium)) {
+						this.AuditoriumsIdEntrancesId.set(auditoriumId, entranceId)
+					}
+				}
+			}
+		}
+		console.log(this.AuditoriumsIdEntrancesId)
+		
 		for (const [auId, $au] of this.auditoriums) { //для каждой аудитории поставить слушатель клика
 			$au.addEventListener('mousedown', event => this.onAuditoriumClicked(auId, event))
 		}
@@ -104,7 +130,7 @@ export class PlanHandler {
 			else $auditorium.classList.toggle('selected')
 		}
 		
-		let clickedAuditoriumEntranceId = Settings.auditoriumsEntrances.get(clickedAuId) //ид входа в нажатую аудиторию
+		let clickedAuditoriumEntranceId = this.AuditoriumsIdEntrancesId.get(clickedAuId) //ид входа в нажатую аудиторию
 		for (const [entranceID, $entrance] of this.entrances) {
 			if (entranceID !== clickedAuditoriumEntranceId) $entrance.classList.remove('selected-entrance')
 			else $entrance.classList.toggle('selected-entrance')
@@ -126,9 +152,9 @@ export class PlanHandler {
 				planHandler.$selector.classList.remove('hidden-selector')
 				planHandler.$selector.classList.add('showing-selector')
 				this.currentAuId = clickedAuId
-				if(this.currentAuId === this.fromId) deactivateButton('button-from')
+				if (this.currentAuId === this.fromId) deactivateButton('button-from')
 				else activateButton('button-from')
-				if(this.currentAuId === this.toId) deactivateButton('button-to')
+				if (this.currentAuId === this.toId) deactivateButton('button-to')
 				else activateButton('button-to')
 			}, 20, this)
 		}
