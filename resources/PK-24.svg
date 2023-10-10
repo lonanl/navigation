@@ -70,7 +70,7 @@
             <path id="Subtract_5" fill-rule="evenodd" clip-rule="evenodd"
                   d="M1939 917V907H1576V917H1939ZM1984 917H2006V907H1984V917Z" fill="#D9D9D9"/>
             <path id="Vector 36" d="M566 215H404" stroke="#D9D9D9" stroke-width="10"/>
-            <path id="Vector 47" d="M146 888V1072" stroke="#D9D9D9" stroke-width="10"/>
+            <path id="Vector 47" d="M146 888V1072" stroke="#D9D9D9" stroke-width="6"/>
             <path id="Vector 50" d="M871 792V1052H917.5V1112" stroke="#D9D9D9" stroke-width="10"/>
             <path id="Subtract_6" fill-rule="evenodd" clip-rule="evenodd"
                   d="M969 787H836V797H969V787ZM1014 797H1166V787H1014V797ZM756 787H791V797H761V1112H751V792V787H756Z"
@@ -78,7 +78,7 @@
             <path id="Subtract_7" fill-rule="evenodd" clip-rule="evenodd"
                   d="M366 912H321V922H366V912ZM411 922H756V912H411V922Z" fill="#D9D9D9"/>
             <path id="Subtract_8" fill-rule="evenodd" clip-rule="evenodd"
-                  d="M63 883H7V893H63V883ZM93 893H218V883H93V893ZM321 893H248V883H321V893Z" fill="#D9D9D9"/>
+                  d="M63 885H7V891H63V885ZM93 891H218V885H93V891ZM321 891H248V885H321V891Z" fill="#D9D9D9"/>
             <path id="Subtract_9" fill-rule="evenodd" clip-rule="evenodd"
                   d="M316 872V1112H326V872H316ZM316 827H326V511H316V827ZM316 466H326V407H316V466ZM316 362V87H326V362H316Z"
                   fill="#D9D9D9"/>
@@ -135,8 +135,8 @@
                   font-size="24" font-weight="bold" letter-spacing="0em"><tspan x="32.2148" y="989.62">&#x41f;&#x41a; 2417&#x410;</tspan></text>
         </g>
         <g id="Components">
-            <g id="Group 7">
-                <g id="Component 1">
+            <g id="&#208;&#155;&#208;&#181;&#209;&#129;&#209;&#130;&#208;&#189;&#208;&#184;&#209;&#134;&#208;&#176;">
+                <g id="&#208;&#146;&#208;&#178;&#208;&#181;&#209;&#128;&#209;&#133;">
                     <path id="Vector 54" d="M1144 595H1134V605H1124V615H1109" stroke="#D9D9D9" stroke-width="2"/>
                     <g id="Group 6">
                         <path id="Vector 55" d="M1142 579L1118 603" stroke="url(#paint0_linear_147_290)"
@@ -144,7 +144,7 @@
                         <path id="Vector 56" d="M1144 577L1133 582H1138L1139 583V588L1144 577Z" fill="#D9D9D9"/>
                     </g>
                 </g>
-                <g id="Component 2">
+                <g id="&#208;&#146;&#208;&#189;&#208;&#184;&#208;&#183;">
                     <path id="Vector 54_2" d="M1166 615H1176V605H1186V595H1201" stroke="#D9D9D9" stroke-width="2"/>
                     <g id="Group 5">
                         <path id="Vector 55_2" d="M1168 601L1192 577" stroke="url(#paint1_linear_147_290)"
@@ -154,8 +154,8 @@
                 </g>
                 <path id="Vector 57" d="M1155 539V657" stroke="#D9D9D9" stroke-width="2"/>
             </g>
-            <g id="Group 7/Variant2">
-                <g id="Component 1_2">
+            <g id="&#208;&#155;&#208;&#181;&#209;&#129;&#209;&#130;&#208;&#189;&#208;&#184;&#209;&#134;&#208;&#176;_2">
+                <g id="&#208;&#146;&#208;&#178;&#208;&#181;&#209;&#128;&#209;&#133;_2">
                     <path id="Vector 54_3" d="M1792 674H1782V684H1772V694H1757" stroke="#D9D9D9" stroke-width="2"/>
                     <g id="Group 6_2">
                         <path id="Vector 55_3" d="M1790 658L1766 682" stroke="url(#paint2_linear_147_290)"
@@ -163,7 +163,7 @@
                         <path id="Vector 56_3" d="M1792 656L1781 661H1786L1787 662V667L1792 656Z" fill="#D9D9D9"/>
                     </g>
                 </g>
-                <g id="Component 2_2">
+                <g id="&#208;&#146;&#208;&#189;&#208;&#184;&#208;&#183;_2">
                     <path id="Vector 54_4" d="M1757 748H1767V738H1777V728H1792" stroke="#D9D9D9" stroke-width="2"/>
                     <g id="Group 5_2">
                         <path id="Vector 55_4" d="M1759 734L1783 710" stroke="url(#paint3_linear_147_290)"
@@ -173,8 +173,8 @@
                 </g>
                 <path id="Vector 57_2" d="M1859 702L1690 702" stroke="#D9D9D9" stroke-width="2"/>
             </g>
-            <g id="Group 7/Variant2_2">
-                <g id="Component 1_3">
+            <g id="&#208;&#155;&#208;&#181;&#209;&#129;&#209;&#130;&#208;&#189;&#208;&#184;&#209;&#134;&#208;&#176;_3">
+                <g id="&#208;&#146;&#208;&#178;&#208;&#181;&#209;&#128;&#209;&#133;_3">
                     <path id="Vector 54_5" d="M556 674H546V684H536V694H521" stroke="#D9D9D9" stroke-width="2"/>
                     <g id="Group 6_3">
                         <path id="Vector 55_5" d="M554 658L530 682" stroke="url(#paint4_linear_147_290)"
@@ -182,7 +182,7 @@
                         <path id="Vector 56_5" d="M556 656L545 661H550L551 662V667L556 656Z" fill="#D9D9D9"/>
                     </g>
                 </g>
-                <g id="Component 2_3">
+                <g id="&#208;&#146;&#208;&#189;&#208;&#184;&#208;&#183;_3">
                     <path id="Vector 54_6" d="M521 748H531V738H541V728H556" stroke="#D9D9D9" stroke-width="2"/>
                     <g id="Group 5_3">
                         <path id="Vector 55_6" d="M523 734L547 710" stroke="url(#paint5_linear_147_290)"
@@ -192,8 +192,8 @@
                 </g>
                 <path id="Vector 57_3" d="M623 702L454 702" stroke="#D9D9D9" stroke-width="2"/>
             </g>
-            <g id="Group 7/Variant2_3">
-                <g id="Component 1_4">
+            <g id="&#208;&#155;&#208;&#181;&#209;&#129;&#209;&#130;&#208;&#189;&#208;&#184;&#209;&#134;&#208;&#176;_4">
+                <g id="&#208;&#146;&#208;&#178;&#208;&#181;&#209;&#128;&#209;&#133;_4">
                     <path id="Vector 54_7" d="M1822 43H1812V53H1802V63H1787" stroke="#D9D9D9" stroke-width="2"/>
                     <g id="Group 6_4">
                         <path id="Vector 55_7" d="M1820 27L1796 51" stroke="url(#paint6_linear_147_290)"
@@ -201,7 +201,7 @@
                         <path id="Vector 56_7" d="M1822 25L1811 30H1816L1817 31V36L1822 25Z" fill="#D9D9D9"/>
                     </g>
                 </g>
-                <g id="Component 2_4">
+                <g id="&#208;&#146;&#208;&#189;&#208;&#184;&#208;&#183;_4">
                     <path id="Vector 54_8" d="M1787 117H1797V107H1807V97H1822" stroke="#D9D9D9" stroke-width="2"/>
                     <g id="Group 5_4">
                         <path id="Vector 55_8" d="M1789 103L1813 79" stroke="url(#paint7_linear_147_290)"
@@ -211,8 +211,8 @@
                 </g>
                 <path id="Vector 57_4" d="M1869 71L1741 71" stroke="#D9D9D9" stroke-width="2"/>
             </g>
-            <g id="Group 7/Variant2_4">
-                <g id="Component 1_5">
+            <g id="&#208;&#155;&#208;&#181;&#209;&#129;&#209;&#130;&#208;&#189;&#208;&#184;&#209;&#134;&#208;&#176;_5">
+                <g id="&#208;&#146;&#208;&#178;&#208;&#181;&#209;&#128;&#209;&#133;_5">
                     <path id="Vector 54_9" d="M530 123H520V133H510V143H495" stroke="#D9D9D9" stroke-width="2"/>
                     <g id="Group 6_5">
                         <path id="Vector 55_9" d="M528 107L504 131" stroke="url(#paint8_linear_147_290)"
@@ -220,7 +220,7 @@
                         <path id="Vector 56_9" d="M530 105L519 110H524L525 111V116L530 105Z" fill="#D9D9D9"/>
                     </g>
                 </g>
-                <g id="Component 2_5">
+                <g id="&#208;&#146;&#208;&#189;&#208;&#184;&#208;&#183;_5">
                     <path id="Vector 54_10" d="M495 197H505V187H515V177H530" stroke="#D9D9D9" stroke-width="2"/>
                     <g id="Group 5_5">
                         <path id="Vector 55_10" d="M497 183L521 159" stroke="url(#paint9_linear_147_290)"
