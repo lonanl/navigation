@@ -32,6 +32,10 @@
 	pointer-events: none;
 }
 
+text {
+	pointer-events: none;
+}
+
 /*.entrance:hover {*/
 /*	fill-opacity: 1;*/
 /*}*/

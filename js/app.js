@@ -144,5 +144,6 @@ setTimeout(() => {
 	document.querySelector('.create-list-of-vertexes').click()
 	document.querySelector('.fill-graph').click()
 	document.querySelector('.fill-auditoriums-vertexes').click()
+	document.querySelector('.hide-graph').click()
 	// document.querySelector('.show-graph').click()
 }, 200)

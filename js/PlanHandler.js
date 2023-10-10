@@ -52,6 +52,9 @@ export class PlanHandler {
 			this.fromId = this.currentAuId
 		}
 		this.onAuditoriumClicked(this.currentAuId, null)
+		if (this.fromId !== undefined && this.toId !== undefined) {
+			document.querySelector('.build-way').click()
+		}
 	}
 	
 	onBToClicked() {
@@ -63,6 +66,9 @@ export class PlanHandler {
 			this.toId = this.currentAuId
 		}
 		this.onAuditoriumClicked(this.currentAuId, null)
+		if (this.fromId !== undefined && this.toId !== undefined) {
+			document.querySelector('.build-way').click()
+		}
 	}
 	
 	onPlanLoad() { //при загрузки плана
@@ -105,7 +111,7 @@ export class PlanHandler {
 		}
 		
 		for (const [auditoriumId, $auditorium] of this.auditoriums) {
-			if ($auditorium.tagName !== 'rect') {
+			if (Settings.auditoriumsEntrances.get(auditoriumId) !== undefined) {
 				this.AuditoriumsIdEntrancesId.set(auditoriumId, Settings.auditoriumsEntrances.get(auditoriumId))
 			}
 			else {
