@@ -3,11 +3,11 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Navigation</title>
-	<link rel="stylesheet" href="css/style.css">
-	<link rel="shortcut icon" href="resources/icon.png" type="image/png">
+	<link href="css/style.css" rel="stylesheet">
+	<link href="resources/icon.png" rel="shortcut icon" type="image/png">
 	
-	<script src="./js/app.js" defer type="module"></script>
-	<script type="module" defer>
+	<script defer src="./js/app.js" type="module"></script>
+	<script defer type="module">
 	  import {graph, planHandler} from "./js/app.js";
 	  
 	  window.planHandler = planHandler
@@ -32,15 +32,15 @@
 				</marker>
 			</defs>
 		</svg>
-		<object type="image/svg+xml" class="graph" title="graph"></object>
+		<object class="graph" title="graph" type="image/svg+xml"></object>
 		<object class="plan" style="visibility: hidden" title="plan" type="image/svg+xml"></object>
 		<div class="selector">
 			<div class="button-from button">
-				<img src="resources/img/from.svg" alt=""/>
+				<img alt="" src="resources/img/from.svg"/>
 				Отсюда
 			</div>
 			<div class="button-to button">
-				<img src="resources/img/to.svg" alt=""/>
+				<img alt="" src="resources/img/to.svg"/>
 				Сюда
 			</div>
 		</div>
@@ -57,11 +57,11 @@
 		<div class="select-points">
 			<div class="input-row">
 				<label for="input-idPoint1">1:</label>
-				<input class="" type="text" name="idPoint1" id="input-idPoint1">
+				<input class="" id="input-idPoint1" name="idPoint1" type="text">
 			</div>
 			<div class="input-row">
 				<label for="input-idPoint2">2:</label>
-				<input class="" type="text" name="idPoint2" id="input-idPoint2">
+				<input class="" id="input-idPoint2" name="idPoint2" type="text">
 			</div>
 			<button class="get-way button">Проложить</button>
 			<p class="output-found-way"></p>
@@ -69,12 +69,12 @@
 		
 		<div class="selector-auditoriums">
 			<div class="input-row">
-				<label for="input-from"><img src="resources/img/from.svg" alt=""/></label>
-				<input type="text" name="input-from" id="input-from" placeholder="Откуда">
+				<label for="input-from"><img alt="" src="resources/img/from.svg"/></label>
+				<input id="input-from" name="input-from" placeholder="Откуда" type="text">
 			</div>
 			<div class="input-row">
-				<label for="input-to"><img src="resources/img/to.svg" alt=""/></label>
-				<input type="text" name="input-to" id="input-to" placeholder="Куда">
+				<label for="input-to"><img alt="" src="resources/img/to.svg"/></label>
+				<input id="input-to" name="input-to" placeholder="Куда" type="text">
 			</div>
 			<button class="build-way button non-active-button">Построить</button>
 			<p class="output-way-between-au"></p>

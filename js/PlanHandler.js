@@ -19,7 +19,64 @@ export class PlanHandler {
 		this.$planObject = $mapObject //объект отображения плана
 		// this.$planWrapper = $mapObject.parentElement //внешний контейнер с картами
 	}
-	
+
+	onPlanLoad() { //при загрузки плана
+		this.$planDocument = this.$planObject.contentDocument
+
+		let linkXmlToStylesheet = document.createElement('style') //тэг для задания стиля в свг
+		linkXmlToStylesheet.innerHTML = `@import url(${Settings.planStyleLink});`
+
+		let $svgPlan = this.$planDocument.getElementsByTagName('svg')[0]
+		$svgPlan.prepend(linkXmlToStylesheet)
+		console.log()
+
+		setTimeout(function () {
+			this.$planObject.style = 'visibility: visible'
+		}.bind(this), 20)
+
+		let planElements = this.$planDocument.getElementsByTagName('*') //все элементы документа плана
+		for (const $el of planElements) { //если элемент это аудитория - добавляем в аудитории
+			if (Settings.auditoriumsColors.includes($el.getAttribute('fill'))) {
+				this.auditoriums.set($el.id, $el)
+				$el.classList.add('auditorium') //и добавляем аудитории соответствующий класс, для подсветки
+			}
+			else if ($el.tagName === Settings.entrancesTag //если элемент - вход - добавляем в входы
+				&& Settings.entrancesColors.includes($el.getAttribute('fill'))) {
+				this.entrances.set($el.id, $el)
+				$el.classList.add('entrance') //и добавляем соответствующий класс для
+				$el.setAttribute('fill-opacity', '0')
+			}
+		}
+
+		function isEntranceOfAuditorium($entrance, $auditorium) {
+			let cx = Number($entrance.getAttribute('cx'))
+			let cy = Number($entrance.getAttribute('cy'))
+			let x = Number($auditorium.getAttribute('x'))
+			let y = Number($auditorium.getAttribute('y'))
+			let width = Number($auditorium.getAttribute('width'))
+			let height = Number($auditorium.getAttribute('height'))
+			return (cx >= x && cx <= x + width && cy >= y && cy <= y + height)
+		}
+
+		for (const [auditoriumId, $auditorium] of this.auditoriums) {
+			if (Settings.auditoriumsEntrances.get(auditoriumId) !== undefined) {
+				this.AuditoriumsIdEntrancesId.set(auditoriumId, Settings.auditoriumsEntrances.get(auditoriumId))
+			}
+			else {
+				for (const [entranceId, $entrance] of this.entrances) {
+					if (isEntranceOfAuditorium($entrance, $auditorium)) {
+						this.AuditoriumsIdEntrancesId.set(auditoriumId, entranceId)
+					}
+				}
+			}
+		}
+		console.log(this.AuditoriumsIdEntrancesId)
+
+		for (const [auId, $au] of this.auditoriums) { //для каждой аудитории поставить слушатель клика
+			$au.addEventListener('mousedown', event => this.onAuditoriumClicked(auId, event))
+		}
+	}
+
 	setSelectorElements($selector, $bFrom, $bTo) {
 		this.$selector = $selector
 		this.$selector.setAttribute('auID', '')
@@ -70,65 +127,6 @@ export class PlanHandler {
 			document.querySelector('.build-way').click()
 		}
 	}
-	
-	onPlanLoad() { //при загрузки плана
-		this.$planDocument = this.$planObject.contentDocument
-		
-		let linkXmlToStylesheet = document.createElement('style') //тэг для задания стиля в свг
-		linkXmlToStylesheet.innerHTML = `@import url(${Settings.planStyleLink});`
-		
-		let $svgPlan = this.$planDocument.getElementsByTagName('svg')[0]
-		$svgPlan.prepend(linkXmlToStylesheet)
-		console.log()
-		
-		setTimeout(function () {
-			this.$planObject.style = 'visibility: visible'
-		}.bind(this), 20)
-		
-		let planElements = this.$planDocument.getElementsByTagName('*') //все элементы документа плана
-		for (const $el of planElements) { //если элемент это аудитория - добавляем в аудитории
-			if (Settings.auditoriumsColors.includes($el.getAttribute('fill'))) {
-				this.auditoriums.set($el.id, $el)
-				$el.classList.add('auditorium') //и добавляем аудитории соответствующий класс, для подсветки
-			}
-			else if ($el.tagName === Settings.entrancesTag //если элемент - вход - добавляем в входы
-				&& Settings.entrancesColors.includes($el.getAttribute('fill'))) {
-				this.entrances.set($el.id, $el)
-				$el.classList.add('entrance') //и добавляем соответствующий класс для
-				$el.setAttribute('fill-opacity', '0')
-			}
-		}
-		
-		
-		function isEntranceOfAuditorium($entrance, $auditorium) {
-			let cx = Number($entrance.getAttribute('cx'))
-			let cy = Number($entrance.getAttribute('cy'))
-			let x = Number($auditorium.getAttribute('x'))
-			let y = Number($auditorium.getAttribute('y'))
-			let width = Number($auditorium.getAttribute('width'))
-			let height = Number($auditorium.getAttribute('height'))
-			return (cx >= x && cx <= x + width && cy >= y && cy <= y + height)
-		}
-		
-		for (const [auditoriumId, $auditorium] of this.auditoriums) {
-			if (Settings.auditoriumsEntrances.get(auditoriumId) !== undefined) {
-				this.AuditoriumsIdEntrancesId.set(auditoriumId, Settings.auditoriumsEntrances.get(auditoriumId))
-			}
-			else {
-				for (const [entranceId, $entrance] of this.entrances) {
-					if (isEntranceOfAuditorium($entrance, $auditorium)) {
-						this.AuditoriumsIdEntrancesId.set(auditoriumId, entranceId)
-					}
-				}
-			}
-		}
-		console.log(this.AuditoriumsIdEntrancesId)
-		
-		for (const [auId, $au] of this.auditoriums) { //для каждой аудитории поставить слушатель клика
-			$au.addEventListener('mousedown', event => this.onAuditoriumClicked(auId, event))
-		}
-	}
-	
 	
 	onAuditoriumClicked(clickedAuId, event) { //когда нажато на аудиторию
 		for (const [auditoriumID, $auditorium] of this.auditoriums) { //когда нажима
