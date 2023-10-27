@@ -158,8 +158,8 @@ export class PlanHandler {
         if (isSelected) {
             this.$selector.classList.remove('showing-selector')
             setTimeout((planHandler) => {
-                planHandler.$selector.style.left = `${String(event.pageX) - this.$svgPlan.getBoundingClientRect().x}px`
-                planHandler.$selector.style.top = `${String(event.pageY  - this.$svgPlan.getBoundingClientRect().y)}px`
+                planHandler.$selector.style.left = `${String(event.clientX) - this.$svgPlan.getBoundingClientRect().x}px`
+                planHandler.$selector.style.top = `${String(event.clientY  - this.$svgPlan.getBoundingClientRect().y)}px`
                 planHandler.$selector.classList.remove('hidden-selector')
                 planHandler.$selector.classList.add('showing-selector')
                 this.currentAuId = clickedAuId
