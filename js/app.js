@@ -4,7 +4,7 @@ import {Settings} from './Settings.js'
 import {Way} from './Way.js'
 
 //обработчик карты, передаем объект содержащий карту
-export let planHandler = new PlanHandler(document.querySelector('.plan'))
+export let planHandler = new PlanHandler(document.querySelector('.plan-object'))
 planHandler.$planObject.data = Settings.planName
 planHandler.setSelectorElements(document.querySelector('.selector'),
 	document.querySelector('.button-from'),
@@ -81,7 +81,7 @@ document.querySelector('.fill-graph').addEventListener('click', () => {
 })
 
 document.querySelector('.fill-auditoriums-vertexes').addEventListener('click', () => {
-	graph.fillAuditoriumsVertexes(planHandler.AuditoriumsIdEntrancesId, planHandler.$planDocument)
+	graph.fillAuditoriumsVertexes(planHandler.AuditoriumsIdEntrancesId, planHandler.$svgPlan)
 	deactivateButton('fill-auditoriums-vertexes')
 	activateButton('build-way')
 })

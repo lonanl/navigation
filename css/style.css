@@ -9,6 +9,13 @@
 
 }
 
+@font-face {
+	font-family: "GothamSSm";
+	src: url("../resources/fonts/GothamXNarrow-Bold.woff2");
+	font-weight: bold;
+	font-style: normal;
+}
+
 :root {
 	--backround-color: #1E1E1E;
 }
@@ -263,4 +270,40 @@ input {
 	100% {
 		stroke-dashoffset: 0;
 	}
+}
+
+.plan * {
+	transition: fill .25s ease, fill-opacity .25s ease;
+}
+
+
+
+/*СТИЛИ ДЛЯ ПЛАНА*/
+.auditorium:hover:not(.selected) {
+	fill: #3D4356;
+}
+
+/*noinspection ALL*/
+.selected {
+	fill: #4A5598;
+}
+
+.selected-entrance {
+	fill-opacity: 1;
+}
+
+.entrance:not(.selected-entrance) {
+	fill-opacity: 0;
+}
+
+.entrance {
+	pointer-events: none;
+}
+
+.plan text {
+	pointer-events: none;
+}
+
+.plan tspan {
+	font-family: "GothamSSm", sans-serif;
 }

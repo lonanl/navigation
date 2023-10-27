@@ -325,9 +325,9 @@ export class Graph {
 		}
 	}
 	
-	fillAuditoriumsVertexes(auditoriumsEntrances, $planDocument) {
+	fillAuditoriumsVertexes(auditoriumsEntrances, $svgPlan) {
 		for(const [auditoriumID, entranceID] of auditoriumsEntrances){
-			let $entrance = $planDocument.getElementById(entranceID)
+			let $entrance = $svgPlan.getElementById(entranceID)
 			let cx = Number($entrance.getAttribute('cx'))
 			let cy = Number($entrance.getAttribute('cy'))
 			let vertex = this.getVertexByXY(cx, cy)
