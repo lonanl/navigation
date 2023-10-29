@@ -2,7 +2,7 @@ import {Graph} from './Graph.js';
 import {PlanHandler} from './PlanHandler.js'
 import {Settings} from './Settings.js'
 import {Way} from './Way.js'
-import {Dragger} from "./dragger.js";
+import {DragHandler} from "./DragHandler.js";
 
 //обработчик карты, передаем объект содержащий карту
 export let planHandler = new PlanHandler(document.querySelector('.plan-object'))
@@ -18,7 +18,10 @@ planHandler.$planObject.addEventListener('load', () => { //при загрузк
 	way.setupWay(planHandler.$svgPlan)
 })
 
-export let dragger = new Dragger(document.querySelector('.map-objects'))
+export let dragger = new DragHandler(
+	document.querySelector('.map-objects'),
+	document.querySelector('.button-plus'),
+	document.querySelector('.button-minus'))
 
 export let graph = new Graph(document.querySelector('.graph'))
 graph.$graphObject.data = Settings.graphName
