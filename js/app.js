@@ -2,6 +2,7 @@ import {Graph} from './Graph.js';
 import {PlanHandler} from './PlanHandler.js'
 import {Settings} from './Settings.js'
 import {Way} from './Way.js'
+import {Dragger} from "./dragger.js";
 
 //обработчик карты, передаем объект содержащий карту
 export let planHandler = new PlanHandler(document.querySelector('.plan-object'))
@@ -14,12 +15,16 @@ planHandler.setSelectorElements(document.querySelector('.selector'),
 planHandler.$planObject.addEventListener('load', () => { //при загрузке плана
 	console.log('план загружен')
 	planHandler.onPlanLoad()
+	way.setupWay(planHandler.$svgPlan)
 })
+
+export let dragger = new Dragger(document.querySelector('.map-objects'))
 
 export let graph = new Graph(document.querySelector('.graph'))
 graph.$graphObject.data = Settings.graphName
 
-export let way = new Way(document.querySelector('.svg-way'))
+export let way = new Way(document.querySelector('.svg-way'),)
+
 
 let $tableOfEdge = document.getElementsByClassName('list-of-edges')[0]
 

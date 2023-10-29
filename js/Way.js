@@ -7,6 +7,10 @@ export class Way { //класс для обработки свг-пути
 		this.$svg = $svg
 	}
 	
+	setupWay($similarElement) {
+		this.$svg.setAttribute('viewBox', $similarElement.getAttribute('viewBox'))
+	}
+	
 	build(graph, wayAndDistance) { //построить путь -
 		this.removeOldWays()
 		let distance = wayAndDistance.distance

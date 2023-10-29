@@ -16,33 +16,34 @@
 </head>
 <body>
 <section class="section-main">
-	<div class="map-objects">
-		<!--
-		Добавить динамическое изменение размеров
-		-->
-		<svg class="svg-way" fill="none" height="1119" width="2318" xmlns="http://www.w3.org/2000/svg">
-			<defs>
-				<marker fill="none" id="end-arrow" orient="auto-start-reverse" refX="6" refY="6" viewBox="0 0 10 12">
-					<path d="M0 0L10 6L0 12L3 6L0 0Z" fill="#3CD288"/>
-				</marker>
-				
-				<!-- Dot marker definition -->
-				<marker id="start-dot" refX="5" refY="5" viewBox="0 0 10 10">
-					<circle cx="5" cy="5" fill="#3CD288" r="5"/>
-				</marker>
-			</defs>
-		</svg>
-		<object class="graph" title="graph" type="image/svg+xml"></object>
-		<object class="plan-object" style="width: 0; height: 0; overflow: hidden" title="plan" type="image/svg+xml"></object>
-		<div class="selector">
-			<div class="button-from button">
-				<img alt="" src="resources/img/from.svg"/>
-				Отсюда
-			</div>
-			<div class="button-to button">
-				<img alt="" src="resources/img/to.svg"/>
-				Сюда
-			</div>
+	<div class="map-wrapper">
+		<div class="map-objects">
+			<svg class="svg-way" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<defs>
+					<marker fill="none" id="end-arrow" orient="auto-start-reverse" refX="6" refY="6" viewBox="0 0 10 12">
+						<path d="M0 0L10 6L0 12L3 6L0 0Z" fill="#3CD288"/>
+					</marker>
+					
+					<!-- Dot marker definition -->
+					<marker id="start-dot" refX="5" refY="5" viewBox="0 0 10 10">
+						<circle cx="5" cy="5" fill="#3CD288" r="5"/>
+					</marker>
+				</defs>
+			</svg>
+			<object class="graph" title="graph" type="image/svg+xml"></object>
+			<object class="plan-object" style="width: 0; height: 0; overflow: hidden" title="plan"
+							type="image/svg+xml"></object>
+		
+		</div>
+	</div>
+	<div class="selector">
+		<div class="button-from button">
+			<img alt="" src="resources/img/from.svg"/>
+			Отсюда
+		</div>
+		<div class="button-to button">
+			<img alt="" src="resources/img/to.svg"/>
+			Сюда
 		</div>
 	</div>
 	<div class="menu">

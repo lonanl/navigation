@@ -27,10 +27,14 @@ export class PlanHandler {
         this.$svgPlan = $planDocument.documentElement.cloneNode(true)//получаем корневой элемент svg
         for(const $oldPlan of document.querySelectorAll('.plan'))
             $oldPlan.remove() //удаляем старый план
+        this.$svgPlan.removeAttribute('width')
+        this.$svgPlan.removeAttribute('height')
         this.$svgPlan.classList.add('plan')
         this.$planObject.before(this.$svgPlan) //вставляем в map-objects загруженный план
         $planDocument.documentElement.remove() //удаляем всё из документа <object>
-
+        
+        // this.$svgPlan.parentElement.style.height = `${this.$svgPlan.getBoundingClientRect().height}px`
+        
         // let test = document.createElement('div')
         // test.classList.add("hello")
 
@@ -82,7 +86,7 @@ export class PlanHandler {
         console.log(this.AuditoriumsIdEntrancesId)
 
         for (const [auId, $au] of this.auditoriums) { //для каждой аудитории поставить слушатель клика
-            $au.addEventListener('mousedown', event => this.onAuditoriumClicked(auId, event))
+            $au.addEventListener('click', event => this.onAuditoriumClicked(auId, event))
         }
     }
 
@@ -158,8 +162,8 @@ export class PlanHandler {
         if (isSelected) {
             this.$selector.classList.remove('showing-selector')
             setTimeout((planHandler) => {
-                planHandler.$selector.style.left = `${String(event.clientX) - this.$svgPlan.getBoundingClientRect().x}px`
-                planHandler.$selector.style.top = `${String(event.clientY  - this.$svgPlan.getBoundingClientRect().y)}px`
+                planHandler.$selector.style.left = `${event.clientX}px`
+                planHandler.$selector.style.top = `${event.clientY}px`
                 planHandler.$selector.classList.remove('hidden-selector')
                 planHandler.$selector.classList.add('showing-selector')
                 this.currentAuId = clickedAuId

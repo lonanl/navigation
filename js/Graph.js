@@ -337,4 +337,8 @@ export class Graph {
 		console.log('Вершины аудиторий')
 		console.log(this.auditoriumsVertexesMap)
 	}
+	
+	// setupSizes($similarElement){
+	// 	this.$graphObject..setAttribute('viewBox', $similarElement.getAttribute('viewBox'))
+	// }
 }

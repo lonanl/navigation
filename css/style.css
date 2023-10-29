@@ -38,8 +38,8 @@ body {
 }
 
 .section-main {
-	/*width: 100vw;*/
-	/*height: 100vh;*/
+	width: 100vw;
+	height: 100vh;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
@@ -47,13 +47,19 @@ body {
 	gap: 40px;
 }
 
-.map-objects {
+.map-wrapper {
 	position: relative;
+	overflow: hidden;
+	width: 80%;
+	height: 80%;
 }
 
-.plan {
-	min-height: 514px;
-	min-width: 514px;
+.map-objects {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	transition: top 0.03s linear, left 0.03s linear;
 }
 
 .menu {
@@ -63,6 +69,45 @@ body {
 	justify-content: center;
 	gap: 10px;
 	width: 150px;
+}
+
+@media all and (orientation: portrait) {
+	.section-main {
+		width: 100vw;
+		height: 100vh;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+		gap: 0;
+	}
+
+	.map-wrapper {
+		position: relative;
+		overflow: hidden;
+		width: 100%;
+		height: 100%;
+	}
+
+	.map-objects {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		transition: top 0.03s linear, left 0.03s linear;
+	}
+
+	.menu {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 10px;
+		width: 0;
+		height: 0;
+		overflow: hidden;
+	}
 }
 
 .button {
@@ -88,6 +133,8 @@ body {
 	top: 0;
 	left: 0;
 	pointer-events: none;
+	width: 100%;
+	/*height: 100%;*/
 }
 
 table {
@@ -257,6 +304,8 @@ input {
 	left: 0;
 	pointer-events: none;
 	z-index: 1;
+	width: 100%;
+	/*height: 100%;*/
 }
 
 .svg-way path {
@@ -272,11 +321,14 @@ input {
 	}
 }
 
+.plan {
+	/*min-height: 514px;*/
+	/*min-width: 514px;*/
+}
+
 .plan * {
 	transition: fill .25s ease, fill-opacity .25s ease;
 }
-
-
 
 /*СТИЛИ ДЛЯ ПЛАНА*/
 .auditorium:hover:not(.selected) {
@@ -307,3 +359,4 @@ input {
 .plan tspan {
 	font-family: "GothamSSm", sans-serif;
 }
+
