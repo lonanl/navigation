@@ -3,13 +3,24 @@ export class DragHandler {
 	$wrapper
 	$bPlus
 	$bMinus
-	$scale = 1
+	currentScale
+	baseTop
 	
-	constructor($dragger, $bPlus, $bMinus) {
+	constructor($dragger, $bPlus, $bMinus, planHandler) {
 		this.$dragger = $dragger
 		this.$bPlus = $bPlus;
 		this.$bMinus = $bMinus;
 		this.$wrapper = this.$dragger.parentElement
+		this.currentScale = 1
+		
+		let height = Math.floor(planHandler.$svgPlan.getBoundingClientRect().height) //высота map-objects и элементов
+		                                                                             // карты
+		let wrapperHeight = Math.round(this.$wrapper.getBoundingClientRect().height) //высота врапппера
+		// console.log(height,wrapperHeight)
+		$dragger.style.height = `${height}px` //устанавливаем вы
+		this.baseTop = Math.floor(wrapperHeight - height) / 2
+		$dragger.style.top = `${this.baseTop}px`
+		console.log('TOP:', this.baseTop)
 		
 		this.$wrapper.addEventListener('mousedown', startMove)
 		this.$wrapper.addEventListener('touchstart', startMove, 'mouse')
@@ -19,11 +30,11 @@ export class DragHandler {
 			let startTop = $dragger.offsetTop
 			let startX;
 			let startY;
-			if(eventMD.type === 'mousedown'){
+			if (eventMD.type === 'mousedown') {
 				startX = eventMD.clientX
 				startY = eventMD.clientY
 			}
-			else if(eventMD.type === 'touchstart'){
+			else if (eventMD.type === 'touchstart') {
 				startX = eventMD.touches[0].clientX
 				startY = eventMD.touches[0].clientY
 			}
@@ -34,11 +45,11 @@ export class DragHandler {
 			function onMouseMove(eventMM) {
 				$dragger.classList.add('non-scaling')
 				$dragger.style.pointerEvents = 'none'
-				if(eventMM.type === 'mousemove'){
+				if (eventMM.type === 'mousemove') {
 					$dragger.style.top = `${eventMM.clientY - startY + startTop}px`
 					$dragger.style.left = `${eventMM.clientX - startX + startLeft}px`
 				}
-				else if(eventMM.type === 'touchmove'){
+				else if (eventMM.type === 'touchmove') {
 					$dragger.style.top = `${eventMM.touches[0].clientY - startY + startTop}px`
 					$dragger.style.left = `${eventMM.touches[0].clientX - startX + startLeft}px`
 				}
@@ -60,22 +71,24 @@ export class DragHandler {
 			}
 		}
 		
-		function scale(dragHandler, typeScale) {
-			let newScale
-			if (typeScale === 'plus') {
-				newScale = Math.round((dragHandler.$scale * 1.2) * 10) / 10;
-			}
-			else if (typeScale === 'minus') {
-				newScale = Math.round((dragHandler.$scale * 0.8) * 10) / 10;
-			}
+		function scale(dragHandler, scaleValue) {
+			let newScale = Math.round((dragHandler.currentScale * scaleValue) * 10) / 10;
 			$dragger.style.transform = `scale(${newScale})`
-			console.log(`scale(${dragHandler.$scale})`)
-			$dragger.style.left = `${$dragger.offsetLeft * (newScale / dragHandler.$scale)}px`
-			dragHandler.$scale = newScale
+			// console.log(`scale(${dragHandler.$scale})`)
+			let relation = newScale / dragHandler.currentScale
+			$dragger.style.left = `${$dragger.offsetLeft * relation}px`
+			// $dragger.style.top = `${$dragger.offsetTop * relation - dragHandler.baseTop * dragHandler.$scale}px`
+			$dragger.style.top = `${($dragger.offsetTop - dragHandler.baseTop) / dragHandler.currentScale * newScale + dragHandler.baseTop}px`
+			console.log($dragger.offsetTop, dragHandler.baseTop, newScale, dragHandler.baseTop)
+			dragHandler.currentScale = newScale
 		}
 		
-		this.$bPlus.addEventListener('click', () => scale(this, 'plus'))
-		this.$bMinus.addEventListener('click', () => scale(this, 'minus'))
+		this.$bPlus.addEventListener('click', function () {
+			scale(this, 1.5)
+		}.bind(this))
+		this.$bMinus.addEventListener('click', function () {
+			scale(this, .6)
+		}.bind(this))
 	}
 }
 

@@ -33,11 +33,7 @@ export class PlanHandler {
         this.$planObject.before(this.$svgPlan) //вставляем в map-objects загруженный план
         $planDocument.documentElement.remove() //удаляем всё из документа <object>
         
-        let height = Math.floor(this.$svgPlan.getBoundingClientRect().height) //высота map-objects и элементов карты
-        let wrapperHeight = Math.round(this.$svgPlan.parentElement.parentElement.getBoundingClientRect().height) //высота врапппера
-        // console.log(height,wrapperHeight)
-        // this.$svgPlan.parentElement.style.height = `${height}px` //устанавливаем вы
-        this.$svgPlan.parentElement.style.top = `${Math.floor(wrapperHeight - height)/2}px`
+        // this.$svgPlan.parentElement.style.transform = `translateY(${Math.floor(wrapperHeight - height)/2}px)`
         
         // let test = document.createElement('div')
         // test.classList.add("hello")

@@ -12,16 +12,17 @@ planHandler.setSelectorElements(document.querySelector('.selector'),
 	document.querySelector('.button-to'))
 
 
+export let dragHandler
 planHandler.$planObject.addEventListener('load', () => { //при загрузке плана
 	console.log('план загружен')
 	planHandler.onPlanLoad()
 	way.setupWay(planHandler.$svgPlan)
+	dragHandler = new DragHandler(
+		document.querySelector('.map-objects'),
+		document.querySelector('.button-plus'),
+		document.querySelector('.button-minus'), planHandler);
 })
 
-export let dragger = new DragHandler(
-	document.querySelector('.map-objects'),
-	document.querySelector('.button-plus'),
-	document.querySelector('.button-minus'))
 
 export let graph = new Graph(document.querySelector('.graph'))
 graph.$graphObject.data = Settings.graphName
