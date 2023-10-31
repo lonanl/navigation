@@ -17,14 +17,14 @@ planHandler.$planObject.addEventListener('load', () => { //при загрузк
 	console.log('план загружен')
 	planHandler.onPlanLoad()
 	way.setupWay(planHandler.$svgPlan)
-	dragHandler = new DragHandler(
-		document.querySelector('.drag-able'),
-		document.querySelector('.scale-able'),
-		document.querySelector('.map-wrapper'),
-		document.querySelector('.button-plus'),
-		document.querySelector('.button-minus'));
 })
 
+dragHandler = new DragHandler(
+	document.querySelector('.drag-able'),
+	document.querySelector('.scale-able'),
+	document.querySelector('.map-wrapper'),
+	document.querySelector('.button-plus'),
+	document.querySelector('.button-minus'));
 
 export let graph = new Graph(document.querySelector('.graph'))
 graph.$graphObject.data = Settings.graphName

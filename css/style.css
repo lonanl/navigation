@@ -56,6 +56,8 @@ body {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	overflow: hidden;
+	position: relative;
 }
 
 .map-objects {
@@ -342,9 +344,6 @@ input {
 	padding-bottom: 6px;
 }
 
-/*.non-scaling {*/
-/*	transition: all .03s linear;*/
-/*}*/
 .drag-able {
 	position: relative;
 	transition: all .03s linear;
@@ -364,5 +363,9 @@ input {
 
 	.menu {
 		display: none;
+	}
+
+	.drag-able {
+		transition: none;
 	}
 }
