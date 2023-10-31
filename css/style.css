@@ -49,11 +49,13 @@ body {
 }
 
 .map-wrapper {
-	position: relative;
-	overflow: hidden;
 	width: 80%;
 	height: 80%;
 	border: #3B3C41 solid 1px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
 .map-objects {
@@ -71,40 +73,7 @@ body {
 	width: 150px;
 }
 
-@media all and (orientation: portrait) {
-	.section-main {
-		width: 100vw;
-		height: 100vh;
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		justify-content: center;
-		gap: 0;
-	}
 
-	.map-wrapper {
-		position: relative;
-		overflow: hidden;
-		width: 100%;
-		height: 100%;
-	}
-
-	.map-objects {
-		position: relative;
-		width: 100%;
-	}
-
-	.menu {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		gap: 10px;
-		width: 0;
-		height: 0;
-		overflow: hidden;
-	}
-}
 
 .button {
 	cursor: pointer;
@@ -379,4 +348,21 @@ input {
 .drag-able {
 	position: relative;
 	transition: all .03s linear;
+}
+
+/*			ВЕРТИКАЛЬНАЯ ОРИЕНТАЦИЯ			*/
+@media all and (orientation: portrait) {
+	.section-main {
+		gap: 0;
+	}
+
+	.map-wrapper {
+		width: 100%;
+		height: 100%;
+		border: none;
+	}
+
+	.menu {
+		display: none;
+	}
 }

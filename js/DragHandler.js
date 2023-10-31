@@ -13,11 +13,6 @@ export class DragHandler {
 		this.$wrapper = $wrapper
 		let currentScale = 1
 		
-		//делаем премещаемый объект по центру по вертикали (по горизонтали он растянут уже)
-		let height = Math.floor(this.$scaleAble.getBoundingClientRect().height - 4) //высота перемещаемого
-		let wrapperHeight = Math.round(this.$wrapper.getBoundingClientRect().height - 2) //высота внешнего
-		$scaleAble.style.top = `${Math.floor(wrapperHeight - height) / 2}px` //собственно центруем
-		
 		//слушатели нажатия на мышь или экран
 		this.$wrapper.addEventListener('mousedown', startMove)
 		this.$wrapper.addEventListener('touchstart', startMove, 'mouse')
