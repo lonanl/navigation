@@ -1,66 +1,58 @@
 export class DragHandler {
-	$dragger
-	$wrapper
-	$bPlus
-	$bMinus
-	currentScale
-	baseTop
+	$dragAble //Объект для премещения
+	$scaleAble //Объект для масштабирования в центр
+	$wrapper //Внешний контейнер за пределами которого не видно
+	$bPlus //Кнопка увеличить масштаб
+	$bMinus //Кнопка уменьшить масштаб
 	
-	constructor($dragger, $bPlus, $bMinus, planHandler) {
-		this.$dragger = $dragger
+	constructor($dragAble, $scaleAble, $wrapper, $bPlus, $bMinus) {
+		this.$dragAble = $dragAble
+		this.$scaleAble = $scaleAble;
 		this.$bPlus = $bPlus;
 		this.$bMinus = $bMinus;
-		this.$wrapper = this.$dragger.parentElement
-		this.currentScale = 1
+		this.$wrapper = $wrapper
+		let currentScale = 1
 		
-		let height = Math.floor(planHandler.$svgPlan.getBoundingClientRect().height) //высота map-objects и элементов
-		                                                                             // карты
-		let wrapperHeight = Math.round(this.$wrapper.getBoundingClientRect().height) //высота врапппера
-		// console.log(height,wrapperHeight)
-		$dragger.style.height = `${height}px` //устанавливаем вы
-		this.baseTop = Math.floor(wrapperHeight - height) / 2
-		$dragger.style.top = `${this.baseTop}px`
-		console.log('TOP:', this.baseTop)
+		//делаем премещаемый объект по центру по вертикали (по горизонтали он растянут уже)
+		let height = Math.floor(this.$scaleAble.getBoundingClientRect().height - 4) //высота перемещаемого
+		let wrapperHeight = Math.round(this.$wrapper.getBoundingClientRect().height - 2) //высота внешнего
+		$scaleAble.style.top = `${Math.floor(wrapperHeight - height) / 2}px` //собственно центруем
 		
+		//слушатели нажатия на мышь или экран
 		this.$wrapper.addEventListener('mousedown', startMove)
 		this.$wrapper.addEventListener('touchstart', startMove, 'mouse')
 		
+		//при нажатии
 		function startMove(eventMD) {
-			let startLeft = $dragger.offsetLeft
-			let startTop = $dragger.offsetTop
-			let startX;
-			let startY;
-			if (eventMD.type === 'mousedown') {
-				startX = eventMD.clientX
-				startY = eventMD.clientY
-			}
-			else if (eventMD.type === 'touchstart') {
-				startX = eventMD.touches[0].clientX
-				startY = eventMD.touches[0].clientY
-			}
+			//запоминаем начальную позицию перемещаемого объекта и начальные координаты касания/нажатия
+			let startLeft = $dragAble.offsetLeft
+			let startTop = $dragAble.offsetTop
+			let startX = eventMD.type === 'mousedown' ? eventMD.clientX : eventMD.touches[0].clientX
+			let startY = eventMD.type === 'mousedown' ? eventMD.clientY : eventMD.touches[0].clientY
 			
+			//устанавливаем слушатели на перемещение
 			document.addEventListener('mousemove', onMouseMove)
 			document.addEventListener('touchmove', onMouseMove)
 			
+			//при перемещении
 			function onMouseMove(eventMM) {
-				// $dragger.classList.add('non-scaling')
-				$dragger.style.transition = 'all .03s linear'
-				// $dragger.style.transition = 'none'
-				$dragger.style.pointerEvents = 'none'
+				$dragAble.style.pointerEvents = 'none' //отключаем возможность нажатия/выделения
+				//считаем текущие координаты касания/нажатия
 				let clientX = eventMM.type === 'mousemove' ? eventMM.clientX : eventMM.touches[0].clientX
 				let clientY = eventMM.type === 'mousemove' ? eventMM.clientY : eventMM.touches[0].clientY
-				$dragger.style.top = `${clientY - startY + startTop}px`
-				$dragger.style.left = `${clientX - startX + startLeft}px`
+				//перемещаем с учетом масштаба
+				$dragAble.style.top = `${(clientY - startY) / currentScale + startTop}px`
+				$dragAble.style.left = `${(clientX - startX) / currentScale + startLeft}px`
 			}
 			
+			//слушатели отпускания мыши/пальца
 			document.addEventListener('mouseup', moveEnd)
 			document.addEventListener('touchend', moveEnd)
 			document.addEventListener('touchcancel', moveEnd)
 			
+			//при отпускании удаляем слушатели и возвращаем возможность взаимодействовать с контентом
 			function moveEnd() {
-				// $dragger.classList.remove('non-scaling')
-				$dragger.style.transition = ''
-				$dragger.style.pointerEvents = 'auto'
+				$dragAble.style.pointerEvents = 'auto'
 				document.removeEventListener('mousemove', onMouseMove)
 				document.removeEventListener('touchmove', onMouseMove)
 				document.removeEventListener('mouseup', moveEnd)
@@ -70,24 +62,17 @@ export class DragHandler {
 			}
 		}
 		
+		//слушатели нажатия на кнопки масштаба
+		this.$bPlus.addEventListener('click', () => scale(this, 1.5))
+		this.$bMinus.addEventListener('click', () => scale(this, 1 / 1.5))
+		
+		//функция масштабирует масштабируемый объект
 		function scale(dragHandler, scaleValue) {
-			let newScale = Math.round((dragHandler.currentScale * scaleValue) * 10) / 10;
-			$dragger.style.transform = `scale(${newScale})`
-			// console.log(`scale(${dragHandler.$scale})`)
-			let relation = newScale / dragHandler.currentScale
-			$dragger.style.left = `${$dragger.offsetLeft * relation}px`
-			// $dragger.style.top = `${$dragger.offsetTop * relation - dragHandler.baseTop * dragHandler.$scale}px`
-			$dragger.style.top = `${($dragger.offsetTop - dragHandler.baseTop) / dragHandler.currentScale * newScale + dragHandler.baseTop}px`
-			console.log($dragger.offsetTop, dragHandler.baseTop, newScale, dragHandler.baseTop)
-			dragHandler.currentScale = newScale
+			let newScale = Math.round((currentScale * scaleValue) * 100) / 100;
+			dragHandler.$scaleAble.style.transform = `scale(${newScale})`
+			currentScale = newScale
 		}
 		
-		this.$bPlus.addEventListener('click', function () {
-			scale(this, 1.5)
-		}.bind(this))
-		this.$bMinus.addEventListener('click', function () {
-			scale(this, .6)
-		}.bind(this))
 	}
 }
 

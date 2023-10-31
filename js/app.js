@@ -18,9 +18,11 @@ planHandler.$planObject.addEventListener('load', () => { //при загрузк
 	planHandler.onPlanLoad()
 	way.setupWay(planHandler.$svgPlan)
 	dragHandler = new DragHandler(
-		document.querySelector('.map-objects'),
+		document.querySelector('.drag-able'),
+		document.querySelector('.scale-able'),
+		document.querySelector('.map-wrapper'),
 		document.querySelector('.button-plus'),
-		document.querySelector('.button-minus'), planHandler);
+		document.querySelector('.button-minus'));
 })
 
 
