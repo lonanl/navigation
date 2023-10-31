@@ -43,16 +43,14 @@ export class DragHandler {
 			document.addEventListener('touchmove', onMouseMove)
 			
 			function onMouseMove(eventMM) {
-				$dragger.classList.add('non-scaling')
+				// $dragger.classList.add('non-scaling')
+				$dragger.style.transition = 'all .03s linear'
+				// $dragger.style.transition = 'none'
 				$dragger.style.pointerEvents = 'none'
-				if (eventMM.type === 'mousemove') {
-					$dragger.style.top = `${eventMM.clientY - startY + startTop}px`
-					$dragger.style.left = `${eventMM.clientX - startX + startLeft}px`
-				}
-				else if (eventMM.type === 'touchmove') {
-					$dragger.style.top = `${eventMM.touches[0].clientY - startY + startTop}px`
-					$dragger.style.left = `${eventMM.touches[0].clientX - startX + startLeft}px`
-				}
+				let clientX = eventMM.type === 'mousemove' ? eventMM.clientX : eventMM.touches[0].clientX
+				let clientY = eventMM.type === 'mousemove' ? eventMM.clientY : eventMM.touches[0].clientY
+				$dragger.style.top = `${clientY - startY + startTop}px`
+				$dragger.style.left = `${clientX - startX + startLeft}px`
 			}
 			
 			document.addEventListener('mouseup', moveEnd)
@@ -60,7 +58,8 @@ export class DragHandler {
 			document.addEventListener('touchcancel', moveEnd)
 			
 			function moveEnd() {
-				$dragger.classList.remove('non-scaling')
+				// $dragger.classList.remove('non-scaling')
+				$dragger.style.transition = ''
 				$dragger.style.pointerEvents = 'auto'
 				document.removeEventListener('mousemove', onMouseMove)
 				document.removeEventListener('touchmove', onMouseMove)

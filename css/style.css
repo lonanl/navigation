@@ -382,6 +382,6 @@ input {
 	padding-bottom: 6px;
 }
 
-.non-scaling {
-	transition: all .03s linear;
-}
+/*.non-scaling {*/
+/*	transition: all .03s linear;*/
+/*}*/
