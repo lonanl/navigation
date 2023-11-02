@@ -58,8 +58,8 @@ export class DragHandler {
 		}
 		
 		//слушатели нажатия на кнопки масштаба
-		this.$bPlus.addEventListener('click', () => scale(this, 1.5))
-		this.$bMinus.addEventListener('click', () => scale(this, 1 / 1.5))
+		this.$bPlus.addEventListener('click', () => scale(this, 1.8))
+		this.$bMinus.addEventListener('click', () => scale(this, 1 / 1.8))
 		
 		//функция масштабирует масштабируемый объект
 		function scale(dragHandler, scaleValue) {
@@ -71,7 +71,12 @@ export class DragHandler {
 		let wheelSum = 0
 		$wrapper.addEventListener('wheel', function (eventWH) {
 			wheelSum+=eventWH.wheelDelta
-			if(Math.abs(wheelSum) > 120 ) {
+			if(Math.abs(wheelSum) > 200 ) {
+				if (eventWH.wheelDelta > 0) scale(this, 1.5)
+				else if (eventWH.wheelDelta < 0) scale(this, 1 / 1.5)
+				wheelSum = 0
+			}
+			else if(Math.abs(wheelSum) > 120 ) {
 				if (eventWH.wheelDelta > 0) scale(this, 1.15)
 				else if (eventWH.wheelDelta < 0) scale(this, 1 / 1.15)
 				wheelSum = 0
