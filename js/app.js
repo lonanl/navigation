@@ -17,6 +17,16 @@ planHandler.$planObject.addEventListener('load', () => { //при загрузк
 	console.log('план загружен')
 	planHandler.onPlanLoad()
 	way.setupWay(planHandler.$svgPlan)
+	
+	setTimeout(() => {
+		document.querySelector('.tracing').click()
+		document.querySelector('.create-list-of-vertexes').click()
+		document.querySelector('.fill-graph').click()
+		document.querySelector('.fill-auditoriums-vertexes').click()
+		// document.querySelector('.hide-graph').click()
+		// document.querySelector('.show-graph').click()
+	}, 200)
+	
 })
 
 dragHandler = new DragHandler(
@@ -149,11 +159,3 @@ document.querySelector('.hide-graph').addEventListener('click', () => {
 /*
 Это потом убрать
  */
-setTimeout(() => {
-	document.querySelector('.tracing').click()
-	document.querySelector('.create-list-of-vertexes').click()
-	document.querySelector('.fill-graph').click()
-	document.querySelector('.fill-auditoriums-vertexes').click()
-	// document.querySelector('.hide-graph').click()
-	// document.querySelector('.show-graph').click()
-}, 200)
