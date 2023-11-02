@@ -14,7 +14,8 @@
 <path id="Vector 270" d="M1267 1578V1526" stroke="#FF5F5F" stroke-opacity="0.5"/>
 <path id="Vector 271" d="M1373 1477V1526" stroke="#FF5F5F" stroke-opacity="0.5"/>
 <path id="Vector 272" d="M1440 1578V1526" stroke="#FF5F5F" stroke-opacity="0.5"/>
-<path id="Vector 310" d="M1440 1578L1566 1856" stroke="#FF5F5F" stroke-opacity="0.5"/>
+<path id="Vector 310" d="M1440 1578V1873" stroke="#FF5F5F" stroke-opacity="0.5"/>
+<path id="Vector 312" d="M1440 1873L1566 1856" stroke="#FF5F5F" stroke-opacity="0.5"/>
 <path id="Vector 273" d="M1567 1472L1578 1526" stroke="#FF5F5F" stroke-opacity="0.5"/>
 <path id="Vector 274" d="M1901 1474L1865 1477" stroke="#FF5F5F" stroke-opacity="0.5"/>
 <path id="Vector 292" d="M1809 1294L1841 1289" stroke="#FF5F5F" stroke-opacity="0.5"/>
