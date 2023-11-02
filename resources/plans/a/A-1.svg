@@ -1,301 +1,244 @@
-<svg width="2367" height="2266" viewBox="0 0 2367 2266" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g id="A-1" clip-path="url(#clip0_3_95)">
+<svg width="2374" height="2274" viewBox="0 0 2374 2274" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="A-1">
 <g id="spaces">
-<path id="a-116" d="M1764 429L2033 395L2078 757L1808 790L1764 429Z" fill="#3B3C41"/>
-<path id="a-115" d="M1433 594L1661 565L1690 807L1462 835L1433 594Z" fill="#3B3C41"/>
-<path id="a-1-stair-5" d="M1417 469L1645 440L1661 569L1432 597L1417 469Z" fill="#23242B"/>
-<path id="a-117" d="M1808 791L2076 757L2092 881L1823 914L1808 791Z" fill="#3B3C41"/>
-<path id="a-113" d="M1690 1210L1794 1197L1823 1440L1717 1453L1690 1210Z" fill="#3B3C41"/>
-<path id="a-108" d="M5 1147H201V1257H275V1371H5V1147Z" fill="#3B3C41"/>
-<rect id="a-107" x="5" y="1371" width="270" height="106" fill="#3B3C41"/>
-<rect id="Rectangle 74" x="201" y="1147" width="74" height="110" fill="#3B3C41"/>
-<path id="a-112v" d="M519.202 1256.71H380V1148H629V1256.71V1478H519.202V1256.71Z" fill="#3B3C41"/>
-<rect id="a-106" x="181" y="1578" width="149" height="229" fill="#3B3C41"/>
-<rect id="a-1-stair-4" x="5" y="1578" width="176" height="281" fill="#23242B"/>
-<path id="a-1-stair-2" d="M1344 1578H1533L1573 1912H1344V1578Z" fill="#23242B"/>
-<path id="a-1-stair-1" d="M2112 1513L2278 1478L2359 1787L2153 1827L2112 1513Z" fill="#23242B"/>
-<rect id="a-1-stair-3" x="631" y="1258" width="99" height="219" fill="#23242B"/>
-<rect id="a-104" x="520" y="1578" width="111" height="229" fill="#3B3C41"/>
-<rect id="a-103" x="631" y="1578" width="204" height="229" fill="#3B3C41"/>
-<rect id="a-102" x="835" y="1578" width="100" height="229" fill="#3B3C41"/>
-<rect id="Rectangle 107" x="935" y="1578" width="295" height="229" fill="#3B3C41"/>
-<rect id="a-1-wc-1" x="1230" y="1578" width="114" height="229" fill="#3B3C41"/>
-<rect id="a-105" x="330" y="1578" width="190" height="229" fill="#3B3C41"/>
-<rect id="a-109" x="730" y="1258" width="205" height="219" fill="#3B3C41"/>
-<rect id="a-110" x="935" y="1258" width="295" height="219" fill="#3B3C41"/>
-<rect id="a-111" x="1230" y="1258" width="190" height="219" fill="#3B3C41"/>
-<path id="a-112" d="M1419 1255H1513.5L1509.82 1231.5L1690.5 1209L1717.5 1453L1524 1477H1419V1255Z" fill="#3B3C41"/>
-<rect id="a-112g" x="380" y="1397" width="140" height="80" fill="#3B3C41"/>
-<rect id="a-112b" x="380" y="1256" width="140" height="106" fill="#3B3C41"/>
-<path id="a-112a" d="M5 8L631 94V1147H5V8Z" fill="#3B3C41"/>
-<path id="a-114" d="M1462 836L1689 808L1739 1204L1510 1233L1462 836Z" fill="#3B3C41"/>
-<path id="a-118" d="M1823 914L2037 887L2051 1000L1836 1027L1823 914Z" fill="#3B3C41"/>
-<path id="a-1-wc-2" d="M1837 1027L2051 1000L2072 1174L1858 1200L1837 1027Z" fill="#3B3C41"/>
-<path id="a-119" d="M1868 1200L2072 1172L2087 1294L1882 1320L1868 1200Z" fill="#3B3C41"/>
-<path id="a-120" d="M1882 1319L2087 1294L2113 1507L1908 1532L1882 1319Z" fill="#3B3C41"/>
-<path id="a-100" d="M1532 1579L2114 1507L2198 2189L1615 2260L1532 1579Z" fill="#3B3C41"/>
-<path id="Vector 250" d="M1882 1319L2087 1294" stroke="#D9D9D9" stroke-width="10"/>
+<path id="a-116" d="M1768 429L2037 395L2082 757L1812 790L1768 429Z" fill="#3B3C41"/>
+<path id="a-115" d="M1437 594L1665 565L1694 807L1466 835L1437 594Z" fill="#3B3C41"/>
+<path id="a-1-stair-5" d="M1421 469L1649 440L1665 569L1436 597L1421 469Z" fill="#23242B"/>
+<path id="a-117" d="M1812 791L2080 757L2096 881L1827 914L1812 791Z" fill="#3B3C41"/>
+<path id="a-113" d="M1694 1210L1798 1197L1827 1440L1721 1453L1694 1210Z" fill="#3B3C41"/>
+<path id="a-108" d="M9 1147H205V1257H279V1371H9V1147Z" fill="#3B3C41"/>
+<rect id="a-107" x="9" y="1371" width="270" height="106" fill="#3B3C41"/>
+<rect id="Rectangle 74" x="205" y="1147" width="74" height="110" fill="#3B3C41"/>
+<path id="a-112v" d="M523.202 1256.71H384V1148H633V1256.71V1478H523.202V1256.71Z" fill="#3B3C41"/>
+<rect id="a-106" x="185" y="1578" width="149" height="229" fill="#3B3C41"/>
+<rect id="a-1-stair-4" x="9" y="1578" width="176" height="281" fill="#23242B"/>
+<path id="a-1-stair-2" d="M1348 1578H1537L1577 1912H1348V1578Z" fill="#23242B"/>
+<path id="a-1-stair-1" d="M2116 1513L2282 1478L2363 1787L2157 1827L2116 1513Z" fill="#23242B"/>
+<rect id="a-1-stair-3" x="635" y="1258" width="99" height="219" fill="#23242B"/>
+<rect id="a-104" x="524" y="1578" width="111" height="229" fill="#3B3C41"/>
+<rect id="a-103" x="635" y="1578" width="204" height="229" fill="#3B3C41"/>
+<rect id="a-102" x="839" y="1578" width="100" height="229" fill="#3B3C41"/>
+<rect id="Rectangle 107" x="939" y="1578" width="295" height="229" fill="#3B3C41"/>
+<rect id="a-1-wc-1" x="1234" y="1578" width="114" height="229" fill="#3B3C41"/>
+<rect id="a-105" x="334" y="1578" width="190" height="229" fill="#3B3C41"/>
+<rect id="a-109" x="734" y="1258" width="205" height="219" fill="#3B3C41"/>
+<rect id="a-110" x="939" y="1258" width="295" height="219" fill="#3B3C41"/>
+<rect id="a-111" x="1234" y="1258" width="190" height="219" fill="#3B3C41"/>
+<path id="a-112" d="M1423 1255H1517.5L1513.82 1231.5L1694.5 1209L1721.5 1453L1528 1477H1423V1255Z" fill="#3B3C41"/>
+<rect id="a-112g" x="384" y="1397" width="140" height="80" fill="#3B3C41"/>
+<rect id="a-112b" x="384" y="1256" width="140" height="106" fill="#3B3C41"/>
+<path id="a-112a" d="M9 8L635 94V1147H9V8Z" fill="#3B3C41"/>
+<path id="a-114" d="M1466 836L1693 808L1743 1204L1514 1233L1466 836Z" fill="#3B3C41"/>
+<path id="a-118" d="M1827 914L2041 887L2055 1000L1840 1027L1827 914Z" fill="#3B3C41"/>
+<path id="a-1-wc-2" d="M1841 1027L2055 1000L2076 1174L1862 1200L1841 1027Z" fill="#3B3C41"/>
+<path id="a-119" d="M1872 1200L2076 1172L2091 1294L1886 1320L1872 1200Z" fill="#3B3C41"/>
+<path id="a-120" d="M1886 1319L2091 1294L2117 1507L1912 1532L1886 1319Z" fill="#3B3C41"/>
+<path id="a-100" d="M1536 1579L2118 1507L2202 2189L1619 2260L1536 1579Z" fill="#3B3C41"/>
+<path id="Vector 250" d="M1886 1319L2091 1294" stroke="#D9D9D9" stroke-width="10"/>
 </g>
 <g id="walls">
-<g id="vnesniy kontur" filter="url(#filter0_d_3_95)">
-<path d="M629.5 92.048L5 6V1857H181V1807H1344V1912H1572.5L1615 2260L2198 2189L2153 1826L2359 1787L2277 1478L2114.5 1512L2037 888L2092 881L2033 395L1417 469L1514 1256H631L629.5 92.048Z" stroke="#D9D9D9" stroke-width="10" shape-rendering="crispEdges"/>
-</g>
-<path id="Vector 245" d="M1837 1027L2052 1001" stroke="#D9D9D9" stroke-width="10"/>
-<path id="Vector 212" d="M2114 1512L1529 1578" stroke="#D9D9D9" stroke-width="10"/>
-<path id="Vector 248" d="M2141 1723.5L1558.5 1801" stroke="#D9D9D9" stroke-width="10"/>
-<path id="Vector 182" d="M275 1371H5" stroke="#D9D9D9" stroke-width="10"/>
-<path id="Vector 187" d="M380 1397H520V1477" stroke="#D9D9D9" stroke-width="10"/>
-<path id="Vector 188" d="M380 1362H520V1257" stroke="#D9D9D9" stroke-width="10"/>
-<path id="Vector 190" d="M330 1578V1809" stroke="#D9D9D9" stroke-width="10"/>
-<path id="Vector 202" d="M181 1578V1809" stroke="#D9D9D9" stroke-width="10"/>
-<path id="Vector 203" d="M520 1578V1809" stroke="#D9D9D9" stroke-width="10"/>
-<path id="Vector 204" d="M631 1578V1809" stroke="#D9D9D9" stroke-width="10"/>
-<path id="Vector 206" d="M835 1578V1809" stroke="#D9D9D9" stroke-width="10"/>
-<path id="Vector 240" d="M935 1578V1809" stroke="#D9D9D9" stroke-width="10"/>
-<path id="Vector 210" d="M1230 1578V1809" stroke="#D9D9D9" stroke-width="10"/>
-<path id="Vector 211" d="M1344 1578V1809" stroke="#D9D9D9" stroke-width="10"/>
-<path id="Vector 192" d="M730 1258V1477" stroke="#D9D9D9" stroke-width="10"/>
-<path id="Vector 200" d="M631 1256V1477" stroke="#D9D9D9" stroke-width="10"/>
-<path id="Vector 193" d="M935 1258V1477" stroke="#D9D9D9" stroke-width="10"/>
-<path id="Vector 197" d="M1230 1258V1477" stroke="#D9D9D9" stroke-width="10"/>
-<path id="Vector 198" d="M1420 1258V1477" stroke="#D9D9D9" stroke-width="10"/>
-<path id="Vector 238" d="M201 1147V1258" stroke="#D9D9D9" stroke-width="10"/>
-<path id="Vector 230" d="M1690 1211L1718 1454" stroke="#D9D9D9" stroke-width="10"/>
-<path id="Vector 228" d="M1512 1232L1799 1196" stroke="#D9D9D9" stroke-width="10"/>
-<path id="Subtract" fill-rule="evenodd" clip-rule="evenodd" d="M305 1152V1142H5V1152H305ZM351 1152H630V1142H351V1152Z" fill="#D9D9D9"/>
-<path id="Subtract_2" fill-rule="evenodd" clip-rule="evenodd" d="M270 1414V1345.39H280V1414H270ZM270 1460V1477H280V1460H270ZM280 1299.39H270V1235H280V1299.39ZM280 1189H270V1147H280V1189Z" fill="#D9D9D9"/>
-<path id="Subtract_3" fill-rule="evenodd" clip-rule="evenodd" d="M375 1345V1367H385V1345H375ZM375 1414V1392H385V1414H375ZM375 1460V1477H385V1460H375ZM375 1299H385V1147H375V1299Z" fill="#D9D9D9"/>
-<path id="Subtract_4" fill-rule="evenodd" clip-rule="evenodd" d="M61 1263V1253H5V1263H61ZM107 1263H275V1253H107V1263Z" fill="#D9D9D9"/>
-<path id="Subtract_5" fill-rule="evenodd" clip-rule="evenodd" d="M1025 1637.74V1809H1035V1637.74H1025ZM1025 1607.87H1035V1578H1025V1607.87Z" fill="#D9D9D9"/>
-<path id="Subtract_6" fill-rule="evenodd" clip-rule="evenodd" d="M1125 1682.55V1658.65H1135V1682.55H1125ZM1125 1712.42V1809H1135V1712.42H1125ZM1135 1628.78H1125V1578H1135V1628.78Z" fill="#D9D9D9"/>
-<path id="Subtract_7" fill-rule="evenodd" clip-rule="evenodd" d="M1399 1583V1573H1290V1583H1399ZM1479 1583H1530V1573H1479V1583ZM1244 1573V1583H1103V1573H1244ZM1057 1583V1573H912V1583H1057ZM866 1573V1583H806V1573H866ZM760 1583V1573H603V1583H760ZM557 1573V1583H509V1573H557ZM463 1583V1573H288V1583H463ZM242 1573V1583H141V1573H242ZM61 1583V1573H5V1583H61Z" fill="#D9D9D9"/>
-<path id="Subtract_8" fill-rule="evenodd" clip-rule="evenodd" d="M1589.48 1474.68L1829.6 1445.46L1828.4 1435.54L1587.55 1464.84L1589.48 1474.68ZM1543.07 1480.33L1541.13 1470.49L1528.4 1472.04L1529.6 1481.96L1543.07 1480.33Z" fill="#D9D9D9"/>
-<path id="Subtract_9" fill-rule="evenodd" clip-rule="evenodd" d="M1752.45 1337.62L1751.28 1327.69L1705.42 1333.03L1706.58 1342.97L1752.45 1337.62ZM1798.06 1332.31L1809.58 1330.97L1808.42 1321.03L1796.89 1322.38L1798.06 1332.31Z" fill="#D9D9D9"/>
-<path id="Subtract_10" fill-rule="evenodd" clip-rule="evenodd" d="M1803.46 1314.63L1819.04 1441.11L1828.96 1439.89L1813.38 1313.41L1803.46 1314.63ZM1797.84 1269.02L1807.76 1267.8L1798.96 1196.39L1789.04 1197.61L1797.84 1269.02Z" fill="#D9D9D9"/>
-<path id="Subtract_11" fill-rule="evenodd" clip-rule="evenodd" d="M830 1447V1477H840V1447H830ZM830 1417H840V1258H830V1417Z" fill="#D9D9D9"/>
-<path id="Subtract_12" fill-rule="evenodd" clip-rule="evenodd" d="M1025 1442V1477H1035V1442H1025ZM1025 1412H1035V1258H1025V1412Z" fill="#D9D9D9"/>
-<path id="Subtract_13" fill-rule="evenodd" clip-rule="evenodd" d="M725 1637.74V1809H735V1637.74H725ZM725 1591.94H735V1578H725V1591.94Z" fill="#D9D9D9"/>
-<path id="Subtract_14" fill-rule="evenodd" clip-rule="evenodd" d="M425 1699.47V1809H435V1699.47H425ZM425 1653.67H435V1578H425V1653.67Z" fill="#D9D9D9"/>
-<path id="Vector 236" d="M1130 1671H1230" stroke="#D9D9D9" stroke-width="10"/>
-<path id="Subtract_15" fill-rule="evenodd" clip-rule="evenodd" d="M210.021 1709L210.021 1699L181 1699L181 1709L210.021 1709ZM256 1709L330 1709L330 1699L256 1699V1709Z" fill="#D9D9D9"/>
-<path id="Subtract_16" fill-rule="evenodd" clip-rule="evenodd" d="M954.021 1668L954.021 1658H935V1668H954.021ZM1000 1668H1031V1658H1000V1668Z" fill="#D9D9D9"/>
-<path id="Subtract_17" fill-rule="evenodd" clip-rule="evenodd" d="M547.838 1261V1251H380V1261H547.838ZM594 1261H631V1251H594V1261Z" fill="#D9D9D9"/>
-<path id="Subtract_18" fill-rule="evenodd" clip-rule="evenodd" d="M532.021 1417L532.021 1407L520 1407L520 1417L532.021 1417ZM578 1417L631 1417L631 1407L578 1407V1417Z" fill="#D9D9D9"/>
-<path id="Subtract_19" fill-rule="evenodd" clip-rule="evenodd" d="M1350.02 1482V1472H1210V1482H1350.02ZM1396 1482H1530V1472H1396V1482ZM640 1472V1482H368V1472H640ZM861.021 1482H720V1472H861.021V1482ZM1164 1482V1472H907V1482H1164ZM288 1482V1472H5V1482H288Z" fill="#D9D9D9"/>
-<path id="Subtract_20" fill-rule="evenodd" clip-rule="evenodd" d="M2149.34 1822.35L2150.09 1828L2160 1826.7L2159.26 1821.03L2149.34 1822.35ZM2138.83 1742.32L2148.74 1741L2118.91 1514L2109 1515.3L2138.83 1742.32Z" fill="#D9D9D9"/>
-<path id="Vector 242" d="M1808 792L2077 758" stroke="#D9D9D9" stroke-width="10"/>
-<path id="Vector 246" d="M1462 836L1690 808" stroke="#D9D9D9" stroke-width="10"/>
-<path id="Vector 247" d="M1431 594L1662 566" stroke="#D9D9D9" stroke-width="10"/>
-<path id="Vector 243" d="M1821 915L2091 881" stroke="#D9D9D9" stroke-width="10"/>
-<path id="Vector 244" d="M1853 1200L2071 1173" stroke="#D9D9D9" stroke-width="10"/>
-<path id="Subtract_21" fill-rule="evenodd" clip-rule="evenodd" d="M1630.57 950.451L1629.17 940.548L1471 961.081L1472.29 970.997L1630.57 950.451ZM1676.14 944.536L1704 940.919L1702.71 931.003L1674.74 934.634L1676.14 944.536Z" fill="#D9D9D9"/>
-<path id="Subtract_22" fill-rule="evenodd" clip-rule="evenodd" d="M1709.38 1009.67L1733.04 1203.11L1742.96 1201.89L1719.31 1008.45L1709.38 1009.67ZM1703.8 964.02L1713.73 962.802L1674.95 645.712L1665.02 646.93L1703.8 964.02ZM1659.44 601.282L1669.37 600.064L1663.06 548.522L1653.14 549.741L1659.44 601.282ZM1649.96 441.393L1653.36 469.135L1643.43 470.353L1640.04 442.607L1649.96 441.393Z" fill="#D9D9D9"/>
-<path id="Subtract_23" fill-rule="evenodd" clip-rule="evenodd" d="M1839.45 1088.53L1828.06 995.463L1837.99 994.245L1849.38 1087.32L1839.45 1088.53ZM1832.41 948.597L1822.48 949.816L1813.14 873.486L1823.07 872.267L1832.41 948.597ZM1845.03 1134.18L1853.04 1199.61L1862.96 1198.39L1854.96 1132.96L1845.03 1134.18ZM1817.48 826.619L1807.56 827.838L1769.49 516.661L1779.42 515.442L1817.48 826.619ZM1773.83 469.794L1768.46 425.893L1758.54 427.107L1763.91 471.013L1773.83 469.794Z" fill="#D9D9D9"/>
-<path id="Subtract_24" fill-rule="evenodd" clip-rule="evenodd" d="M1871.96 1196.89L1877.48 1241.88L1867.55 1243.1L1862.04 1198.11L1871.96 1196.89ZM1873.15 1288.73L1883.07 1287.51L1903.06 1450.56L1893.14 1451.78L1873.15 1288.73ZM1898.73 1497.41L1903.54 1536.61L1913.46 1535.39L1908.66 1496.2L1898.73 1497.41Z" fill="#D9D9D9"/>
+<path d="M635 94.5L9 6V1857H185V1807H1348V1912H1576.5L1619 2260L2202 2189L2157 1826L2363 1787L2281 1478L2118.5 1512L2041 888L2096 881L2037 395L1421 469L1518 1256H635C634.414 801.448 635.586 549.052 635 94.5Z" stroke="#D9D9D9" stroke-width="10" shape-rendering="crispEdges"/>
+<path id="Vector 245" d="M1841 1027L2056 1001" stroke="#D9D9D9" stroke-width="10"/>
+<path id="Vector 212" d="M2118 1512L1533 1578" stroke="#D9D9D9" stroke-width="10"/>
+<path id="Vector 248" d="M2145 1723.5L1562.5 1801" stroke="#D9D9D9" stroke-width="10"/>
+<path id="Vector 182" d="M279 1371H9" stroke="#D9D9D9" stroke-width="10"/>
+<path id="Vector 187" d="M384 1397H524V1477" stroke="#D9D9D9" stroke-width="10"/>
+<path id="Vector 188" d="M384 1362H524V1257" stroke="#D9D9D9" stroke-width="10"/>
+<path id="Vector 190" d="M334 1578V1809" stroke="#D9D9D9" stroke-width="10"/>
+<path id="Vector 202" d="M185 1578V1809" stroke="#D9D9D9" stroke-width="10"/>
+<path id="Vector 203" d="M524 1578V1809" stroke="#D9D9D9" stroke-width="10"/>
+<path id="Vector 204" d="M635 1578V1809" stroke="#D9D9D9" stroke-width="10"/>
+<path id="Vector 206" d="M839 1578V1809" stroke="#D9D9D9" stroke-width="10"/>
+<path id="Vector 240" d="M939 1578V1809" stroke="#D9D9D9" stroke-width="10"/>
+<path id="Vector 210" d="M1234 1578V1809" stroke="#D9D9D9" stroke-width="10"/>
+<path id="Vector 211" d="M1348 1578V1809" stroke="#D9D9D9" stroke-width="10"/>
+<path id="Vector 192" d="M734 1258V1477" stroke="#D9D9D9" stroke-width="10"/>
+<path id="Vector 200" d="M635 1256V1477" stroke="#D9D9D9" stroke-width="10"/>
+<path id="Vector 193" d="M939 1258V1477" stroke="#D9D9D9" stroke-width="10"/>
+<path id="Vector 197" d="M1234 1258V1477" stroke="#D9D9D9" stroke-width="10"/>
+<path id="Vector 198" d="M1424 1258V1477" stroke="#D9D9D9" stroke-width="10"/>
+<path id="Vector 238" d="M205 1147V1258" stroke="#D9D9D9" stroke-width="10"/>
+<path id="Vector 230" d="M1694 1211L1722 1454" stroke="#D9D9D9" stroke-width="10"/>
+<path id="Vector 228" d="M1516 1232L1803 1196" stroke="#D9D9D9" stroke-width="10"/>
+<path id="Subtract" fill-rule="evenodd" clip-rule="evenodd" d="M309 1152V1142H9V1152H309ZM355 1152H634V1142H355V1152Z" fill="#D9D9D9"/>
+<path id="Subtract_2" fill-rule="evenodd" clip-rule="evenodd" d="M274 1414V1345.39H284V1414H274ZM274 1460V1477H284V1460H274ZM284 1299.39H274V1235H284V1299.39ZM284 1189H274V1147H284V1189Z" fill="#D9D9D9"/>
+<path id="Subtract_3" fill-rule="evenodd" clip-rule="evenodd" d="M379 1345V1367H389V1345H379ZM379 1414V1392H389V1414H379ZM379 1460V1477H389V1460H379ZM379 1299H389V1147H379V1299Z" fill="#D9D9D9"/>
+<path id="Subtract_4" fill-rule="evenodd" clip-rule="evenodd" d="M65 1263V1253H9V1263H65ZM111 1263H279V1253H111V1263Z" fill="#D9D9D9"/>
+<path id="Subtract_5" fill-rule="evenodd" clip-rule="evenodd" d="M1029 1637.74V1809H1039V1637.74H1029ZM1029 1607.87H1039V1578H1029V1607.87Z" fill="#D9D9D9"/>
+<path id="Subtract_6" fill-rule="evenodd" clip-rule="evenodd" d="M1129 1682.55V1658.65H1139V1682.55H1129ZM1129 1712.42V1809H1139V1712.42H1129ZM1139 1628.78H1129V1578H1139V1628.78Z" fill="#D9D9D9"/>
+<path id="Subtract_7" fill-rule="evenodd" clip-rule="evenodd" d="M1403 1583V1573H1294V1583H1403ZM1483 1583H1534V1573H1483V1583ZM1248 1573V1583H1107V1573H1248ZM1061 1583V1573H916V1583H1061ZM870 1573V1583H810V1573H870ZM764 1583V1573H607V1583H764ZM561 1573V1583H513V1573H561ZM467 1583V1573H292V1583H467ZM246 1573V1583H145V1573H246ZM65 1583V1573H9V1583H65Z" fill="#D9D9D9"/>
+<path id="Subtract_8" fill-rule="evenodd" clip-rule="evenodd" d="M1593.48 1474.68L1833.6 1445.46L1832.4 1435.54L1591.55 1464.84L1593.48 1474.68ZM1547.07 1480.33L1545.13 1470.49L1532.4 1472.04L1533.6 1481.96L1547.07 1480.33Z" fill="#D9D9D9"/>
+<path id="Subtract_9" fill-rule="evenodd" clip-rule="evenodd" d="M1756.45 1337.62L1755.28 1327.69L1709.42 1333.03L1710.58 1342.97L1756.45 1337.62ZM1802.06 1332.31L1813.58 1330.97L1812.42 1321.03L1800.89 1322.38L1802.06 1332.31Z" fill="#D9D9D9"/>
+<path id="Subtract_10" fill-rule="evenodd" clip-rule="evenodd" d="M1807.46 1314.63L1823.04 1441.11L1832.96 1439.89L1817.38 1313.41L1807.46 1314.63ZM1801.84 1269.02L1811.76 1267.8L1802.96 1196.39L1793.04 1197.61L1801.84 1269.02Z" fill="#D9D9D9"/>
+<path id="Subtract_11" fill-rule="evenodd" clip-rule="evenodd" d="M834 1447V1477H844V1447H834ZM834 1417H844V1258H834V1417Z" fill="#D9D9D9"/>
+<path id="Subtract_12" fill-rule="evenodd" clip-rule="evenodd" d="M1029 1442V1477H1039V1442H1029ZM1029 1412H1039V1258H1029V1412Z" fill="#D9D9D9"/>
+<path id="Subtract_13" fill-rule="evenodd" clip-rule="evenodd" d="M729 1637.74V1809H739V1637.74H729ZM729 1591.94H739V1578H729V1591.94Z" fill="#D9D9D9"/>
+<path id="Subtract_14" fill-rule="evenodd" clip-rule="evenodd" d="M429 1699.47V1809H439V1699.47H429ZM429 1653.67H439V1578H429V1653.67Z" fill="#D9D9D9"/>
+<path id="Vector 236" d="M1134 1671H1234" stroke="#D9D9D9" stroke-width="10"/>
+<path id="Subtract_15" fill-rule="evenodd" clip-rule="evenodd" d="M214.021 1709L214.021 1699L185 1699L185 1709L214.021 1709ZM260 1709L334 1709L334 1699L260 1699V1709Z" fill="#D9D9D9"/>
+<path id="Subtract_16" fill-rule="evenodd" clip-rule="evenodd" d="M958.021 1668L958.021 1658H939V1668H958.021ZM1004 1668H1035V1658H1004V1668Z" fill="#D9D9D9"/>
+<path id="Subtract_17" fill-rule="evenodd" clip-rule="evenodd" d="M551.838 1261V1251H384V1261H551.838ZM598 1261H635V1251H598V1261Z" fill="#D9D9D9"/>
+<path id="Subtract_18" fill-rule="evenodd" clip-rule="evenodd" d="M536.021 1417L536.021 1407L524 1407L524 1417L536.021 1417ZM582 1417L635 1417L635 1407L582 1407V1417Z" fill="#D9D9D9"/>
+<path id="Subtract_19" fill-rule="evenodd" clip-rule="evenodd" d="M1354.02 1482V1472H1214V1482H1354.02ZM1400 1482H1534V1472H1400V1482ZM644 1472V1482H372V1472H644ZM865.021 1482H724V1472H865.021V1482ZM1168 1482V1472H911V1482H1168ZM292 1482V1472H9V1482H292Z" fill="#D9D9D9"/>
+<path id="Subtract_20" fill-rule="evenodd" clip-rule="evenodd" d="M2153.34 1822.35L2154.09 1828L2164 1826.7L2163.26 1821.03L2153.34 1822.35ZM2142.83 1742.32L2152.74 1741L2122.91 1514L2113 1515.3L2142.83 1742.32Z" fill="#D9D9D9"/>
+<path id="Vector 242" d="M1812 792L2081 758" stroke="#D9D9D9" stroke-width="10"/>
+<path id="Vector 246" d="M1466 836L1694 808" stroke="#D9D9D9" stroke-width="10"/>
+<path id="Vector 247" d="M1435 594L1666 566" stroke="#D9D9D9" stroke-width="10"/>
+<path id="Vector 243" d="M1825 915L2095 881" stroke="#D9D9D9" stroke-width="10"/>
+<path id="Vector 244" d="M1857 1200L2075 1173" stroke="#D9D9D9" stroke-width="10"/>
+<path id="Subtract_21" fill-rule="evenodd" clip-rule="evenodd" d="M1634.57 950.451L1633.17 940.548L1475 961.081L1476.29 970.997L1634.57 950.451ZM1680.14 944.536L1708 940.919L1706.71 931.003L1678.74 934.634L1680.14 944.536Z" fill="#D9D9D9"/>
+<path id="Subtract_22" fill-rule="evenodd" clip-rule="evenodd" d="M1713.38 1009.67L1737.04 1203.11L1746.96 1201.89L1723.31 1008.45L1713.38 1009.67ZM1707.8 964.02L1717.73 962.802L1678.95 645.712L1669.02 646.93L1707.8 964.02ZM1663.44 601.282L1673.37 600.064L1667.06 548.522L1657.14 549.741L1663.44 601.282ZM1653.96 441.393L1657.36 469.135L1647.43 470.353L1644.04 442.607L1653.96 441.393Z" fill="#D9D9D9"/>
+<path id="Subtract_23" fill-rule="evenodd" clip-rule="evenodd" d="M1843.45 1088.53L1832.06 995.463L1841.99 994.245L1853.38 1087.32L1843.45 1088.53ZM1836.41 948.597L1826.48 949.816L1817.14 873.486L1827.07 872.267L1836.41 948.597ZM1849.03 1134.18L1857.04 1199.61L1866.96 1198.39L1858.96 1132.96L1849.03 1134.18ZM1821.48 826.619L1811.56 827.838L1773.49 516.661L1783.42 515.442L1821.48 826.619ZM1777.83 469.794L1772.46 425.893L1762.54 427.107L1767.91 471.013L1777.83 469.794Z" fill="#D9D9D9"/>
+<path id="Subtract_24" fill-rule="evenodd" clip-rule="evenodd" d="M1875.96 1196.89L1881.48 1241.88L1871.55 1243.1L1866.04 1198.11L1875.96 1196.89ZM1877.15 1288.73L1887.07 1287.51L1907.06 1450.56L1897.14 1451.78L1877.15 1288.73ZM1902.73 1497.41L1907.54 1536.61L1917.46 1535.39L1912.66 1496.2L1902.73 1497.41Z" fill="#D9D9D9"/>
+<path id="Subtract_25" fill-rule="evenodd" clip-rule="evenodd" d="M1568.98 1814.36L1539.96 1576.89L1530.04 1578.11L1559.06 1815.58L1568.98 1814.36ZM1578.69 1893.77L1568.76 1894.98L1571.04 1913.61L1580.96 1912.39L1578.69 1893.77Z" fill="#D9D9D9"/>
 </g>
 <g id="textes">
-<text id="text 3" fill="#D9D9D9" xml:space="preserve" style="white-space: pre" font-family="GothamSSm" font-size="24" font-weight="bold" letter-spacing="0em"><tspan x="288.094" y="586.62">&#x410; 112&#x410;</tspan></text>
-<text id="text 4" fill="#D9D9D9" xml:space="preserve" style="white-space: pre" font-family="GothamSSm" font-size="24" font-weight="bold" letter-spacing="0em"><tspan x="114.414" y="1323.62">&#x410; 108</tspan></text>
-<text id="text 5" fill="#D9D9D9" xml:space="preserve" style="white-space: pre" font-family="GothamSSm" font-size="24" font-weight="bold" letter-spacing="0em"><tspan x="115.094" y="1433.62">&#x410; 107</tspan></text>
-<text id="text 6" fill="#D9D9D9" xml:space="preserve" style="white-space: pre" font-family="GothamSSm" font-size="24" font-weight="bold" letter-spacing="0em"><tspan x="421.074" y="1319.62">&#x410; 112&#x411;</tspan></text>
-<text id="text 7" fill="#D9D9D9" xml:space="preserve" style="white-space: pre" font-family="GothamSSm" font-size="24" font-weight="bold" letter-spacing="0em"><tspan x="422.164" y="1446.62">&#x410; 112&#x413;</tspan></text>
-<text id="text 9" fill="#D9D9D9" xml:space="preserve" style="white-space: pre" font-family="GothamSSm" font-size="24" font-weight="bold" letter-spacing="0em"><tspan x="229.32" y="1647.62">&#x410; 106</tspan></text>
-<text id="text 10" fill="#D9D9D9" xml:space="preserve" style="white-space: pre" font-family="GothamSSm" font-size="24" font-weight="bold" letter-spacing="0em"><tspan x="447.312" y="1701.62">&#x410; 105</tspan></text>
-<text id="text 11" fill="#D9D9D9" xml:space="preserve" style="white-space: pre" font-family="GothamSSm" font-size="24" font-weight="bold" letter-spacing="0em"><tspan x="549.145" y="1701.62">&#x410; 104</tspan></text>
-<text id="text 12" fill="#D9D9D9" xml:space="preserve" style="white-space: pre" font-family="GothamSSm" font-size="24" font-weight="bold" letter-spacing="0em"><tspan x="757.488" y="1702.62">&#x410; 103</tspan></text>
-<text id="text 13" fill="#D9D9D9" xml:space="preserve" style="white-space: pre" font-family="GothamSSm" font-size="24" font-weight="bold" letter-spacing="0em"><tspan x="860.383" y="1702.62">&#x410; 102</tspan></text>
-<text id="text 14" fill="#D9D9D9" xml:space="preserve" style="white-space: pre" font-family="GothamSSm" font-size="24" font-weight="bold" letter-spacing="0em"><tspan x="858.344" y="1375.62">&#x410; 109</tspan></text>
-<text id="text 15" fill="#D9D9D9" xml:space="preserve" style="white-space: pre" font-family="GothamSSm" font-size="24" font-weight="bold" letter-spacing="0em"><tspan x="1106.06" y="1376.62">&#x410; 110</tspan></text>
-<text id="text 16" fill="#D9D9D9" xml:space="preserve" style="white-space: pre" font-family="GothamSSm" font-size="24" font-weight="bold" letter-spacing="0em"><tspan x="1304.24" y="1376.62">&#x410; 111</tspan></text>
-<text id="text 18" fill="#D9D9D9" xml:space="preserve" style="white-space: pre" font-family="GothamSSm" font-size="24" font-weight="bold" letter-spacing="0em"><tspan x="1546.45" y="1353.62">&#x410; 112</tspan></text>
-<text id="text 19" fill="#D9D9D9" xml:space="preserve" style="white-space: pre" font-family="GothamSSm" font-size="24" font-weight="bold" letter-spacing="0em"><tspan x="1726.08" y="1276.62">&#x410; 113</tspan></text>
-<text id="text 20" fill="#D9D9D9" xml:space="preserve" style="white-space: pre" font-family="GothamSSm" font-size="24" font-weight="bold" letter-spacing="0em"><tspan x="1971.27" y="1425.62">&#x410; 120</tspan></text>
-<text id="text 21" fill="#D9D9D9" xml:space="preserve" style="white-space: pre" font-family="GothamSSm" font-size="24" font-weight="bold" letter-spacing="0em"><tspan x="1954.03" y="1255.62">&#x410; 119</tspan></text>
-<text id="text 22" fill="#D9D9D9" xml:space="preserve" style="white-space: pre" font-family="GothamSSm" font-size="24" font-weight="bold" letter-spacing="0em"><tspan x="1914.1" y="966.62">&#x410; 118</tspan></text>
-<text id="text 23" fill="#D9D9D9" xml:space="preserve" style="white-space: pre" font-family="GothamSSm" font-size="24" font-weight="bold" letter-spacing="0em"><tspan x="1927.08" y="845.62">&#x410; 117</tspan></text>
-<text id="text 24" fill="#D9D9D9" xml:space="preserve" style="white-space: pre" font-family="GothamSSm" font-size="24" font-weight="bold" letter-spacing="0em"><tspan x="1897" y="602.62">&#x410; 116</tspan></text>
-<text id="text 25" fill="#D9D9D9" xml:space="preserve" style="white-space: pre" font-family="GothamSSm" font-size="24" font-weight="bold" letter-spacing="0em"><tspan x="1538.5" y="709.62">&#x410; 115</tspan></text>
-<text id="text 26" fill="#D9D9D9" xml:space="preserve" style="white-space: pre" font-family="GothamSSm" font-size="24" font-weight="bold" letter-spacing="0em"><tspan x="1576.33" y="1029.62">&#x410; 114</tspan></text>
-<text id="text 17" fill="#D9D9D9" xml:space="preserve" style="white-space: pre" font-family="GothamSSm" font-size="24" font-weight="bold" letter-spacing="0em"><tspan x="1850.38" y="1994.62">&#x410; 100</tspan></text>
-<text id="text 8" fill="#D9D9D9" xml:space="preserve" style="white-space: pre" font-family="GothamSSm" font-size="24" font-weight="bold" letter-spacing="0em"><tspan x="548.48" y="1358.62">&#x410; 112&#x412;</tspan></text>
+<text id="text 3" fill="#D9D9D9" xml:space="preserve" style="white-space: pre" font-family="GothamSSm" font-size="24" font-weight="bold" letter-spacing="0em"><tspan x="292.094" y="586.62">&#x410; 112&#x410;</tspan></text>
+<text id="text 4" fill="#D9D9D9" xml:space="preserve" style="white-space: pre" font-family="GothamSSm" font-size="24" font-weight="bold" letter-spacing="0em"><tspan x="118.414" y="1323.62">&#x410; 108</tspan></text>
+<text id="text 5" fill="#D9D9D9" xml:space="preserve" style="white-space: pre" font-family="GothamSSm" font-size="24" font-weight="bold" letter-spacing="0em"><tspan x="119.094" y="1433.62">&#x410; 107</tspan></text>
+<text id="text 6" fill="#D9D9D9" xml:space="preserve" style="white-space: pre" font-family="GothamSSm" font-size="24" font-weight="bold" letter-spacing="0em"><tspan x="425.074" y="1319.62">&#x410; 112&#x411;</tspan></text>
+<text id="text 7" fill="#D9D9D9" xml:space="preserve" style="white-space: pre" font-family="GothamSSm" font-size="24" font-weight="bold" letter-spacing="0em"><tspan x="426.164" y="1446.62">&#x410; 112&#x413;</tspan></text>
+<text id="text 9" fill="#D9D9D9" xml:space="preserve" style="white-space: pre" font-family="GothamSSm" font-size="24" font-weight="bold" letter-spacing="0em"><tspan x="233.32" y="1647.62">&#x410; 106</tspan></text>
+<text id="text 10" fill="#D9D9D9" xml:space="preserve" style="white-space: pre" font-family="GothamSSm" font-size="24" font-weight="bold" letter-spacing="0em"><tspan x="451.312" y="1701.62">&#x410; 105</tspan></text>
+<text id="text 11" fill="#D9D9D9" xml:space="preserve" style="white-space: pre" font-family="GothamSSm" font-size="24" font-weight="bold" letter-spacing="0em"><tspan x="553.145" y="1701.62">&#x410; 104</tspan></text>
+<text id="text 12" fill="#D9D9D9" xml:space="preserve" style="white-space: pre" font-family="GothamSSm" font-size="24" font-weight="bold" letter-spacing="0em"><tspan x="761.488" y="1702.62">&#x410; 103</tspan></text>
+<text id="text 13" fill="#D9D9D9" xml:space="preserve" style="white-space: pre" font-family="GothamSSm" font-size="24" font-weight="bold" letter-spacing="0em"><tspan x="864.383" y="1702.62">&#x410; 102</tspan></text>
+<text id="text 14" fill="#D9D9D9" xml:space="preserve" style="white-space: pre" font-family="GothamSSm" font-size="24" font-weight="bold" letter-spacing="0em"><tspan x="862.344" y="1375.62">&#x410; 109</tspan></text>
+<text id="text 15" fill="#D9D9D9" xml:space="preserve" style="white-space: pre" font-family="GothamSSm" font-size="24" font-weight="bold" letter-spacing="0em"><tspan x="1110.06" y="1376.62">&#x410; 110</tspan></text>
+<text id="text 16" fill="#D9D9D9" xml:space="preserve" style="white-space: pre" font-family="GothamSSm" font-size="24" font-weight="bold" letter-spacing="0em"><tspan x="1308.24" y="1376.62">&#x410; 111</tspan></text>
+<text id="text 18" fill="#D9D9D9" xml:space="preserve" style="white-space: pre" font-family="GothamSSm" font-size="24" font-weight="bold" letter-spacing="0em"><tspan x="1550.45" y="1353.62">&#x410; 112</tspan></text>
+<text id="text 19" fill="#D9D9D9" xml:space="preserve" style="white-space: pre" font-family="GothamSSm" font-size="24" font-weight="bold" letter-spacing="0em"><tspan x="1730.08" y="1276.62">&#x410; 113</tspan></text>
+<text id="text 20" fill="#D9D9D9" xml:space="preserve" style="white-space: pre" font-family="GothamSSm" font-size="24" font-weight="bold" letter-spacing="0em"><tspan x="1975.27" y="1425.62">&#x410; 120</tspan></text>
+<text id="text 21" fill="#D9D9D9" xml:space="preserve" style="white-space: pre" font-family="GothamSSm" font-size="24" font-weight="bold" letter-spacing="0em"><tspan x="1958.03" y="1255.62">&#x410; 119</tspan></text>
+<text id="text 22" fill="#D9D9D9" xml:space="preserve" style="white-space: pre" font-family="GothamSSm" font-size="24" font-weight="bold" letter-spacing="0em"><tspan x="1918.1" y="966.62">&#x410; 118</tspan></text>
+<text id="text 23" fill="#D9D9D9" xml:space="preserve" style="white-space: pre" font-family="GothamSSm" font-size="24" font-weight="bold" letter-spacing="0em"><tspan x="1931.08" y="845.62">&#x410; 117</tspan></text>
+<text id="text 24" fill="#D9D9D9" xml:space="preserve" style="white-space: pre" font-family="GothamSSm" font-size="24" font-weight="bold" letter-spacing="0em"><tspan x="1901" y="602.62">&#x410; 116</tspan></text>
+<text id="text 25" fill="#D9D9D9" xml:space="preserve" style="white-space: pre" font-family="GothamSSm" font-size="24" font-weight="bold" letter-spacing="0em"><tspan x="1542.5" y="709.62">&#x410; 115</tspan></text>
+<text id="text 26" fill="#D9D9D9" xml:space="preserve" style="white-space: pre" font-family="GothamSSm" font-size="24" font-weight="bold" letter-spacing="0em"><tspan x="1580.33" y="1029.62">&#x410; 114</tspan></text>
+<text id="text 17" fill="#D9D9D9" xml:space="preserve" style="white-space: pre" font-family="GothamSSm" font-size="24" font-weight="bold" letter-spacing="0em"><tspan x="1854.38" y="1994.62">&#x410; 100</tspan></text>
+<text id="text 8" fill="#D9D9D9" xml:space="preserve" style="white-space: pre" font-family="GothamSSm" font-size="24" font-weight="bold" letter-spacing="0em"><tspan x="552.48" y="1358.62">&#x410; 112&#x412;</tspan></text>
 </g>
 <g id="enterances">
-<circle id="1" cx="884" cy="1477" r="10" fill="#9CBBFF"/>
-<circle id="2" cx="680" cy="1477" r="10" fill="#9CBBFF"/>
-<circle id="3" cx="380" cy="1437" r="10" fill="#9CBBFF"/>
-<circle id="4" cx="275" cy="1437" r="10" fill="#9CBBFF"/>
-<circle id="5" cx="380" cy="1322" r="10" fill="#9CBBFF"/>
-<circle id="6" cx="275" cy="1322" r="10" fill="#9CBBFF"/>
-<circle id="7" cx="275" cy="1212" r="10" fill="#9CBBFF"/>
-<circle id="8" cx="328" cy="1147" r="10" fill="#9CBBFF"/>
-<circle id="9" cx="520" cy="1379" r="10" fill="#9CBBFF"/>
-<circle id="10" cx="101" cy="1578" r="10" fill="#9CBBFF"/>
-<circle id="11" cx="265" cy="1578" r="10" fill="#9CBBFF"/>
-<circle id="12" cx="486" cy="1578" r="10" fill="#9CBBFF"/>
-<circle id="13" cx="580" cy="1578" r="10" fill="#9CBBFF"/>
-<circle id="14" cx="783" cy="1578" r="10" fill="#9CBBFF"/>
-<circle id="15" cx="889" cy="1578" r="10" fill="#9CBBFF"/>
-<circle id="16" cx="1080" cy="1578" r="10" fill="#9CBBFF"/>
-<circle id="17" cx="1267" cy="1578" r="10" fill="#9CBBFF"/>
-<circle id="18" cx="1187" cy="1477" r="10" fill="#9CBBFF"/>
-<circle id="19" cx="1373" cy="1477" r="10" fill="#9CBBFF"/>
-<circle id="20" cx="1440" cy="1578" r="10" fill="#9CBBFF"/>
-<circle id="21" cx="1567" cy="1472" r="10" fill="#9CBBFF"/>
-<circle id="22" cx="1809" cy="1294" r="10" fill="#9CBBFF"/>
-<circle id="23" cx="1712" cy="986" r="10" fill="#9CBBFF"/>
-<circle id="24" cx="1668" cy="624" r="10" fill="#9CBBFF"/>
-<circle id="25" cx="1654" cy="509" r="10" fill="#9CBBFF"/>
-<circle id="26" cx="1772" cy="492" r="10" fill="#9CBBFF"/>
-<circle id="27" cx="1813" cy="851" r="10" fill="#9CBBFF"/>
-<circle id="28" cx="1830" cy="972" r="10" fill="#9CBBFF"/>
-<circle id="29" cx="1848" cy="1111" r="10" fill="#9CBBFF"/>
-<circle id="30" cx="1875" cy="1265" r="10" fill="#9CBBFF"/>
-<circle id="31" cx="1901" cy="1474" r="10" fill="#9CBBFF"/>
-<circle id="33" cx="1566" cy="1856" r="10" fill="#9CBBFF"/>
-<circle id="32" cx="2150" cy="1780" r="10" fill="#9CBBFF"/>
+<circle id="1" cx="888" cy="1477" r="10" fill="#9CBBFF"/>
+<circle id="2" cx="684" cy="1477" r="10" fill="#9CBBFF"/>
+<circle id="3" cx="384" cy="1437" r="10" fill="#9CBBFF"/>
+<circle id="4" cx="279" cy="1437" r="10" fill="#9CBBFF"/>
+<circle id="5" cx="384" cy="1322" r="10" fill="#9CBBFF"/>
+<circle id="6" cx="279" cy="1322" r="10" fill="#9CBBFF"/>
+<circle id="7" cx="279" cy="1212" r="10" fill="#9CBBFF"/>
+<circle id="8" cx="332" cy="1147" r="10" fill="#9CBBFF"/>
+<circle id="9" cx="524" cy="1379" r="10" fill="#9CBBFF"/>
+<circle id="10" cx="105" cy="1578" r="10" fill="#9CBBFF"/>
+<circle id="11" cx="269" cy="1578" r="10" fill="#9CBBFF"/>
+<circle id="12" cx="490" cy="1578" r="10" fill="#9CBBFF"/>
+<circle id="13" cx="584" cy="1578" r="10" fill="#9CBBFF"/>
+<circle id="14" cx="787" cy="1578" r="10" fill="#9CBBFF"/>
+<circle id="15" cx="893" cy="1578" r="10" fill="#9CBBFF"/>
+<circle id="16" cx="1084" cy="1578" r="10" fill="#9CBBFF"/>
+<circle id="17" cx="1271" cy="1578" r="10" fill="#9CBBFF"/>
+<circle id="18" cx="1191" cy="1477" r="10" fill="#9CBBFF"/>
+<circle id="19" cx="1377" cy="1477" r="10" fill="#9CBBFF"/>
+<circle id="20" cx="1444" cy="1578" r="10" fill="#9CBBFF"/>
+<circle id="21" cx="1571" cy="1472" r="10" fill="#9CBBFF"/>
+<circle id="22" cx="1813" cy="1294" r="10" fill="#9CBBFF"/>
+<circle id="23" cx="1716" cy="986" r="10" fill="#9CBBFF"/>
+<circle id="24" cx="1672" cy="624" r="10" fill="#9CBBFF"/>
+<circle id="25" cx="1658" cy="509" r="10" fill="#9CBBFF"/>
+<circle id="26" cx="1776" cy="492" r="10" fill="#9CBBFF"/>
+<circle id="27" cx="1817" cy="851" r="10" fill="#9CBBFF"/>
+<circle id="28" cx="1834" cy="972" r="10" fill="#9CBBFF"/>
+<circle id="29" cx="1852" cy="1111" r="10" fill="#9CBBFF"/>
+<circle id="30" cx="1879" cy="1265" r="10" fill="#9CBBFF"/>
+<circle id="31" cx="1905" cy="1474" r="10" fill="#9CBBFF"/>
+<circle id="33" cx="1570" cy="1856" r="10" fill="#9CBBFF"/>
+<circle id="32" cx="2154" cy="1780" r="10" fill="#9CBBFF"/>
 </g>
-<path id="Subtract_25" fill-rule="evenodd" clip-rule="evenodd" d="M1564.98 1814.36L1535.96 1576.89L1526.04 1578.11L1555.06 1815.58L1564.98 1814.36ZM1574.69 1893.77L1564.76 1894.98L1567.04 1913.61L1576.96 1912.39L1574.69 1893.77Z" fill="#D9D9D9"/>
 <g id="icons">
 <g id="&#208;&#155;&#208;&#181;&#209;&#129;&#209;&#130;&#208;&#189;&#208;&#184;&#209;&#134;&#208;&#176;/&#208;&#146;&#208;&#181;&#209;&#128;&#209;&#130;&#208;&#184;&#208;&#186;&#208;&#176;&#208;&#187;&#209;&#140;&#208;&#189;&#208;&#176;&#209;&#143;">
 <g id="&#208;&#155;&#208;&#181;&#209;&#129;&#209;&#130;&#208;&#189;&#208;&#184;&#209;&#134;&#208;&#176;/&#208;&#146;&#208;&#178;&#208;&#181;&#209;&#128;&#209;&#133;">
-<path id="Vector 54" d="M111 1687H101V1697H91V1707H76" stroke="#D9D9D9" stroke-width="2"/>
+<path id="Vector 54" d="M115 1687H105V1697H95V1707H80" stroke="#D9D9D9" stroke-width="2"/>
 <g id="Group 6">
-<path id="Vector 55" d="M109 1671L85 1695" stroke="url(#paint0_linear_3_95)" stroke-width="2"/>
-<path id="Vector 56" d="M111 1669L100 1674H105L106 1675V1680L111 1669Z" fill="#D9D9D9"/>
+<path id="Vector 55" d="M113 1671L89 1695" stroke="url(#paint0_linear_3_95)" stroke-width="2"/>
+<path id="Vector 56" d="M115 1669L104 1674H109L110 1675V1680L115 1669Z" fill="#D9D9D9"/>
 </g>
 </g>
 <g id="&#208;&#155;&#208;&#181;&#209;&#129;&#209;&#130;&#208;&#189;&#208;&#184;&#209;&#134;&#208;&#176;/&#208;&#146;&#208;&#189;&#208;&#184;&#208;&#183;">
-<path id="Vector 54_2" d="M76 1761H86V1751H96V1741H111" stroke="#D9D9D9" stroke-width="2"/>
+<path id="Vector 54_2" d="M80 1761H90V1751H100V1741H115" stroke="#D9D9D9" stroke-width="2"/>
 <g id="Group 5">
-<path id="Vector 55_2" d="M78 1747L102 1723" stroke="url(#paint1_linear_3_95)" stroke-width="2"/>
-<path id="Vector 56_2" d="M76 1749L87 1744H82L81 1743V1738L76 1749Z" fill="#D9D9D9"/>
+<path id="Vector 55_2" d="M82 1747L106 1723" stroke="url(#paint1_linear_3_95)" stroke-width="2"/>
+<path id="Vector 56_2" d="M80 1749L91 1744H86L85 1743V1738L80 1749Z" fill="#D9D9D9"/>
 </g>
 </g>
-<path id="Vector 57" d="M137 1715L50 1715" stroke="#D9D9D9" stroke-width="2"/>
+<path id="Vector 57" d="M141 1715L54 1715" stroke="#D9D9D9" stroke-width="2"/>
 </g>
 <g id="&#208;&#155;&#208;&#181;&#209;&#129;&#209;&#130;&#208;&#189;&#208;&#184;&#209;&#134;&#208;&#176;/&#208;&#146;&#208;&#181;&#209;&#128;&#209;&#130;&#208;&#184;&#208;&#186;&#208;&#176;&#208;&#187;&#209;&#140;&#208;&#189;&#208;&#176;&#209;&#143;_2">
 <g id="&#208;&#155;&#208;&#181;&#209;&#129;&#209;&#130;&#208;&#189;&#208;&#184;&#209;&#134;&#208;&#176;/&#208;&#146;&#208;&#178;&#208;&#181;&#209;&#128;&#209;&#133;_2">
-<path id="Vector 54_3" d="M1468 1727H1458V1737H1448V1747H1433" stroke="#D9D9D9" stroke-width="2"/>
+<path id="Vector 54_3" d="M1472 1727H1462V1737H1452V1747H1437" stroke="#D9D9D9" stroke-width="2"/>
 <g id="Group 6_2">
-<path id="Vector 55_3" d="M1466 1711L1442 1735" stroke="url(#paint2_linear_3_95)" stroke-width="2"/>
-<path id="Vector 56_3" d="M1468 1709L1457 1714H1462L1463 1715V1720L1468 1709Z" fill="#D9D9D9"/>
+<path id="Vector 55_3" d="M1470 1711L1446 1735" stroke="url(#paint2_linear_3_95)" stroke-width="2"/>
+<path id="Vector 56_3" d="M1472 1709L1461 1714H1466L1467 1715V1720L1472 1709Z" fill="#D9D9D9"/>
 </g>
 </g>
 <g id="&#208;&#155;&#208;&#181;&#209;&#129;&#209;&#130;&#208;&#189;&#208;&#184;&#209;&#134;&#208;&#176;/&#208;&#146;&#208;&#189;&#208;&#184;&#208;&#183;_2">
-<path id="Vector 54_4" d="M1433 1801H1443V1791H1453V1781H1468" stroke="#D9D9D9" stroke-width="2"/>
+<path id="Vector 54_4" d="M1437 1801H1447V1791H1457V1781H1472" stroke="#D9D9D9" stroke-width="2"/>
 <g id="Group 5_2">
-<path id="Vector 55_4" d="M1435 1787L1459 1763" stroke="url(#paint3_linear_3_95)" stroke-width="2"/>
-<path id="Vector 56_4" d="M1433 1789L1444 1784H1439L1438 1783V1778L1433 1789Z" fill="#D9D9D9"/>
+<path id="Vector 55_4" d="M1439 1787L1463 1763" stroke="url(#paint3_linear_3_95)" stroke-width="2"/>
+<path id="Vector 56_4" d="M1437 1789L1448 1784H1443L1442 1783V1778L1437 1789Z" fill="#D9D9D9"/>
 </g>
 </g>
-<path id="Vector 57_2" d="M1494 1755L1407 1755" stroke="#D9D9D9" stroke-width="2"/>
+<path id="Vector 57_2" d="M1498 1755L1411 1755" stroke="#D9D9D9" stroke-width="2"/>
 </g>
 <g id="&#208;&#155;&#208;&#181;&#209;&#129;&#209;&#130;&#208;&#189;&#208;&#184;&#209;&#134;&#208;&#176;/&#208;&#146;&#208;&#181;&#209;&#128;&#209;&#130;&#208;&#184;&#208;&#186;&#208;&#176;&#208;&#187;&#209;&#140;&#208;&#189;&#208;&#176;&#209;&#143;_3">
 <g id="&#208;&#155;&#208;&#181;&#209;&#129;&#209;&#130;&#208;&#189;&#208;&#184;&#209;&#134;&#208;&#176;/&#208;&#146;&#208;&#178;&#208;&#181;&#209;&#128;&#209;&#133;_3">
-<path id="Vector 54_5" d="M697 1344H687V1354H677V1364H662" stroke="#D9D9D9" stroke-width="2"/>
+<path id="Vector 54_5" d="M701 1344H691V1354H681V1364H666" stroke="#D9D9D9" stroke-width="2"/>
 <g id="Group 6_3">
-<path id="Vector 55_5" d="M695 1328L671 1352" stroke="url(#paint4_linear_3_95)" stroke-width="2"/>
-<path id="Vector 56_5" d="M697 1326L686 1331H691L692 1332V1337L697 1326Z" fill="#D9D9D9"/>
+<path id="Vector 55_5" d="M699 1328L675 1352" stroke="url(#paint4_linear_3_95)" stroke-width="2"/>
+<path id="Vector 56_5" d="M701 1326L690 1331H695L696 1332V1337L701 1326Z" fill="#D9D9D9"/>
 </g>
 </g>
 <g id="&#208;&#155;&#208;&#181;&#209;&#129;&#209;&#130;&#208;&#189;&#208;&#184;&#209;&#134;&#208;&#176;/&#208;&#146;&#208;&#189;&#208;&#184;&#208;&#183;_3">
-<path id="Vector 54_6" d="M662 1418H672V1408H682V1398H697" stroke="#D9D9D9" stroke-width="2"/>
+<path id="Vector 54_6" d="M666 1418H676V1408H686V1398H701" stroke="#D9D9D9" stroke-width="2"/>
 <g id="Group 5_3">
-<path id="Vector 55_6" d="M664 1404L688 1380" stroke="url(#paint5_linear_3_95)" stroke-width="2"/>
-<path id="Vector 56_6" d="M662 1406L673 1401H668L667 1400V1395L662 1406Z" fill="#D9D9D9"/>
+<path id="Vector 55_6" d="M668 1404L692 1380" stroke="url(#paint5_linear_3_95)" stroke-width="2"/>
+<path id="Vector 56_6" d="M666 1406L677 1401H672L671 1400V1395L666 1406Z" fill="#D9D9D9"/>
 </g>
 </g>
-<path id="Vector 57_3" d="M714 1372L645 1372" stroke="#D9D9D9" stroke-width="2"/>
+<path id="Vector 57_3" d="M718 1372L649 1372" stroke="#D9D9D9" stroke-width="2"/>
 </g>
 <g id="&#208;&#155;&#208;&#181;&#209;&#129;&#209;&#130;&#208;&#189;&#208;&#184;&#209;&#134;&#208;&#176;/&#208;&#146;&#208;&#181;&#209;&#128;&#209;&#130;&#208;&#184;&#208;&#186;&#208;&#176;&#208;&#187;&#209;&#140;&#208;&#189;&#208;&#176;&#209;&#143;_4">
 <g id="&#208;&#155;&#208;&#181;&#209;&#129;&#209;&#130;&#208;&#189;&#208;&#184;&#209;&#134;&#208;&#176;/&#208;&#146;&#208;&#178;&#208;&#181;&#209;&#128;&#209;&#133;_4">
-<path id="Vector 54_7" d="M2244 1625H2234V1635H2224V1645H2209" stroke="#D9D9D9" stroke-width="2"/>
+<path id="Vector 54_7" d="M2248 1625H2238V1635H2228V1645H2213" stroke="#D9D9D9" stroke-width="2"/>
 <g id="Group 6_4">
-<path id="Vector 55_7" d="M2242 1609L2218 1633" stroke="url(#paint6_linear_3_95)" stroke-width="2"/>
-<path id="Vector 56_7" d="M2244 1607L2233 1612H2238L2239 1613V1618L2244 1607Z" fill="#D9D9D9"/>
+<path id="Vector 55_7" d="M2246 1609L2222 1633" stroke="url(#paint6_linear_3_95)" stroke-width="2"/>
+<path id="Vector 56_7" d="M2248 1607L2237 1612H2242L2243 1613V1618L2248 1607Z" fill="#D9D9D9"/>
 </g>
 </g>
 <g id="&#208;&#155;&#208;&#181;&#209;&#129;&#209;&#130;&#208;&#189;&#208;&#184;&#209;&#134;&#208;&#176;/&#208;&#146;&#208;&#189;&#208;&#184;&#208;&#183;_4">
-<path id="Vector 54_8" d="M2209 1699H2219V1689H2229V1679H2244" stroke="#D9D9D9" stroke-width="2"/>
+<path id="Vector 54_8" d="M2213 1699H2223V1689H2233V1679H2248" stroke="#D9D9D9" stroke-width="2"/>
 <g id="Group 5_4">
-<path id="Vector 55_8" d="M2211 1685L2235 1661" stroke="url(#paint7_linear_3_95)" stroke-width="2"/>
-<path id="Vector 56_8" d="M2209 1687L2220 1682H2215L2214 1681V1676L2209 1687Z" fill="#D9D9D9"/>
+<path id="Vector 55_8" d="M2215 1685L2239 1661" stroke="url(#paint7_linear_3_95)" stroke-width="2"/>
+<path id="Vector 56_8" d="M2213 1687L2224 1682H2219L2218 1681V1676L2213 1687Z" fill="#D9D9D9"/>
 </g>
 </g>
-<path id="Vector 57_4" d="M2270 1653L2183 1653" stroke="#D9D9D9" stroke-width="2"/>
+<path id="Vector 57_4" d="M2274 1653L2187 1653" stroke="#D9D9D9" stroke-width="2"/>
 </g>
 <g id="&#208;&#155;&#208;&#181;&#209;&#129;&#209;&#130;&#208;&#189;&#208;&#184;&#209;&#134;&#208;&#176;/&#208;&#146;&#208;&#181;&#209;&#128;&#209;&#130;&#208;&#184;&#208;&#186;&#208;&#176;&#208;&#187;&#209;&#140;&#208;&#189;&#208;&#176;&#209;&#143;_5">
 <g id="&#208;&#155;&#208;&#181;&#209;&#129;&#209;&#130;&#208;&#189;&#208;&#184;&#209;&#134;&#208;&#176;/&#208;&#146;&#208;&#178;&#208;&#181;&#209;&#128;&#209;&#133;_5">
-<path id="Vector 54_9" d="M1563 487H1553V497H1543V507H1528" stroke="#D9D9D9" stroke-width="2"/>
+<path id="Vector 54_9" d="M1567 487H1557V497H1547V507H1532" stroke="#D9D9D9" stroke-width="2"/>
 <g id="Group 6_5">
-<path id="Vector 55_9" d="M1561 471L1537 495" stroke="url(#paint8_linear_3_95)" stroke-width="2"/>
-<path id="Vector 56_9" d="M1563 469L1552 474H1557L1558 475V480L1563 469Z" fill="#D9D9D9"/>
+<path id="Vector 55_9" d="M1565 471L1541 495" stroke="url(#paint8_linear_3_95)" stroke-width="2"/>
+<path id="Vector 56_9" d="M1567 469L1556 474H1561L1562 475V480L1567 469Z" fill="#D9D9D9"/>
 </g>
 </g>
 <g id="&#208;&#155;&#208;&#181;&#209;&#129;&#209;&#130;&#208;&#189;&#208;&#184;&#209;&#134;&#208;&#176;/&#208;&#146;&#208;&#189;&#208;&#184;&#208;&#183;_5">
-<path id="Vector 54_10" d="M1528 561H1538V551H1548V541H1563" stroke="#D9D9D9" stroke-width="2"/>
+<path id="Vector 54_10" d="M1532 561H1542V551H1552V541H1567" stroke="#D9D9D9" stroke-width="2"/>
 <g id="Group 5_5">
-<path id="Vector 55_10" d="M1530 547L1554 523" stroke="url(#paint9_linear_3_95)" stroke-width="2"/>
-<path id="Vector 56_10" d="M1528 549L1539 544H1534L1533 543V538L1528 549Z" fill="#D9D9D9"/>
+<path id="Vector 55_10" d="M1534 547L1558 523" stroke="url(#paint9_linear_3_95)" stroke-width="2"/>
+<path id="Vector 56_10" d="M1532 549L1543 544H1538L1537 543V538L1532 549Z" fill="#D9D9D9"/>
 </g>
 </g>
-<path id="Vector 57_5" d="M1589 515L1502 515" stroke="#D9D9D9" stroke-width="2"/>
+<path id="Vector 57_5" d="M1593 515L1506 515" stroke="#D9D9D9" stroke-width="2"/>
 </g>
 </g>
 </g>
-<defs>
-<filter id="filter0_d_3_95" x="-4" y="0.263824" width="2373.21" height="2273.3" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-<feFlood flood-opacity="0" result="BackgroundImageFix"/>
-<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-<feOffset dy="4"/>
-<feGaussianBlur stdDeviation="2"/>
-<feComposite in2="hardAlpha" operator="out"/>
-<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
-<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_3_95"/>
-<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_3_95" result="shape"/>
-</filter>
-<linearGradient id="paint0_linear_3_95" x1="113" y1="1667" x2="75.5" y2="1704.5" gradientUnits="userSpaceOnUse">
-<stop stop-color="#D9D9D9"/>
-<stop offset="1" stop-color="#D9D9D9" stop-opacity="0"/>
-</linearGradient>
-<linearGradient id="paint1_linear_3_95" x1="74" y1="1751" x2="111.5" y2="1713.5" gradientUnits="userSpaceOnUse">
-<stop stop-color="#D9D9D9"/>
-<stop offset="1" stop-color="#D9D9D9" stop-opacity="0"/>
-</linearGradient>
-<linearGradient id="paint2_linear_3_95" x1="1470" y1="1707" x2="1432.5" y2="1744.5" gradientUnits="userSpaceOnUse">
-<stop stop-color="#D9D9D9"/>
-<stop offset="1" stop-color="#D9D9D9" stop-opacity="0"/>
-</linearGradient>
-<linearGradient id="paint3_linear_3_95" x1="1431" y1="1791" x2="1468.5" y2="1753.5" gradientUnits="userSpaceOnUse">
-<stop stop-color="#D9D9D9"/>
-<stop offset="1" stop-color="#D9D9D9" stop-opacity="0"/>
-</linearGradient>
-<linearGradient id="paint4_linear_3_95" x1="699" y1="1324" x2="661.5" y2="1361.5" gradientUnits="userSpaceOnUse">
-<stop stop-color="#D9D9D9"/>
-<stop offset="1" stop-color="#D9D9D9" stop-opacity="0"/>
-</linearGradient>
-<linearGradient id="paint5_linear_3_95" x1="660" y1="1408" x2="697.5" y2="1370.5" gradientUnits="userSpaceOnUse">
-<stop stop-color="#D9D9D9"/>
-<stop offset="1" stop-color="#D9D9D9" stop-opacity="0"/>
-</linearGradient>
-<linearGradient id="paint6_linear_3_95" x1="2246" y1="1605" x2="2208.5" y2="1642.5" gradientUnits="userSpaceOnUse">
-<stop stop-color="#D9D9D9"/>
-<stop offset="1" stop-color="#D9D9D9" stop-opacity="0"/>
-</linearGradient>
-<linearGradient id="paint7_linear_3_95" x1="2207" y1="1689" x2="2244.5" y2="1651.5" gradientUnits="userSpaceOnUse">
-<stop stop-color="#D9D9D9"/>
-<stop offset="1" stop-color="#D9D9D9" stop-opacity="0"/>
-</linearGradient>
-<linearGradient id="paint8_linear_3_95" x1="1565" y1="467" x2="1527.5" y2="504.5" gradientUnits="userSpaceOnUse">
-<stop stop-color="#D9D9D9"/>
-<stop offset="1" stop-color="#D9D9D9" stop-opacity="0"/>
-</linearGradient>
-<linearGradient id="paint9_linear_3_95" x1="1526" y1="551" x2="1563.5" y2="513.5" gradientUnits="userSpaceOnUse">
-<stop stop-color="#D9D9D9"/>
-<stop offset="1" stop-color="#D9D9D9" stop-opacity="0"/>
-</linearGradient>
-<clipPath id="clip0_3_95">
-<rect width="2367" height="2266" fill="white"/>
-</clipPath>
-</defs>
 </svg>
