@@ -232,8 +232,7 @@ export class Graph {
 		console.groupEnd()
 	}
 	
-	showGraph() {
-		let $wrapper = this.$graphObject.parentElement
+	showGraph($graphMarkers) {
 		
 		for (let vertex of this.vertexes) {
 			let $idEl = document.createElement('div')
@@ -241,7 +240,7 @@ export class Graph {
 			$idEl.style.left = `${vertex.x}px`
 			$idEl.style.top = `${vertex.y}px`
 			$idEl.innerText = vertex.id
-			$wrapper.appendChild($idEl)
+			$graphMarkers.appendChild($idEl)
 		}
 		
 		for (let edge of this.edges) {
@@ -255,12 +254,11 @@ export class Graph {
 			$idEl.style.top = `${top}px`
 			// $idEl.innerHTML = edge.id.replace('Vector ', '')+'<br>'+edge.weight
 			$idEl.innerHTML = edge.weight
-			$wrapper.appendChild($idEl)
+			$graphMarkers.appendChild($idEl)
 		}
 	}
 	
 	getShortestWayFromTo(idVertex1, idVertex2) {
-		
 		let distances = new Map() //расстояния до вершин от начальной точки (старта)
 		let ways = new Map() //маршруты из точек
 		for (let vertex of this.vertexes) { // для всех вершин устанавливаем бесконечную длину пути
@@ -273,7 +271,7 @@ export class Graph {
 		
 		let currentVertexID = idVertex1 //ид обрабатываемой вершины
 		// for (let i = 0; i < 2; i ++) {
-			while(finals.size !== this.vertexes.length){ //пока не посетили все вершины (или пока не обнаружено, что
+		while (finals.size !== this.vertexes.length) { //пока не посетили все вершины (или пока не обнаружено, что
 			// граф не связный)
 			
 			//релаксации для соседних вершин
@@ -313,7 +311,7 @@ export class Graph {
 			currentVertexID = nextVertexID
 		}
 		
-		for(let [id, way] of ways){
+		for (let [id, way] of ways) {
 			way.push(id)
 		}
 		
@@ -326,13 +324,20 @@ export class Graph {
 	}
 	
 	fillAuditoriumsVertexes(auditoriumsEntrances, $svgPlan) {
-		for(const [auditoriumID, entranceID] of auditoriumsEntrances){
+		for (const [auditoriumID, entranceID] of auditoriumsEntrances) {
 			let $entrance = $svgPlan.getElementById(entranceID)
-			let cx = Number($entrance.getAttribute('cx'))
-			let cy = Number($entrance.getAttribute('cy'))
-			let vertex = this.getVertexByXY(cx, cy)
-			vertex.type = 'entrancesToAu'
-			this.auditoriumsVertexesMap.set(auditoriumID, vertex.id)
+			if ($entrance !== null) {
+				let cx = Number($entrance.getAttribute('cx'))
+				let cy = Number($entrance.getAttribute('cy'))
+				let vertex = this.getVertexByXY(cx, cy)
+			if (vertex !== undefined) {
+				vertex.type = 'entrancesToAu'
+				this.auditoriumsVertexesMap.set(auditoriumID, vertex.id)
+			}
+			}
+			else {
+				`Не найдена точка входа с айди${entranceID}, поправьте таблицу ассоциаций`
+			}
 		}
 		console.log('Вершины аудиторий')
 		console.log(this.auditoriumsVertexesMap)

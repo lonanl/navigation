@@ -68,6 +68,11 @@ export class DragHandler {
 			currentScale = newScale
 		}
 		
+		
+		$wrapper.addEventListener('wheel', function (eventWH) {
+			if (eventWH.wheelDelta > 0) scale(this, 1.5)
+			else if (eventWH.wheelDelta < 0) scale(this, 1 / 1.5)
+		}.bind(this))
 	}
 }
 

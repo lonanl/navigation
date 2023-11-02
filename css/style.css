@@ -63,7 +63,13 @@ body {
 .map-objects {
 	position: relative;
 	width: 100%;
+}
+
+.scale-able {
 	transition: all .25s ease-out;
+	-webkit-transition: all .25s ease-out;
+	-moz-transition: all .25s ease-out;
+	-ms-transition: all .25s ease-out;
 }
 
 .menu {
@@ -324,6 +330,10 @@ input {
 	font-family: "GothamSSm", sans-serif;
 }
 
+/*.vertex-id, .edge-id {*/
+/*	position: absolute;*/
+/*}*/
+
 .scale-buttons {
 	position: absolute;
 	/*width: 50px;*/
@@ -347,6 +357,9 @@ input {
 .drag-able {
 	position: relative;
 	transition: all .03s linear;
+	-webkit-transition: all .03s linear;
+	-moz-transition: all .03s linear;
+	-ms-transition: all .03s linear;
 }
 
 /*			ВЕРТИКАЛЬНАЯ ОРИЕНТАЦИЯ			*/
@@ -367,5 +380,16 @@ input {
 
 	.drag-able {
 		transition: none;
+		-webkit-transition: none;
+		-moz-transition: none;
+		-ms-transition: none;
+
 	}
+}
+
+.graph-markers {
+	width: 100%;
+	/*height: 100%;*/
+	position: absolute;
+	top: 0;
 }

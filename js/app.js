@@ -98,8 +98,8 @@ document.querySelector('.fill-auditoriums-vertexes').addEventListener('click', (
 })
 
 document.querySelector('.show-graph').addEventListener('click', () => {
-	graph.showGraph()
-	
+	graph.showGraph(document.querySelector('.graph-markers'))
+	graph.$graphObject.style.visibility = 'visible'
 	deactivateButton('show-graph')
 	activateButton('get-way')
 })
@@ -126,7 +126,6 @@ document.querySelector('.get-way').addEventListener('click', () => {
 document.querySelector('.build-way').addEventListener('click', () => {
 	let idVertex1 = graph.auditoriumsVertexesMap.get(planHandler.fromId)
 	let idVertex2 = graph.auditoriumsVertexesMap.get(planHandler.toId)
-	
 	let wayAndDistance = graph.getShortestWayFromTo(idVertex1, idVertex2)
 	
 	let outputContent = ''
@@ -143,7 +142,7 @@ document.querySelector('.build-way').addEventListener('click', () => {
 })
 
 document.querySelector('.hide-graph').addEventListener('click', () => {
-	graph.$graphObject.setAttribute('style', 'visibility: hidden')
+	graph.$graphObject.style.visibility = 'hidden'
 })
 
 
@@ -155,6 +154,6 @@ setTimeout(() => {
 	document.querySelector('.create-list-of-vertexes').click()
 	document.querySelector('.fill-graph').click()
 	document.querySelector('.fill-auditoriums-vertexes').click()
-	document.querySelector('.hide-graph').click()
+	// document.querySelector('.hide-graph').click()
 	// document.querySelector('.show-graph').click()
 }, 200)
