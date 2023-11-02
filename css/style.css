@@ -358,7 +358,7 @@ input {
 	position: relative;
 	/*transition: all .03s linear;*/
 	/*-webkit-transition: all .03s linear;*/
-	/*-moz-transition: all .03s linear;*/
+	-moz-transition: all .03s linear;
 	/*-ms-transition: all .03s linear;*/
 }
 
@@ -381,7 +381,7 @@ input {
 	.drag-able {
 		/*transition: none;*/
 		/*-webkit-transition: none;*/
-		/*-moz-transition: none;*/
+		-moz-transition: none;
 		/*-ms-transition: none;*/
 
 	}
