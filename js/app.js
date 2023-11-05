@@ -22,6 +22,7 @@ planHandler.$planObject.addEventListener('load', () => { //при загрузк
 		document.querySelector('.tracing').click()
 		document.querySelector('.create-list-of-vertexes').click()
 		document.querySelector('.fill-graph').click()
+		document.querySelector('.tracing-cross').click()
 		document.querySelector('.fill-auditoriums-vertexes').click()
 		// document.querySelector('.hide-graph').click()
 		// document.querySelector('.show-graph').click()
@@ -153,6 +154,10 @@ document.querySelector('.build-way').addEventListener('click', () => {
 
 document.querySelector('.hide-graph').addEventListener('click', () => {
 	graph.$graphObject.style.visibility = 'hidden'
+})
+
+document.querySelector('.tracing-cross').addEventListener('click', () => {
+	graph.tracingCross()
 })
 
 

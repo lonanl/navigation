@@ -330,10 +330,10 @@ export class Graph {
 				let cx = Number($entrance.getAttribute('cx'))
 				let cy = Number($entrance.getAttribute('cy'))
 				let vertex = this.getVertexByXY(cx, cy)
-			if (vertex !== undefined) {
-				vertex.type = 'entrancesToAu'
-				this.auditoriumsVertexesMap.set(auditoriumID, vertex.id)
-			}
+				if (vertex !== undefined) {
+					vertex.type = 'entrancesToAu'
+					this.auditoriumsVertexesMap.set(auditoriumID, vertex.id)
+				}
 			}
 			else {
 				`Не найдена точка входа с айди${entranceID}, поправьте таблицу ассоциаций`
@@ -343,7 +343,136 @@ export class Graph {
 		console.log(this.auditoriumsVertexesMap)
 	}
 	
-	// setupSizes($similarElement){
-	// 	this.$graphObject..setAttribute('viewBox', $similarElement.getAttribute('viewBox'))
-	// }
+	tracingCross() {
+		//Функция возвращает принадлежит ли точка (x,y) отрезку {(x1,y1);(x2,y2)}
+		function isPointOnLineSegment(x1, y1, x2, y2, x, y) {
+			const dxc = x - x1;
+			const dyc = y - y1;
+			const dxl = x2 - x1;
+			const dyl = y2 - y1;
+			const cross = dxc * dyl - dyc * dxl;
+			if (cross !== 0) {
+				return false;
+			}
+			if (Math.abs(dxl) >= Math.abs(dyl)) {
+				return dxl > 0 ? x1 <= x && x <= x2 : x2 <= x && x <= x1;
+			}
+			else {
+				return dyl > 0 ? y1 <= y && y <= y2 : y2 <= y && y <= y1;
+			}
+		}
+		
+		//
+		function compare(field, order) {
+			let len = arguments.length;
+			if (len === 0) {
+				return (a, b) => (a < b && - 1) || (a > b && 1) || 0;
+			}
+			if (len === 1) {
+				switch (typeof field) {
+					case 'number':
+						return field < 0 ?
+							((a, b) => (a < b && 1) || (a > b && - 1) || 0) :
+							((a, b) => (a < b && - 1) || (a > b && 1) || 0);
+					case 'string':
+						return (a, b) => (a[field] < b[field] && - 1) || (a[field] > b[field] && 1) || 0;
+				}
+			}
+			if (len === 2 && typeof order === 'number') {
+				return order < 0 ?
+					((a, b) => (a[field] < b[field] && 1) || (a[field] > b[field] && - 1) || 0) :
+					((a, b) => (a[field] < b[field] && - 1) || (a[field] > b[field] && 1) || 0);
+			}
+			let fields, orders;
+			if (typeof field === 'object') {
+				fields = Object.getOwnPropertyNames(field);
+				orders = fields.map(key => field[key]);
+				len = fields.length;
+			}
+			else {
+				fields = new Array(len);
+				orders = new Array(len);
+				for (let i = len; i --;) {
+					fields[i] = arguments[i];
+					orders[i] = 1;
+				}
+			}
+			return (a, b) => {
+				for (let i = 0; i < len; i ++) {
+					if (a[fields[i]] < b[fields[i]]) return orders[i];
+					if (a[fields[i]] > b[fields[i]]) return - orders[i];
+				}
+				return 0;
+			};
+		}
+		
+		console.log('ТРАССИРОВКА ПЕРЕСЕКАЮЩИХСЯ ЛИНИЙ')
+		let startTime = performance.now()
+		let hallwayVertexes = []
+		for (let vertex of this.vertexes) {
+			if (vertex.type === 'hallway') hallwayVertexes.push(vertex)
+		}
+		let count = 0
+		let splittingEdges = new Map()
+		for (let vertex of hallwayVertexes) {
+			for (let edge of this.edges) {
+				if (edge.idVertex1 !== vertex.id && edge.idVertex2 !== vertex.id) {
+					let {x: x1, y: y1} = this.getVertexByID(edge.idVertex1)
+					let {x: x2, y: y2} = this.getVertexByID(edge.idVertex2)
+					let {x: x, y: y} = vertex
+					if (isPointOnLineSegment(x1, y1, x2, y2, x, y)) {
+						console.log(`Точка (${x},${y}) принадлежит отрезку {(${edge.id})}`)
+						if (splittingEdges.get(edge) === undefined) {
+							splittingEdges.set(edge, [])
+						}
+						splittingEdges.get(edge).push(vertex)
+						count ++
+					}
+				}
+			}
+		}
+		console.log(count)
+		let endTime = performance.now()
+		console.log(endTime - startTime)
+		console.table(splittingEdges)
+		
+		function getSplitEdges(edge, vertexes) {
+			let vertex1 = vertexes.shift()
+			let splitEdges = []
+			for (let vertex2 of vertexes) {
+				let {x: x1, y: y1} = vertex1
+				let {x: x2, y: y2} = vertex2
+				let type = 'same-floor'
+				if (vertex1.type === 'entranceToAu' || vertex2.type === 'entranceToAu') type = 'entranceToAu'
+				let weight = Number((((x2 - x1) ** 2 + (y2 - y1) ** 2) ** 0.5).toFixed(2))
+				splitEdges.push(new Edge(
+					String(iterator),
+					vertex1.id,
+					vertex2.id,
+					weight,
+					type))
+				vertex1.neighboringIDs.add(vertex2.id)
+				vertex2.neighboringIDs.add(vertex1.id)
+				vertex1 = vertex2
+				iterator ++
+			}
+			return splitEdges
+		}
+		
+		let iterator = 0
+		for (let [edge, vertexes] of splittingEdges) {
+			vertexes.unshift(this.getVertexByID(edge.idVertex1))
+			vertexes.unshift(this.getVertexByID(edge.idVertex2))
+			vertexes.sort(compare('y'))
+			vertexes.sort(compare('x'))
+			console.table(vertexes)
+			
+			let splitEdges = getSplitEdges(edge, vertexes)
+			console.log(splitEdges)
+			
+			let index = this.edges.indexOf(edge)
+			this.edges.splice(index, 1, ...splitEdges)
+			
+		}
+	}
 }
