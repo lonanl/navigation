@@ -319,7 +319,7 @@ export class Graph {
 		// console.log(ways)
 		return {
 			way: ways.get(idVertex2),
-			distance: distances.get(idVertex2)
+			distance: Math.floor(distances.get(idVertex2))
 		}
 	}
 	
@@ -344,22 +344,24 @@ export class Graph {
 	}
 	
 	tracingCross() {
-		//Функция возвращает принадлежит ли точка (x,y) отрезку {(x1,y1);(x2,y2)}
+		//Функция возвращает принадлежит ли точка (x,y) отрезку {(x1,y1);(x2,y2)} или находится на расстоянии меньше 1
+		// от этого отрезка
 		function isPointOnLineSegment(x1, y1, x2, y2, x, y) {
-			const dxc = x - x1;
-			const dyc = y - y1;
-			const dxl = x2 - x1;
-			const dyl = y2 - y1;
-			const cross = dxc * dyl - dyc * dxl;
-			if (cross !== 0) {
-				return false;
-			}
-			if (Math.abs(dxl) >= Math.abs(dyl)) {
-				return dxl > 0 ? x1 <= x && x <= x2 : x2 <= x && x <= x1;
-			}
-			else {
-				return dyl > 0 ? y1 <= y && y <= y2 : y2 <= y && y <= y1;
-			}
+			// Вычисляем длину отрезка AB
+			const lengthAB = Math.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2);
+			
+			// Вычисляем отношение расстояния от точки A до точки C к длине отрезка AB
+			const k = Math.min(1, Math.max(0, ((x - x1) * (x2 - x1) + (y - y1) * (y2 - y1)) / (lengthAB ** 2)));
+			
+			// Вычисляем координаты точки C
+			const xc = x1 + (x2 - x1) * k;
+			const yc = y1 + (y2 - y1) * k;
+			
+			// Вычисляем расстояние от точки C до точки (x, y)
+			const distance = Math.sqrt((xc - x) ** 2 + (yc - y) ** 2);
+			
+			// Проверяем условие и возвращаем результат
+			return distance <= 1 && (k > 0 && k < 1);
 		}
 		
 		//

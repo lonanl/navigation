@@ -15,27 +15,18 @@
 <path id="Vector 272" d="M1440 1578V1526" stroke="#FF5F5F" stroke-opacity="0.5"/>
 <path id="Vector 310" d="M1440 1578V1873" stroke="#FF5F5F" stroke-opacity="0.5"/>
 <path id="Vector 312" d="M1440 1873L1566 1856" stroke="#FF5F5F" stroke-opacity="0.5"/>
-<path id="Vector 273" d="M1567 1472L1578 1526" stroke="#FF5F5F" stroke-opacity="0.5"/>
-<path id="Vector 274" d="M1901 1474L1865 1477" stroke="#FF5F5F" stroke-opacity="0.5"/>
+<path id="Vector 273" d="M1567 1472L1574 1516" stroke="#FF5F5F" stroke-opacity="0.5"/>
 <path id="Vector 292" d="M1809 1294L1841 1289" stroke="#FF5F5F" stroke-opacity="0.5"/>
-<path id="Vector 293" d="M1875 1265L1838 1269" stroke="#FF5F5F" stroke-opacity="0.5"/>
+<path id="Vector 293" d="M1875 1265L1838 1271" stroke="#FF5F5F" stroke-opacity="0.5"/>
 <path id="Vector 294" d="M1848 1111L1817 1115" stroke="#FF5F5F" stroke-opacity="0.5"/>
-<path id="Vector 295" d="M1712 986L1799 976" stroke="#FF5F5F" stroke-opacity="0.5"/>
-<path id="Vector 296" d="M1799 976L1830 972" stroke="#FF5F5F" stroke-opacity="0.5"/>
+<path id="Vector 295" d="M1712 986L1799 974" stroke="#FF5F5F" stroke-opacity="0.5"/>
+<path id="Vector 296" d="M1799 977L1830 972" stroke="#FF5F5F" stroke-opacity="0.5"/>
 <path id="Vector 297" d="M1813 851L1783 854" stroke="#FF5F5F" stroke-opacity="0.5"/>
 <path id="Vector 298" d="M1654 509L1736 497" stroke="#FF5F5F" stroke-opacity="0.5"/>
-<path id="Vector 301" d="M1736 497L1751 610" stroke="#FF5F5F" stroke-opacity="0.5"/>
-<path id="Vector 302" d="M1751 610L1783 854" stroke="#FF5F5F" stroke-opacity="0.5"/>
-<path id="Vector 303" d="M1783 854L1799 976" stroke="#FF5F5F" stroke-opacity="0.5"/>
-<path id="Vector 304" d="M1799 976L1817 1115" stroke="#FF5F5F" stroke-opacity="0.5"/>
-<path id="Vector 305" d="M1817 1115L1838 1269" stroke="#FF5F5F" stroke-opacity="0.5"/>
-<path id="Vector 306" d="M1838 1269L1841 1289" stroke="#FF5F5F" stroke-opacity="0.5"/>
-<path id="Vector 307" d="M1841 1289L1865 1477" stroke="#FF5F5F" stroke-opacity="0.5"/>
-<path id="Vector 300" d="M1668 624L1751 610" stroke="#FF5F5F" stroke-opacity="0.5"/>
+<path id="Vector 300" d="M1668 624L1751 611" stroke="#FF5F5F" stroke-opacity="0.5"/>
 <path id="Vector 299" d="M1736 497L1772 492" stroke="#FF5F5F" stroke-opacity="0.5"/>
-<path id="Vector 275" d="M101 1526H1578" stroke="#FF5F5F" stroke-opacity="0.5"/>
-<path id="Vector 289" d="M1578 1526L1867 1489" stroke="#FF5F5F" stroke-opacity="0.5"/>
-<path id="Vector 291" d="M1867 1489L1865 1477" stroke="#FF5F5F" stroke-opacity="0.5"/>
+<path id="Vector 275" d="M101 1526H1491" stroke="#FF5F5F" stroke-opacity="0.5"/>
+<path id="Vector 291" d="M1865 1479L1736 497" stroke="#FF5F5F" stroke-opacity="0.5"/>
 <path id="Vector 251" d="M275 1212H328" stroke="#FF5F5F" stroke-opacity="0.5"/>
 <path id="Vector 252" d="M328 1147V1526" stroke="#FF5F5F" stroke-opacity="0.5"/>
 <path id="Vector 253" d="M380 1322H328" stroke="#FF5F5F" stroke-opacity="0.5"/>
@@ -43,5 +34,7 @@
 <path id="Vector 254" d="M275 1322H328" stroke="#FF5F5F" stroke-opacity="0.5"/>
 <path id="Vector 256" d="M380 1437H328" stroke="#FF5F5F" stroke-opacity="0.5"/>
 <path id="Vector 257" d="M328 1437H275" stroke="#FF5F5F" stroke-opacity="0.5"/>
+<path id="Vector 313" d="M1865 1479L1491 1526" stroke="#FF5F5F" stroke-opacity="0.5"/>
+<path id="Vector 314" d="M1865 1479L1901 1474" stroke="#FF5F5F" stroke-opacity="0.5"/>
 </g>
 </svg>
