@@ -199,10 +199,11 @@ export class Graph {
 	}
 	
 	fillGraph() {
+		console.group('Заполнение графа')
 		for (let rawEdge of this.rawEdges) {
 			let vertex1 = this.getVertexByXY(rawEdge.x1, rawEdge.y1)
 			let vertex2 = this.getVertexByXY(rawEdge.x2, rawEdge.y2)
-			
+			console.log('Заполняется ребро(', rawEdge.x1, rawEdge.y1, ')(', rawEdge.x2, rawEdge.y2, ')')
 			let type
 			if (vertex1.type === 'entranceToAu' || vertex2.type === 'entranceToAu') type = 'entranceToAu'
 			else type = rawEdge.type
@@ -408,8 +409,7 @@ export class Graph {
 			};
 		}
 		
-		console.log('ТРАССИРОВКА ПЕРЕСЕКАЮЩИХСЯ ЛИНИЙ')
-		let startTime = performance.now()
+		console.group('ТРАССИРОВКА ПЕРЕСЕКАЮЩИХСЯ ЛИНИЙ')
 		let hallwayVertexes = []
 		for (let vertex of this.vertexes) {
 			if (vertex.type === 'hallway') hallwayVertexes.push(vertex)
@@ -433,9 +433,7 @@ export class Graph {
 				}
 			}
 		}
-		console.log(count)
-		let endTime = performance.now()
-		console.log(endTime - startTime)
+		console.log('Итого количество разделяющих точек', count)
 		console.table(splittingEdges)
 		
 		function getSplitEdges(edge, vertexes) {
@@ -470,11 +468,12 @@ export class Graph {
 			console.table(vertexes)
 			
 			let splitEdges = getSplitEdges(edge, vertexes)
-			console.log(splitEdges)
+			console.log('Разделенные ребра', splitEdges)
 			
 			let index = this.edges.indexOf(edge)
 			this.edges.splice(index, 1, ...splitEdges)
 			
 		}
+		console.groupEnd()
 	}
 }
