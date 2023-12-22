@@ -3,6 +3,7 @@ import {PlanHandler} from './PlanHandler.js'
 import {Settings} from './Settings.js'
 import {Way} from './Way.js'
 import {DragHandler} from "./DragHandler.js";
+import {Names} from "./Names.js";
 
 //обработчик карты, передаем объект содержащий карту
 export let planHandler = new PlanHandler(document.querySelector('.plan-object'))
@@ -135,10 +136,9 @@ document.querySelector('.get-way').addEventListener('click', () => {
 })
 
 document.querySelector('.build-way').addEventListener('click', () => {
-	let idVertex1 = graph.auditoriumsVertexesMap.get(planHandler.fromId)
-	let idVertex2 = graph.auditoriumsVertexesMap.get(planHandler.toId)
+	let idVertex1 = planHandler.fromId
+	let idVertex2 = planHandler.toId
 	let wayAndDistance = graph.getShortestWayFromTo(idVertex1, idVertex2)
-	
 	let outputContent = ''
 	wayAndDistance.way.forEach(vertexId => {
 		outputContent += `→ ${vertexId} `

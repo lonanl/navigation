@@ -11,10 +11,14 @@
 	
 	<script defer src="./js/app.js" type="module"></script>
 	<script defer type="module">
-	  import {graph, planHandler} from "./js/app.js";
-	  
+	  import {graph, planHandler} from "./js/app.js"
+	  import {Names} from "./js/Names.js"
+		import {Settings} from "./js/Settings.js";
+    
+    window.Names = Names
 	  window.planHandler = planHandler
 	  window.graph = graph
+		window.settings = Settings
 	</script>
 </head>
 <body>

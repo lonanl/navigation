@@ -332,6 +332,18 @@ export class Graph {
 				let cy = Number($entrance.getAttribute('cy'))
 				let vertex = this.getVertexByXY(cx, cy)
 				if (vertex !== undefined) {
+					let oldVertexId = vertex.id
+					vertex.id = auditoriumID
+					for (let vertexWithNeighbors of this.vertexes) {
+						if(vertexWithNeighbors.neighboringIDs.has(oldVertexId)){
+						    vertexWithNeighbors.neighboringIDs.delete(oldVertexId)
+							vertexWithNeighbors.neighboringIDs.add(vertex.id)
+						}
+					}
+					for (let edge of this.edges) {
+						if(edge.idVertex1===oldVertexId) edge.idVertex1=vertex.id
+						if(edge.idVertex2===oldVertexId) edge.idVertex2=vertex.id
+					}
 					vertex.type = 'entrancesToAu'
 					this.auditoriumsVertexesMap.set(auditoriumID, vertex.id)
 				}
