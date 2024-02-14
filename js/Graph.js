@@ -40,43 +40,32 @@ export class Graph {
 		this.$graphObject = $graphObject
 	}
 	
-	hasVertexByXY(x, y) {
-		for (let vertex of this.vertexes) if ((vertex.x === x) && (vertex.y === y)) {
-			return true
-		}
-		return false
-	} //есть ли вершина в списке по координатам
-	
 	addVertexByXY(x, y, type = '') {
-		if (!this.hasVertexByXY(x, y)) {
+		if (!this.getVertexByXY(x,y)) {
 			this.vertexes.push(new Vertex(x, y, String(this.vertexIdIterator), type))
 			this.vertexIdIterator ++
 		}
-	}
+	} //добавляет вершину с координатами
 	
 	getVertexByXY(x, y) {
-		for (let vertex of this.vertexes) if ((vertex.x === x) && (vertex.y === y)) {
-			return vertex
-		}
-		return undefined
-	} //возвращает вершину по координатам
+		return this.vertexes.find(vertex => {
+			if(vertex.x === x && vertex.y === y) return true
+		})
+	} //возвращает объект вершины по координатам
 	
 	getVertexByID(id = '') {
-		for (let vertex of this.vertexes)
-			if (vertex.id === id) {
-				return vertex
-			}
-		return undefined
-	}
+		return this.vertexes.find(vertex => {
+			if(vertex.id === id) return true
+		})
+	} //возвращает объект вершины по id
 	
 	getDistanceBetween2VertexesByID(idVertex1, idVertex2) {
-		for (let edge of this.edges) {
-			if (edge.idVertex1 === idVertex1 && edge.idVertex2 === idVertex2)
-				return (edge.weight)
-			else if (edge.idVertex1 === idVertex2 && edge.idVertex2 === idVertex1)
-				return (edge.weight)
+		let vertex1 = this.getVertexByID(idVertex1)
+		let vertex2 = this.getVertexByID(idVertex2)
+		if(vertex1.neighboringIDs.has(vertex2.id)) {
+			return Number((((vertex2.x - vertex1.x) ** 2 + (vertex2.y - vertex1.y) ** 2) ** 0.5).toFixed(2))
 		}
-	}
+	} //возвращает длину прямого отрезка между двумя вершинами (потом переписать на расстояние из графа)
 	
 	tracing($tableOfEdges) { //трассировка - парсинг путей и добавление их в таблицу
 		let allPaths = this.$graphObject.contentDocument.getElementsByTagName('path') //все path на картинке
