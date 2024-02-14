@@ -110,7 +110,7 @@ document.querySelector('.fill-auditoriums-vertexes').addEventListener('click', (
 })
 
 document.querySelector('.show-graph').addEventListener('click', () => {
-	graph.showGraph(document.querySelector('.graph-markers'))
+	graph.showGraph(document.querySelector('.graph-markers'), planHandler.$svgPlan)
 	graph.$graphObject.style.visibility = 'visible'
 	deactivateButton('show-graph')
 	activateButton('get-way')

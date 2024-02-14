@@ -233,14 +233,17 @@ export class Graph {
 		console.groupEnd()
 	}
 	
-	showGraph($graphMarkers) {
-		
+	showGraph($graphMarkers, $similarElement) {
+		$graphMarkers.setAttribute('viewBox', $similarElement.getAttribute('viewBox'))
 		for (let vertex of this.vertexes) {
-			let $idEl = document.createElement('div')
+			// let $idEl = document.createElement('div')
+			let $idEl = document.createElementNS('http://www.w3.org/2000/svg', 'text')
 			$idEl.classList.add('vertex-id')
-			$idEl.style.left = `${vertex.x}px`
-			$idEl.style.top = `${vertex.y}px`
-			$idEl.innerText = vertex.id
+			let $idElTspan = document.createElementNS('http://www.w3.org/2000/svg', 'tspan')
+			$idElTspan.setAttribute('x', `${vertex.x}`)
+			$idElTspan.setAttribute('y', `${vertex.y}`)
+			$idElTspan.innerHTML = vertex.id
+			$idEl.appendChild($idElTspan)
 			$graphMarkers.appendChild($idEl)
 		}
 		

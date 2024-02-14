@@ -145,9 +145,12 @@ table tr:not(thead>tr) {
 .vertex-id {
 	position: absolute;
 	color: #ce787f;
-	font-family: "GothamSSm XNarrow Medium", "Segoe UI", sans-serif;
 	border: 1px solid rgba(206, 120, 127, 0.5);
 	padding: 2px 4px;
+	fill: #ce787f;
+	/*font-family: */
+	font-weight: 600;
+	font-size: 24px;
 }
 
 .edge-id {
@@ -392,4 +395,5 @@ input {
 	/*height: 100%;*/
 	position: absolute;
 	top: 0;
+	left: 0;
 }
